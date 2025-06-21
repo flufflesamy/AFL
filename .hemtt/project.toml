@@ -1,4 +1,13 @@
 name = "Amy Functions Library"
 author = "flufflesamy"
-prefix = "amy_funclib"
+prefix = "AFL"
 mainprefix = "z"
+
+[files]
+include = [
+    "LICENSE",
+    "README.md"
+]
+
+[version]
+git_hash = 0

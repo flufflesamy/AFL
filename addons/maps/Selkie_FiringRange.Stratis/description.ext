@@ -1,0 +1,11 @@
+/*
+ *	Author: Amy
+ *	defines everything
+ *
+ */
+author			= "Amy";
+onLoadName		= "Selkie Firing Range";
+onLoadMission	= "";
+loadScreen		= "";
+
+#include "configs\CfgFunctions.hpp"
