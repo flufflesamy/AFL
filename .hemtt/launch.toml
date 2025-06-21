@@ -5,4 +5,4 @@ workshop = [
 presets = [
     "Selkie_2025_06_08.html",
 ]
-mission = "addons\\maps\\Selkie_FiringRange.Stratis"
+mission = "addons\\missions\\Selkie_FiringRange.Stratis"
