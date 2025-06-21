@@ -1,5 +1,4 @@
 #include "..\script_component.hpp"
-#define PNUMO_TYPE ["initial", "tension", "hepo"]
 /*
 	Author: Amy
 

@@ -3,3 +3,9 @@
 
 #include "\z\afl\addons\main\script_mod.hpp"
 #include "\z\afl\addons\main\script_macros.hpp"
+
+#define DISABLE_COMPILE_CACHE
+
+#define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
+#define FRACTURE_TYPE ["simple", "compound", "comminuted"]
+#define PNUMO_TYPE ["initial", "tension", "hepo"]

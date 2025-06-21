@@ -1,0 +1,8 @@
+[default]
+workshop = [
+    "3499977893",
+]
+presets = [
+    "Selkie_2025_06_08.html",
+]
+mission = "addons\\maps\\Selkie_FiringRange.Stratis"

@@ -20,18 +20,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=32;
+		nextID=47;
 	};
 	class Camera
 	{
-		pos[]={6446.0396,36.397633,5372.2476};
-		dir[]={0.79667318,-0.5870921,-0.14456861};
-		up[]={0.57766581,0.80955839,-0.10482723};
-		aside[]={-0.17856623,2.933084e-06,-0.98397624};
+		pos[]={6416.2236,14.810093,5455.1768};
+		dir[]={-0.83768898,-0.53562427,-0.10717736};
+		up[]={-0.53130591,0.84445578,-0.067977801};
+		aside[]={-0.12691435,-1.3998942e-07,0.99195963};
 	};
 };
 binarizationWanted=0;
-sourceName="Selkie_FiringRange";
+sourceName="selkie_firingrange";
 addons[]=
 {
 	"A3_Structures_F_Training",
@@ -314,18 +314,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="ENH_saveLoadout";
 			expression="if (!isMultiplayer || !_value || is3DEN || !hasInterface) exitWith {};        0 spawn        {            waitUntil {sleep 1; !isNull player};            player setVariable ['ENH_savedLoadout', getUnitloadout player];            player addMPEventHandler ['MPRespawn',            {                params ['_unit'];                private _loadout = _unit getVariable ['ENH_savedLoadout', []];                if (_loadout isNotEqualTo []) then {_unit setUnitLoadout _loadout};            }];        };";
 			class Value
@@ -334,6 +322,18 @@ class CustomAttributes
 				{
 					singleType="BOOL";
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
 				};
 			};
 		};
@@ -40442,6 +40442,7 @@ class Mission
 			};
 			id=141;
 			type="OPTRE_RS_ConsoleCorvette_SysGreen";
+			atlOffset=9.5367432e-07;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -42813,6 +42814,7 @@ class Mission
 					};
 					id=193;
 					type="Land_Stretcher_01_sand_F";
+					atlOffset=2.4318695e-05;
 				};
 				class Item2
 				{
@@ -42830,6 +42832,7 @@ class Mission
 					};
 					id=199;
 					type="Land_Stretcher_01_sand_F";
+					atlOffset=-4.7683716e-07;
 				};
 				class Item3
 				{
@@ -42847,6 +42850,7 @@ class Mission
 					};
 					id=200;
 					type="Land_Stretcher_01_sand_F";
+					atlOffset=-1.7166138e-05;
 				};
 				class Item4
 				{
@@ -42898,7 +42902,7 @@ class Mission
 				};
 			};
 			id=189;
-			atlOffset=-0.0056247711;
+			atlOffset=-0.0056142807;
 		};
 	};
 };

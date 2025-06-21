@@ -1,4 +1,4 @@
-name = "Amy Functions Library"
+name = "Amy Functions Library for Arma 3"
 author = "flufflesamy"
 prefix = "AFL"
 mainprefix = "z"
@@ -6,7 +6,7 @@ mainprefix = "z"
 [files]
 include = [
     "LICENSE",
-    "README.md"
+    "README.md",
 ]
 
 [version]

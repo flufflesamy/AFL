@@ -27,3 +27,11 @@
 #define KGVAR(var1) TRIPLES(kat,medical,var1)
 #define QKVAR(var) QUOTE(KVAR(var))
 #define QKGVAR(var1) QUOTE(KGVAR(var1))
+
+#ifdef DISABLE_COMPILE_CACHE
+    #undef PREP
+    #define PREP(var1) TRIPLES(ADDON,fnc,var1) = compile preprocessFileLineNumbers '\MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT_F\functions\DOUBLES(fnc,var1).sqf'
+#else
+    #undef PREP
+    #define PREP(var1) ['\MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT_F\functions\DOUBLES(fnc,var1).sqf', 'TRIPLES(ADDON,fnc,var1)'] call SLX_XEH_COMPILE_NEW
+#endif

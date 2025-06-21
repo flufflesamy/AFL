@@ -8,6 +8,7 @@
 	Parameter(s):
 		0: Name of Vehicle <STRING>
 		1: Name of Marker <STRING>
+		2: Entity to store variable in <OBJECT>
 
 	Returns:
 		0: Vehicle <OBJECT>
@@ -16,18 +17,18 @@
 		<example>
 */
 
-params ["_vehName", "_markerName"];
+params ["_vehName", "_markerName", "_entity"];
 
 private _pos = getMarkerPos[_markerName];
 
 private _mkrVarName = format ["%1_%2", str(ADDON), _markerName];
-private _veh = AVAR(VehicleConsole) getVariable [_mkrVarName, nil];
+private _veh = _entity getVariable [_mkrVarName, nil];
 
 // If vehicle is already spawned, remove it
 if (!isNil _veh) then
 {
 	deleteVehicle _veh;
-	AVAR(VehicleConsole) setVariable [_mkrVarName, nil, true];
+	_entity setVariable [_mkrVarName, nil, true];
 };
 
 _veh = createVehicle[_vehName, _pos, [], 0, ""];
@@ -35,24 +36,24 @@ _veh setVariable ["BIS_enableRandomization", false];
 hint format ["Spawned %1 at %2!", _vehName, _markerName];
 
 // sets variable in console for name of marker
-AVAR(VehicleConsole) setVariable [_mkrVarName, _veh, true];
+_entity setVariable [_mkrVarName, _veh, true];
 
 private _id = [_veh, "Dammaged", {
 	params ["_unit", "_hitSelection", "_damage", "_hitPartIndex", "_hitPoint", "_shooter", "_projectile"];
-	thisArgs params ["_mkrVarName"];
+	thisArgs params ["_mkrVarName", "_entity"];
 
 	hint format ["Dealt %1 damage to %2!", _damage, _hitPoint];
 
-	if (_unit call AFUNC(isDestroyed)) then
+	if (_unit call FUNC(isDestroyed)) then
 	{
 		hint "Vehicle Destroyed!";
 		[{
 			params ["_unit", "_thisID", "_mkrVarName"];
 			deleteVehicle _unit select 0;
-			AVAR(VehicleConsole) setVariable [_mkrVarName, nil, true];
+			_entity setVariable [_mkrVarName, nil, true];
 			_unit removeEventHandler ["Dammaged", _thisID];
-		}, [_unit, _thisID, _mkrVarName], 5] call CFUNC(waitAndExecute);
+		}, [_unit, _thisID, _mkrVarName, _entity], 5] call CFUNC(waitAndExecute);
 	};
-}, [_mkrVarName]] call CFUNC(addBISEventHandler);
+}, [_mkrVarName, _entity]] call CFUNC(addBISEventHandler);
 
 _veh // Return
