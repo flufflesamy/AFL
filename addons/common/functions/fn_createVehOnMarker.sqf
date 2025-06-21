@@ -1,4 +1,4 @@
-#include "..\..\configs\script_macros.hpp"
+#include "..\script_component.hpp"
 /*
 	Author: Amy
 

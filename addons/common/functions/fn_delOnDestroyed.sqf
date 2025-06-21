@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 	Author: Amy
 
@@ -14,4 +15,8 @@
 		<example>
 */
 
-hint "Test!";
+params ["_veh"];
+
+_veh addEventHandler ["Dammaged", {
+    
+}];

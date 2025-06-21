@@ -18,5 +18,3 @@ class CfgMods {
         name = "Amy Functions Library";
     };
 };
-
-#include "CfgFunctions.hpp"

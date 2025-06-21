@@ -1,4 +1,4 @@
-#include "..\..\configs\script_macros.hpp"
+#include "..\script_component.hpp"
 #define MEDSIM_TYPE ["simple", "fracture", "pneumothorax"]
 /*
 	Author: Amy

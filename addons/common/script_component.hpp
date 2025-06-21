@@ -1,5 +1,5 @@
-#define COMPONENT maps
-#define COMPONENT_BEAUTIFIED Maps
+#define COMPONENT common
+#define COMPONENT_BEAUTIFIED Common Functions
 
 #include "\z\afl\addons\main\script_mod.hpp"
 #include "\z\afl\addons\main\script_macros.hpp"
