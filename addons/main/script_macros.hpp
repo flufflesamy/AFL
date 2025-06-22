@@ -1,41 +1,49 @@
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
+#include "script_debug.hpp"
 
-#define AFUNC(var) TRIPLES(ADDON,fnc,var)
-#define AVAR(v) DOUBLES(ADDON,v)
-#define QAVAR(v) QUOTE(AVAR(v))
-#define QDAVAR(var1, var2) DOUBLES(AVAR(var1),var2)
+// #define AFUNC(var) TRIPLES(ADDON,fnc,var)
+// #define AVAR(v) DOUBLES(ADDON,v)
+// #define QAVAR(v) QUOTE(AVAR(v))
+// #define QDAVAR(var1, var2) DOUBLES(AVAR(var1),var2)
 #define ENTVAR(var1) DOUBLES(fr,var1)
 #define QENTVAR(var1) QUOTE(ENTVAR(var1))
 
-// CBA functions
-#define CFUNC(var) TRIPLES(CBA,fnc,var)
+// AFL macros
+#define FRACTURE_TYPE ["none", "simple", "compound", "comminuted"]
+#define PNUMO_TYPE ["initial", "tension", "hepo"]
 
-// // ACE functions
-// // #define ACEFUNC(var) TRIPLES(ace,fnc,var)
-// #define ACEFUNC(var1,var2) TRIPLES(DOUBLES(ace,var1),fnc,var2)
-// #define QACEFUNC(var1,var2) DOUBLES(ACEFUNC(var1,var2))
+// CBA xeh PREP override
+#ifdef DISABLE_COMPILE_CACHE
+    #undef PREP
+    #define PREP(function) TRIPLES(ADDON,fnc,function) = compile preprocessFileLineNumbers '\MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT_F\functions\DOUBLES(fnc,function).sqf'
+#else
+    #undef PREP
+    #define PREP(function) ['\MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT_F\functions\DOUBLES(fnc,function).sqf', 'TRIPLES(ADDON,fnc,function)'] call SLX_XEH_COMPILE_NEW
+#endif
 
-// #define ACEVAR(var) DOUBLES(ace,var)
-// #define ACEEVAR(var1,var2) TRIPLES(ace,var1,var2)
-// #define QACEEVAR(var1,var2) QUOTE(ACEEVAR(var1,var2))
-// // #define ACEGVAR(var1) TRIPLES(ace,medical,var1)
-// #define ACEGVAR(var1,var2) ACEEVAR(var1,var2)
-// #define QACEGVAR(var1,var2) QUOTE(ACEGVAR(var1,var2))
+// CBA macros
+#define CBA_PREFIX cba
+#define CBA_ADDON(component) DOUBLES(CBA_PREFIX,component)
 
-// KAM functions
-#define KFUNC(var) TRIPLES(kat,fnc,var)
-#define KEFUNC(var1,var2) TRIPLES(DOUBLES(kat,var1),fnc,var2)
+#define CFUNC(function) TRIPLES(CBA_PREFIX,fnc,function)
+#define QCFUNC(function) QUOTE(CFUNC(function))
 
-// KAM variables
-// #define KVAR(var) DOUBLES(kat,var)
-#define KGVAR(var1) DOUBLES(kat,var1)
-#define KEGVAR(var1,var2) TRIPLES(kat,var1,var2)
-#define QKVAR(var) QUOTE(KVAR(var))
-#define QKGVAR(var1) QUOTE(KGVAR(var1))
-#define QKEGVAR(var1,var2) QUOTE(KEGVAR(var1,var2))
+#define CEFUNC(module,function) TRIPLES(DOUBLES(CBA_PREFIX,module),fnc,function)
+#define QCEFUNC(module,function) QUOTE(CEFUNC(module,function))
 
-// BEGIN ACE3 reference macros (from KAM)
+// KAM macros
+#define KAM_PREFIX kat
+
+#define KAM_ADDON(component) DOUBLES(KAM_PREFIX,component)
+
+#define KEFUNC(module,function) TRIPLES(DOUBLES(KAM_PREFIX,module),fnc,function)
+#define QKEFUNC(module,function) QUOTE(KEFUNC(module,function))
+
+#define KEGVAR(module,var) TRIPLES(KAM_PREFIX,module,var)
+#define QKEGVAR(module,var) QUOTE(KEGVAR(module,var))
+
+// BEGIN ACE3 medical reference macros (from KAM)
 
 #define ACE_PREFIX ace
 
@@ -156,11 +164,3 @@
 #define PAIN_UNCONSCIOUS ACEGVAR(medical,painUnconsciousThreshold)
 
 // END ACE3 reference macros
-
-#ifdef DISABLE_COMPILE_CACHE
-    #undef PREP
-    #define PREP(var1) TRIPLES(ADDON,fnc,var1) = compile preprocessFileLineNumbers '\MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT_F\functions\DOUBLES(fnc,var1).sqf'
-#else
-    #undef PREP
-    #define PREP(var1) ['\MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT_F\functions\DOUBLES(fnc,var1).sqf', 'TRIPLES(ADDON,fnc,var1)'] call SLX_XEH_COMPILE_NEW
-#endif
