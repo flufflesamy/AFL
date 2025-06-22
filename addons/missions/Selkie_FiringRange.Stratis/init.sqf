@@ -68,6 +68,6 @@ fr_vehicleConsole addAction [
 
 // Initialize medical console
 
-fr_medicalConsole addAction [
+// fr_medicalConsole addAction [
 
-];
+// ];

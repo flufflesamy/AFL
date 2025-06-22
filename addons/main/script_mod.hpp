@@ -2,6 +2,8 @@
 #define PREFIX afl
 #define SUBPREFIX addons
 
+#define DEBUG_MODE_FULL
+
 #include "script_version.hpp"
 
 #define REQUIRED_VERSION 2.20

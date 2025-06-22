@@ -14,28 +14,32 @@
 		Nothing
 
 	Examples:
-		[player, "LeftLeg", "Simple"] call amy_sfr_fnc_setFracture;
+		[player, "LeftLeg", "Simple"] call afl_common_fnc_setFracture;
 */
 
 params ["_unit", "_bodyPart", "_fracType"];
 TRACE_3("setFracture",_unit,_bodyPart,_fracType);
 
 // set body part to fractured
-private _fractureArray = [0,0,0,0,0,0];
+private _fractureArray = _unit getVariable [QACEGVAR(medical,fractures), [0,0,0,0,0,0]];
 private _part = ALL_BODY_PARTS find toLower _bodyPart;
+if (_part == -1) exitWith {ERROR_1("Invalid fracture location %1!", _fracType)};
 _fractureArray set [_part, 1];
 
 // set type of fracture for body part
-private _kamfractureArray = [0,0,0,0,0,0];
+private _kamfractureArray = _unit getVariable [QKEGVAR(surgery,fractures), [0,0,0,0,0,0]];
 private _type = FRACTURE_TYPE find toLower _fracType;
+if (_type == -1) exitWith {ERROR_1("Invalid fracture type %1!", _fracType)};
 _kamfractureArray set [_part, _type];
 
 // set fracture variables for unit
-_unit setVariable [QKGVAR(fractures), _kamfractureArray, true];
+_unit setVariable [QKEGVAR(surgery,fractures), _kamfractureArray, true];
 _unit setVariable [QACEGVAR(medical,fractures), _fractureArray, true];
 
 // play fracture sound
 [QACEGVAR(medical,fracture), [_unit, _part], _unit] call CFUNC(targetEvent);
 
-// update damage effects
+TRACE_2("Limb fracture",_fractureArray,_kamfractureArray);
+
+// update fracture damage effects
 _unit call ACEFUNC(medical_system,updateDamageEffects);

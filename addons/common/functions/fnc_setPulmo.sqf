@@ -17,35 +17,57 @@
 */
 
 params ["_unit", "_type"];
+TRACE_2("setPulmo",_unit,_type);
 
 private _pType = PNUMO_TYPE find toLower _type;
 
-if (_pType == -1) exitWith {false};
+if (_pType == -1) exitWith {
+    ERROR_1("Invalid pneumothorax type %1",_type);
+    false;
+};
+
+//set pain
+[_unit, 0.2] call ACEFUNC(medical_status,adjustPainLevel);
+
+// add breathing sound
+_unit setVariable [QKEGVAR(breathing,pneumothorax), 1, true];
+_unit setVariable [QKEGVAR(breathing,deepPenetratingInjury), true, true];
+_unit setVariable [QKEGVAR(breathing,activeChestSeal), false, true];
+
+// deteriorate after delay
+[_unit, 15] call KEFUNC(breathing,handlePneumothoraxDeterioration);
 
 switch (_pType) do
 {
     // initial
     case 0:
     {
-        _unit setVariable [QKGVAR(pneumothorax), 1, true];
-        _unit setVariable [QKGVAR(deepPenetratingInjury), true, true];
-        _unit setVariable [QKGVAR(activeChestSeal), false, true];
+        //set pain
+        [_unit, 0.2] call ACEFUNC(medical_status,adjustPainLevel);
 
-        [_unit, 15] call KEFUNC(breathing,handlePneumothoraxDeterioration);
+        // add breathing sound
+        _unit setVariable [QKEGVAR(breathing,pneumothorax), 1, true];
+        _unit setVariable [QKEGVAR(breathing,deepPenetratingInjury), true, true];
+        _unit setVariable [QKEGVAR(breathing,activeChestSeal), false, true];
+
+        // deteriorate after delay
+        [_unit, 0] call KEFUNC(breathing,handlePneumothoraxDeterioration);
     };
     // tension
     case 1:
     {
-        _unit setVariable [QKGVAR(tensionpneumothorax), true, true];
-        _unit setVariable [QKGVAR(pneumothorax), 4, true];
-        _unit setVariable [QKGVAR(deepPenetratingInjury), true, true];
-        _unit setVariable [QKGVAR(activeChestSeal), false, true];
+        _unit setVariable [QKEGVAR(breathing,tensionpneumothorax), true, true];
+        _unit setVariable [QKEGVAR(breathing,pneumothorax), 4, true];
+        _unit setVariable [QKEGVAR(breathing,deepPenetratingInjury), true, true];
+        _unit setVariable [QKEGVAR(breathing,activeChestSeal), false, true];
+
+        [_unit, 0] call KEFUNC(breathing,handlePneumothoraxDeterioration);
     };
     // hemo
     case 2:
     {
-        _unit setVariable [QKGVAR(hemopneumothorax), true, true];
-        _unit setVariable [QKGVAR(pneumothorax), 4, true];
+        _unit setVariable [QKEGVAR(breathing,hemopneumothorax), true, true];
+        _unit setVariable [QKEGVAR(breathing,pneumothorax), 4, true];
 
         [_unit] call KEFUNC(circulation,updateInternalBleeding);
     };
