@@ -9,3 +9,4 @@
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 #define FRACTURE_TYPE ["simple", "compound", "comminuted"]
 #define PNUMO_TYPE ["initial", "tension", "hepo"]
+#define WOUND_TYPE ["explosive", "vehiclecrash", "collision", "grenade", "shell", "bullet", "backblast", "bite"]

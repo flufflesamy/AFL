@@ -21,7 +21,7 @@ params ["_vehName", "_markerName", "_entity"];
 
 private _pos = getMarkerPos[_markerName];
 
-private _mkrVarName = format ["%1_%2", str(ADDON), _markerName];
+private _mkrVarName = format ["%1_%2", ADDON, _markerName];
 private _veh = _entity getVariable [_mkrVarName, nil];
 
 // If vehicle is already spawned, remove it

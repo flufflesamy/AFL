@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=202;
+		nextID=206;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=47;
+		nextID=50;
 	};
 	class Camera
 	{
-		pos[]={6416.2236,14.810093,5455.1768};
-		dir[]={-0.83768898,-0.53562427,-0.10717736};
-		up[]={-0.53130591,0.84445578,-0.067977801};
-		aside[]={-0.12691435,-1.3998942e-07,0.99195963};
+		pos[]={6413.6929,10.522052,5422.3643};
+		dir[]={-0.03011336,-0.20565656,0.97827929};
+		up[]={-0.0063272812,0.97859681,0.2056299};
+		aside[]={0.99963665,-1.4732068e-06,0.030762549};
 	};
 };
 binarizationWanted=0;
@@ -314,6 +314,18 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="ENH_saveLoadout";
 			expression="if (!isMultiplayer || !_value || is3DEN || !hasInterface) exitWith {};        0 spawn        {            waitUntil {sleep 1; !isNull player};            player setVariable ['ENH_savedLoadout', getUnitloadout player];            player addMPEventHandler ['MPRespawn',            {                params ['_unit'];                private _loadout = _unit getVariable ['ENH_savedLoadout', []];                if (_loadout isNotEqualTo []) then {_unit setUnitLoadout _loadout};            }];        };";
 			class Value
@@ -322,18 +334,6 @@ class CustomAttributes
 				{
 					singleType="BOOL";
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
 				};
 			};
 		};
@@ -42763,7 +42763,7 @@ class Mission
 			name="MedicalSim";
 			class Entities
 			{
-				items=5;
+				items=9;
 				class Item0
 				{
 					dataType="Object";
@@ -42832,15 +42832,14 @@ class Mission
 					};
 					id=199;
 					type="Land_Stretcher_01_sand_F";
-					atlOffset=-4.7683716e-07;
 				};
 				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6495.9976,8.2710581,5368.0161};
-						angles[]={0.069885373,5.5157166,0};
+						position[]={6495.9976,8.2710762,5368.0161};
+						angles[]={0.067397334,5.5157166,0.010000871};
 					};
 					side="Empty";
 					flags=4;
@@ -42850,7 +42849,7 @@ class Mission
 					};
 					id=200;
 					type="Land_Stretcher_01_sand_F";
-					atlOffset=-1.7166138e-05;
+					atlOffset=9.5367432e-07;
 				};
 				class Item4
 				{
@@ -42858,7 +42857,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={6494.9976,8.3285589,5367.0161};
-						angles[]={0.067404613,5.5157118,0.010000736};
+						angles[]={0.067397334,5.5157118,0.010000871};
 					};
 					side="Empty";
 					flags=4;
@@ -42900,9 +42899,172 @@ class Mission
 						nAttributes=2;
 					};
 				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6494,9.2210083,5364};
+						angles[]={0,3.9269907,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="fr_medicalConsole_1";
+					};
+					id=202;
+					type="OPTRE_RS_ConsoleCorvette_SysYellow";
+					atlOffset=9.5367432e-07;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExec ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6491.9976,8.5410585,5364.0161};
+						angles[]={0.042475242,5.5157118,0.024996169};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="fr_stretcher_4";
+					};
+					id=203;
+					type="Land_Stretcher_01_sand_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExec ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6492,9.3060074,5362};
+						angles[]={0,3.9269907,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="fr_medicalConsole_2";
+					};
+					id=204;
+					type="OPTRE_RS_ConsoleCorvette_SysYellow";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExec ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item8
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6490,8.5758982,5362.0186};
+						angles[]={0.079830162,5.5157118,6.270689};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="fr_stretcher_5";
+					};
+					id=205;
+					type="Land_Stretcher_01_sand_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectCollision";
+							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExec ['setPhysicsCollisionFlag', 0, _this];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
 			};
 			id=189;
-			atlOffset=-0.0056142807;
+			atlOffset=-0.015780449;
 		};
 	};
 };
