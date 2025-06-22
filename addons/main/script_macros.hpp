@@ -15,8 +15,10 @@
 #define ACEFUNC(var1,var2) TRIPLES(DOUBLES(ace,var1),fnc,var2)
 #define ACEVAR(var) DOUBLES(ace,var)
 #define ACEEVAR(var1,var2) TRIPLES(ace,var1,var2)
-#define ACEGVAR(var1) TRIPLES(ace,medical,var1)
-#define QACEGVAR(var1) QUOTE(ACEGVAR(var1))
+#define QACEEVAR(var1,var2) QUOTE(ACEEVAR(var1,var2))
+// #define ACEGVAR(var1) TRIPLES(ace,medical,var1)
+#define ACEGVAR(var1,var2) ACEEVAR(var1,var2)
+#define QACEGVAR(var1,var2) QUOTE(ACEGVAR(var1,var2))
 
 // KAM functions
 #define KFUNC(var) TRIPLES(kat,fnc,var)

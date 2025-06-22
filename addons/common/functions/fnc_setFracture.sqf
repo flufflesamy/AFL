@@ -18,6 +18,7 @@
 */
 
 params ["_unit", "_bodyPart", "_fracType"];
+TRACE_3("setFracture",_unit,_bodyPart,_fracType);
 
 // set body part to fractured
 private _fractureArray = [0,0,0,0,0,0];
@@ -31,7 +32,10 @@ _kamfractureArray set [_part, _type];
 
 // set fracture variables for unit
 _unit setVariable [QKGVAR(fractures), _kamfractureArray, true];
-_unit setVariable [QACEGVAR(fractures), _fractureArray, true];
+_unit setVariable [QACEGVAR(medical,fractures), _fractureArray, true];
+
+// play fracture sound
+[QACEGVAR(medical,fracture), [_unit, _part], _unit] call CFUNC(targetEvent);
 
 // update damage effects
 _unit call ACEFUNC(medical_system,updateDamageEffects);

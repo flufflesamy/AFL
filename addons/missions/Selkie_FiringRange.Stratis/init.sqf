@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 
-// Initalize vehicle console 
+// Initalize vehicle console
 fr_vehicleConsole addAction [
     "Spawn Wraith Close",
     {
@@ -18,7 +18,7 @@ fr_vehicleConsole addAction [
     ""
 ];
 fr_vehicleConsole addAction [
-    "Spawn Wraith Medium", 
+    "Spawn Wraith Medium",
     {
         ["OPTRE_FC_Wraith_Tank", "mkrVehMed", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
     },
@@ -34,7 +34,7 @@ fr_vehicleConsole addAction [
     ""
 ];
 fr_vehicleConsole addAction [
-    "Spawn Wraith Medium-Far", 
+    "Spawn Wraith Medium-Far",
     {
         ["OPTRE_FC_Wraith_Tank", "mkrVehMedFar", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
     },
@@ -50,7 +50,7 @@ fr_vehicleConsole addAction [
     ""
 ];
 fr_vehicleConsole addAction [
-    "Spawn Wraith Far", 
+    "Spawn Wraith Far",
     {
         ["OPTRE_FC_Wraith_Tank", "mkrVehFar", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
     },
@@ -69,5 +69,5 @@ fr_vehicleConsole addAction [
 // Initialize medical console
 
 fr_medicalConsole addAction [
-    
+
 ];

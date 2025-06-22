@@ -49,7 +49,7 @@ switch (_simType) do
 {
 	case 0: // simple
 	{
-		
+
 	};
 	case 1: // fracture
 	{

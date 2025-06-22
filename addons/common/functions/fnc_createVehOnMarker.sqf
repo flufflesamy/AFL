@@ -9,6 +9,7 @@
 		0: Name of Vehicle <STRING>
 		1: Name of Marker <STRING>
 		2: Entity to store variable in <OBJECT>
+		3: Caller (Optional, default nil) <OBJECT>
 
 	Returns:
 		0: Vehicle <OBJECT>
@@ -17,7 +18,8 @@
 		<example>
 */
 
-params ["_vehName", "_markerName", "_entity"];
+params ["_vehName", "_markerName", "_entity", ["_caller", nil]];
+TRACE_3("createVehOnMarker",_vehName,_markerName,_entity);
 
 private _pos = getMarkerPos[_markerName];
 
@@ -29,24 +31,36 @@ if (!isNil _veh) then
 {
 	deleteVehicle _veh;
 	_entity setVariable [_mkrVarName, nil, true];
+	TRACE_2("_veh exists, deleting old vehicle",_veh,_entity);
 };
 
 _veh = createVehicle[_vehName, _pos, [], 0, ""];
 _veh setVariable ["BIS_enableRandomization", false];
-hint format ["Spawned %1 at %2!", _vehName, _markerName];
+
+if (_caller == player) then
+{
+	hint format ["Spawned %1 at %2!", _vehName, _markerName];
+};
+
 
 // sets variable in console for name of marker
 _entity setVariable [_mkrVarName, _veh, true];
 
 private _id = [_veh, "Dammaged", {
 	params ["_unit", "_hitSelection", "_damage", "_hitPartIndex", "_hitPoint", "_shooter", "_projectile"];
-	thisArgs params ["_mkrVarName", "_entity"];
+	thisArgs params ["_mkrVarName", "_entity", "_caller"];
 
-	hint format ["Dealt %1 damage to %2!", _damage, _hitPoint];
+	if (_caller == player) then
+	{
+		hint format ["Dealt %1 damage to %2!", _damage, _hitPoint];
+	};
 
 	if (_unit call FUNC(isDestroyed)) then
 	{
-		hint "Vehicle Destroyed!";
+		if (caller == player) then{
+			hint "Vehicle Destroyed!";
+		};
+
 		[{
 			params ["_unit", "_thisID", "_mkrVarName"];
 			deleteVehicle _unit select 0;
@@ -54,6 +68,6 @@ private _id = [_veh, "Dammaged", {
 			_unit removeEventHandler ["Dammaged", _thisID];
 		}, [_unit, _thisID, _mkrVarName, _entity], 5] call CFUNC(waitAndExecute);
 	};
-}, [_mkrVarName, _entity]] call CFUNC(addBISEventHandler);
+}, [_mkrVarName, _entity, _caller]] call CFUNC(addBISEventHandler);
 
 _veh // Return
