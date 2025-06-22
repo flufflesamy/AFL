@@ -26,17 +26,6 @@ if (_pType == -1) exitWith {
     false;
 };
 
-//set pain
-[_unit, 0.2] call ACEFUNC(medical_status,adjustPainLevel);
-
-// add breathing sound
-_unit setVariable [QKEGVAR(breathing,pneumothorax), 1, true];
-_unit setVariable [QKEGVAR(breathing,deepPenetratingInjury), true, true];
-_unit setVariable [QKEGVAR(breathing,activeChestSeal), false, true];
-
-// deteriorate after delay
-[_unit, 15] call KEFUNC(breathing,handlePneumothoraxDeterioration);
-
 switch (_pType) do
 {
     // initial
@@ -72,6 +61,3 @@ switch (_pType) do
         [_unit] call KEFUNC(circulation,updateInternalBleeding);
     };
 };
-
-// update damage effects
-_unit call ACEFUNC(medical_system,updateDamageEffects);
