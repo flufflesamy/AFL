@@ -12,6 +12,7 @@
 // AFL macros
 #define FRACTURE_TYPE ["none", "simple", "compound", "comminuted"]
 #define PNUMO_TYPE ["initial", "tension", "hepo"]
+#define ARREST_TYPE ["none", "asystole", "pea", "vf", "vt"]
 
 // CBA xeh PREP override
 #ifdef DISABLE_COMPILE_CACHE
