@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=68;
+		nextID=74;
 	};
 	class Camera
 	{
-		pos[]={6402.0347,23.121414,5459.9834};
-		dir[]={-0.13725001,-0.43515348,0.88983589};
-		up[]={-0.066334397,0.90035617,0.43006846};
-		aside[]={0.98831528,-5.3783879e-08,0.15243979};
+		pos[]={6494.6836,10.272309,5373.4956};
+		dir[]={0.81231147,-0.2777445,-0.51284331};
+		up[]={0.23485544,0.96065503,-0.14827323};
+		aside[]={-0.53384757,0,-0.84558094};
 	};
 };
 binarizationWanted=0;
@@ -47,6 +47,7 @@ addons[]=
 	"14th_rebalance_mod",
 	"OPTRE_Weapons_Ammo",
 	"OPTRE_Weapons_Rockets",
+	"dev_flood_rocket",
 	"OPTRE_ACE_Compat",
 	"OPTRE_Weapons_M6G",
 	"14th_aux_mod",
@@ -80,7 +81,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=32;
+		items=33;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -154,136 +155,141 @@ class AddonsMetaData
 		};
 		class Item11
 		{
+			className="dev_flood_rocket";
+			name="dev_flood_rocket";
+		};
+		class Item12
+		{
 			className="OPTRE_ACE_Compat";
 			name="OPTRE_ACE_Compat";
 			author="Article 2 Studios";
 		};
-		class Item12
+		class Item13
 		{
 			className="OPTRE_Weapons_Pistol";
 			name="OPTRE_Weapons_M6G";
 			author="Article 2 Studios";
 		};
-		class Item13
+		class Item14
 		{
 			className="14th_aux_mod";
 			name="14th_aux_mod";
 			author="Stellarynn";
 		};
-		class Item14
+		class Item15
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item15
+		class Item16
 		{
 			className="kat_watch";
 			name="KAT - ADV Medical: Watch";
 			author="Mazinski";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item16
+		class Item17
 		{
 			className="tfar_handhelds";
 			name="tfar_handhelds";
 			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
 		};
-		class Item17
+		class Item18
 		{
 			className="OPTRE_UNSC_Units_NVGs";
 			name="OPTRE_UNSC_Units_NVGs";
 		};
-		class Item18
+		class Item19
 		{
 			className="Misriah_Armory_Weapons";
 			name="Misriah_Armory_Weapons";
 			author="Misriah Armory Dev Team";
 		};
-		class Item19
+		class Item20
 		{
 			className="kat_pharma";
 			name="KAT - ADV Medical: Pharma";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item20
+		class Item21
 		{
 			className="ace_attach";
 			name="ACE3 - Attach";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item21
+		class Item22
 		{
 			className="cTab";
 			name="cTab";
 		};
-		class Item22
+		class Item23
 		{
 			className="ace_medical_treatment";
 			name="ACE3 - Medical Treatment";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item23
+		class Item24
 		{
 			className="kat_airway";
 			name="KAT - ADV Medical: Airway";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item24
+		class Item25
 		{
 			className="kat_breathing";
 			name="KAT - ADV Medical: Breathing";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item25
+		class Item26
 		{
 			className="kat_surgery";
 			name="KAT - ADV Medical: Surgery";
 			author="Mazinski";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item26
+		class Item27
 		{
 			className="kat_circulation";
 			name="KAT - ADV Medical: Circulation";
 			author="Katalam";
 			url="https://github.com/KAT-Advanced-Medical/KAM";
 		};
-		class Item27
+		class Item28
 		{
 			className="A3_Weapons_F_Exp";
 			name="Arma 3 Apex - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item28
+		class Item29
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item30
 		{
 			className="ace_irlight";
 			name="ACE3 - IR Lights";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item30
+		class Item31
 		{
 			className="ace_grenades";
 			name="ACE3 - Grenades";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item31
+		class Item32
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
@@ -23530,7 +23536,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=1.25;
+														value=2;
 													};
 												};
 												class Item1
@@ -23557,7 +23563,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=1;
+														value=0;
 													};
 												};
 												class Item1
@@ -23746,7 +23752,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="BOOL";
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
@@ -26149,7 +26155,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=2;
+														value=0;
 													};
 												};
 												class Item1
@@ -26176,7 +26182,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
@@ -35383,7 +35389,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="BOOL";
-														value=1;
+														value=0;
 													};
 												};
 												class Item1
@@ -42777,6 +42783,7 @@ class Mission
 					class Attributes
 					{
 						name="fr_medicalConsole";
+						description="Test";
 					};
 					id=178;
 					type="OPTRE_RS_ConsoleCorvette_SysYellow";

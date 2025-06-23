@@ -13,7 +13,7 @@
 		Nothing
 
 	Examples:
-		[player, "VF"] call afl_common_setCardiacArrest;
+		[player, "VF"] call afl_common_fnc_setCardiacArrest;
 */
 
 params[_unit, _type];

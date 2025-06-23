@@ -1,11 +1,8 @@
 [default]
-presets = [
-    "Selkie_2025_06_08.html",
-]
-mission = "addons\\missions\\Selkie_FiringRange.Stratis"
-
-[adc]
-extends = "default"
 workshop = [
     "3499977893",
 ]
+presets = [
+    "Selkie_2025_06_23.html",
+]
+mission = "addons\\missions\\Selkie_FiringRange.Stratis"

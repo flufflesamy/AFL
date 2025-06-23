@@ -68,6 +68,19 @@ fr_vehicleConsole addAction [
 
 // Initialize medical console
 
-// fr_medicalConsole addAction [
-
-// ];
+fr_medicalConsole addAction [
+    "Spawn patient",
+    {
+        [fr_stretcher_0, "simple", []] call EFUNC(common,spawnPatient);
+    },
+    nil,
+    1.5,
+    true,
+    true,
+    "",
+    "true",
+    5,
+    false,
+    "",
+    ""
+];

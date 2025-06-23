@@ -15,7 +15,7 @@
 		Nothing
 
 	Examples:
-		[player, "true", "true", 90] call afl_common_setAirway;
+		[player, "true", "true", 90] call afl_common_fnc_setAirway;
 */
 
 params["_unit", "_occluded", "_obstructed", "_spo2"];
@@ -23,6 +23,8 @@ params["_unit", "_occluded", "_obstructed", "_spo2"];
 _unit setVariable [QKEGVAR(airway,occluded), _occluded, true];
 _unit setVariable [QKEGVAR(airway,obstructed), _obstructed, true];
 
-private _bloodGas = GET_BLOOD_GAS(_unit);
-_bloodGas set [1, _spo2]
+private _bloodGas = _unit getVariable [QKEGVAR(circulation,bloodGas), [40,90,0.96,0.24,7.4,37]];
+
+_bloodGas set [1, _spo2];
+
 _unit setVariable [QKEGVAR(circulation,bloodGas), _bloodGas, true];
