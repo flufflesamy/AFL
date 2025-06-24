@@ -11,7 +11,9 @@ class CfgPatches {
             "cba_main",
             "ace_main",
             "ace_medical",
+            "ace_medical_damage",
             "kat_main",
+            "kat_vitals",
             "kat_circulation",
             "kat_breathing",
             "kat_surgery"
@@ -22,3 +24,4 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "ACE_Medical_Injuries.hpp"

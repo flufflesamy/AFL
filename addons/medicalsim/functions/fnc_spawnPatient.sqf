@@ -15,14 +15,14 @@
 		0: Patient Unit <OBJECT>
 
 	Examples:
-		[player, "LeftLeg", "Simple"] call afl_common_fnc_spawnPatient;
+		fr_stretcher_0 call afl_common_fnc_spawnPatient;
 */
 
 params ["_entity", "_type", "_injuryArgs"];
 
 private _simType = MEDSIM_TYPE find toLower _type;
 private _entityPos = getPos(_entity);
-private _patient = _entity getVariable [QGVAR(patient), nil];
+private _patient = _entity getVariable [QGVAR(simPatient), nil];
 
 if (_simType == -1) exitWith {nil};
 
@@ -30,7 +30,7 @@ if (_simType == -1) exitWith {nil};
 if (!isNil "_patient") then
 {
 	deleteVehicle _patient;
-	_entity setVariable [QGVAR(patient), nil, true];
+	_entity setVariable [QGVAR(simPatient), nil, true];
 };
 
 // spawn patient
@@ -44,6 +44,6 @@ removeAllAssignedItems _patient;
 _patient disableAI "PATH";
 _patient disableAI "RADIOPROTOCOL";
 
-_entity setVariable [QGVAR(patient), _patient, true];
+_entity setVariable [QGVAR(simPatient), _patient, true];
 
 _patient;

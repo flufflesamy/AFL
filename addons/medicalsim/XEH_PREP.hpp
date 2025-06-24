@@ -5,3 +5,4 @@ PREP(setAirway);
 PREP(setCardiacArrest);
 PREP(setHypothermia);
 PREP(setWounds);
+PREP(clearPatient);

@@ -68,10 +68,63 @@ fr_vehicleConsole addAction [
 
 // Initialize medical console
 
+fr_medicalConsole setVariable ["afl_test", "testtest"];
+
 fr_medicalConsole addAction [
     "Spawn patient",
     {
         [fr_stretcher_0, "simple", []] call EFUNC(medicalsim,spawnPatient);
+    },
+    nil,
+    1.5,
+    true,
+    true,
+    "",
+    "true",
+    5,
+    false,
+    "",
+    ""
+];
+
+fr_medicalConsole addAction [
+    "Clear patient",
+    {
+        [fr_stretcher_0] call EFUNC(medicalsim,clearPatient);
+    },
+    nil,
+    1.5,
+    true,
+    true,
+    "",
+    "true",
+    5,
+    false,
+    "",
+    ""
+];
+
+fr_medicalConsole addAction [
+    "Give patient pneumo (tension)",
+    {
+        [(fr_stretcher_0 getVariable QEGVAR(medicalsim,simPatient)), "tension"] call EFUNC(medicalsim,setPneumothorax);
+    },
+    nil,
+    1.5,
+    true,
+    true,
+    "",
+    "true",
+    5,
+    false,
+    "",
+    ""
+];
+
+fr_medicalConsole addAction [
+    "Give patient pneumo (tamponade)",
+    {
+        [(fr_stretcher_0 getVariable QEGVAR(medicalsim,simPatient)), "initial", 1, true, true] call EFUNC(medicalsim,setPneumothorax);
     },
     nil,
     1.5,
