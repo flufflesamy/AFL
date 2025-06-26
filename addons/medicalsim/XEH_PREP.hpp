@@ -6,3 +6,5 @@ PREP(setCardiacArrest);
 PREP(setHypothermia);
 PREP(setWounds);
 PREP(clearPatient);
+PREP(addSimMenu);
+PREP(openSimMenu);

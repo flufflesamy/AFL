@@ -60,7 +60,8 @@ if (_pType == 0) then {
     [_unit, 0.5] call ACEFUNC(medical_status,adjustPainLevel);
 };
 
-[_unit] call KEFUNC(circulation,updateInternalBleeding);
-
 // create tamponade
-if (_tam == true) then {_unit call KEFUNC(breathing,createTamponade);};
+if (_tam) then {_unit call KEFUNC(breathing,createTamponade);};
+
+[_unit] call KEFUNC(breathing,handleBreathing);
+[_unit] call KEFUNC(circulation,updateInternalBleeding);

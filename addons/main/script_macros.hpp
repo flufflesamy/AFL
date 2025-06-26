@@ -2,6 +2,17 @@
 #include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
 #include "script_debug.hpp"
 
+// UI
+#include "\a3\ui_f\hpp\defineResincl.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
+#include "\a3\ui_f\hpp\defineCommonGrids.inc"
+#include "\a3\ui_f\hpp\defineCommonColors.inc"
+
+#define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
+#define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)
+#define POS_W(N) ((N) * GUI_GRID_W)
+#define POS_H(N) ((N) * GUI_GRID_H)
+
 // #define AFUNC(var) TRIPLES(ADDON,fnc,var)
 // #define AVAR(v) DOUBLES(ADDON,v)
 // #define QAVAR(v) QUOTE(AVAR(v))

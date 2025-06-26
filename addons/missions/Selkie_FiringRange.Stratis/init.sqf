@@ -68,7 +68,7 @@ fr_vehicleConsole addAction [
 
 // Initialize medical console
 
-fr_medicalConsole setVariable ["afl_test", "testtest"];
+fr_medicalConsole call EFUNC(medicalsim,addSimMenu);
 
 fr_medicalConsole addAction [
     "Spawn patient",

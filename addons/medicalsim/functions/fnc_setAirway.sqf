@@ -28,3 +28,5 @@ private _bloodGas = _unit getVariable [QKEGVAR(circulation,bloodGas), [40,90,0.9
 _bloodGas set [1, _spo2];
 
 _unit setVariable [QKEGVAR(circulation,bloodGas), _bloodGas, true];
+
+[_unit] call KEFUNC(breathing,handleBreathing);
