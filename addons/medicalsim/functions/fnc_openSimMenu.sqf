@@ -3,7 +3,7 @@
 params ["_entity"];
 TRACE_1("openSimMenu",_entity);
 
-// if (!(isNull (findDisplay IDD_MEDSIM_MENU))) exitWith {closeDialog 2;};
+if (!(isNull (findDisplay IDD_MEDSIM_MENU))) exitWith {closeDialog 2;};
 
 GVAR(menuTarget) = _entity;
 

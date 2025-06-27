@@ -8,3 +8,7 @@ PREP(setWounds);
 PREP(clearPatient);
 PREP(addSimMenu);
 PREP(openSimMenu);
+PREP(ui_onMenuOpen);
+PREP(ui_spawnPatient);
+PREP(ui_clearPatient);
+PREP(ui_clearAllPatients);
