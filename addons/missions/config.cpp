@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"afl_main", "cba_main", "afl_main", "afl_medicalsim", "afl_common"};
+        requiredAddons[] = {"cba_main", "afl_main", "afl_medicalsim", "afl_misc"};
         author = "flufflesamy";
         VERSION_CONFIG;
     };

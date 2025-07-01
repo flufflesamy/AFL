@@ -8,12 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "afl_main",
-            "cba_main",
-            "ace_main",
-            "ace_medical",
-            "kat_main",
-            "kat_circulation",
-            "kat_breathing"
+            "cba_main"
         };
         author = "flufflesamy";
         VERSION_CONFIG;
