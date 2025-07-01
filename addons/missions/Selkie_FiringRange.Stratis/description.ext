@@ -5,5 +5,11 @@
  */
 author			= "flufflesamy";
 onLoadName		= "Selkie Firing Range";
-onLoadMission	= "";
-loadScreen		= "";
+overviewText    = "Selkie Platoon firing range. Includes a full-featured medical simulator, vehicle spawner and targets.";
+onLoadMission   = "Selkie Platoon firing range. Includes a full-featured medical simulator, vehicle spawner and targets.";
+
+class Header {
+    gameType = "Coop";
+    minPlayers = 1;
+    maxPlayers = 64;
+};

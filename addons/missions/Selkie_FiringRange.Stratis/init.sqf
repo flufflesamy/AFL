@@ -1,4 +1,4 @@
-#include "..\script_component.hpp"
+#include "\z\afl\addons\missions\script_component.hpp"
 
 // Initalize vehicle console
 fr_vehicleConsole addAction [

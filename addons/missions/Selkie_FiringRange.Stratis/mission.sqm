@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=209;
+		nextID=212;
 	};
 	class Camera
 	{
-		pos[]={6409.0146,27.599531,5411.8618};
-		dir[]={0.59785843,-0.65158075,-0.46719083};
-		up[]={0.51347822,0.75854188,-0.40125909};
-		aside[]={-0.61581433,1.1514639e-06,-0.78803813};
+		pos[]={6481.1484,32.394371,5371.1318};
+		dir[]={0.32359383,-0.83898646,0.43753293};
+		up[]={0.49888968,0.54413807,0.67455322};
+		aside[]={0.80401993,-4.0431041e-07,-0.59463984};
 	};
 };
 binarizationWanted=0;
@@ -41,6 +41,7 @@ addons[]=
 	"A3_Ui_F",
 	"A3_Modules_F_Curator_Curator",
 	"OPTRE_UNSC_Units_Army",
+	"A3_Weapons_F",
 	"MA_Armor",
 	"OPTRE_BW_DoorConsole",
 	"A3_Props_F_Orange_Humanitarian_Camps",
@@ -51,7 +52,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=12;
+		items=13;
 		class Item0
 		{
 			className="A3_Structures_F";
@@ -102,28 +103,35 @@ class AddonsMetaData
 		};
 		class Item7
 		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item8
+		{
 			className="MA_Armor";
 			name="MA_Armor";
 			author="Misriah Armory";
 		};
-		class Item8
+		class Item9
 		{
 			className="OPTRE_BW_Buildings";
 			name="OPTRE_BW_DoorConsole";
 		};
-		class Item9
+		class Item10
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item10
+		class Item11
 		{
 			className="OPTRE_Corvette";
 			name="OPTRE_Corvette_Interior";
 		};
-		class Item11
+		class Item12
 		{
 			className="A3_Structures_F_Globe";
 			name="O&T Expansion Eden - Buildings and Structures";
@@ -48374,6 +48382,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48444,6 +48455,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48513,6 +48527,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48556,6 +48573,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48599,6 +48619,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48642,6 +48665,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48685,6 +48711,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48728,6 +48757,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48771,6 +48803,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48903,6 +48938,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -48986,6 +49024,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49156,6 +49197,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49240,6 +49284,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49323,6 +49370,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49406,6 +49456,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49489,6 +49542,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49572,6 +49628,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49742,6 +49801,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49826,6 +49888,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49910,6 +49975,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -49993,6 +50061,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -50076,6 +50147,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -50159,6 +50233,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -50329,6 +50406,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -50413,6 +50493,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -50497,6 +50580,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -50581,6 +50667,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -50665,6 +50754,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
@@ -50749,6 +50841,9 @@ class Mission
 										typeName="MA_Marine_BDU_ODST_HJ";
 										isBackpack=0;
 									};
+									map="ItemMap";
+									compass="ItemCompass";
+									gps="ItemGPS";
 									headgear="CH252D_Helmet";
 								};
 							};
