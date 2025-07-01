@@ -3,7 +3,7 @@ picture = "logo.paa"; // Picture displayed from the expansions menu. Optimal siz
 logo= "logo.paa";// Logo displayed in the main menu
 logoOver= "logo.paa";// When the mouse is over, in the main menu
 action= "https://github.com/flufflesamy/AFL";// Website URL, that can accessed from the expansions menu
-tooltipOwned = "Selkie Aux Mod";// Tool tip displayed when the mouse is left over, in the main menu
+tooltipOwned = "Amy Functions Library";// Tool tip displayed when the mouse is left over, in the main menu
 
 // Color used for DLC stripes and backgrounds (RGBA)
 dlcColor[] =
@@ -14,6 +14,6 @@ dlcColor[] =
 1
 };
 // Overview text, displayed from the extension menu
-overview = "Trans girls just do it better";
+overview = "Amy Functions Library contains various helpful components, including a medical simulator, a vehicle spawner, and a mission that integrates both. This mod is intended to be used in the Selkie platoon.";
 hideName= 0;// Hide the extension name
 hidePicture= 0;// Hide the extension menu
