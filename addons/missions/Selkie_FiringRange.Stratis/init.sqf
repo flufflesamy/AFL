@@ -68,7 +68,15 @@ fr_vehicleConsole addAction [
 
 // Initialize medical console
 
-[fr_medicalConsole,
-[[fr_stretcher_0, "Stretcher A"],
-[fr_stretcher_1, "Stretcher B"],
-[fr_stretcher_2, "Stretcher C"]]] call EFUNC(medicalsim,addSimMenu);
+private _stretchers = [
+    [fr_stretcher_0, "Stretcher 0"],
+    [fr_stretcher_1, "Stretcher 1"],
+    [fr_stretcher_2, "Stretcher 2"],
+    [fr_stretcher_3, "Stretcher 3"],
+    [fr_stretcher_4, "Stretcher 4"],
+    [fr_stretcher_5, "Stretcher 5"],
+    [fr_stretcher_6, "Stretcher 6"]
+];
+
+[fr_medicalConsole_0, _stretchers] call EFUNC(medicalsim,addSimMenu);
+[fr_medicalConsole_1, _stretchers] call EFUNC(medicalsim,addSimMenu);

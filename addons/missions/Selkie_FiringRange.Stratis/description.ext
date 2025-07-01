@@ -7,5 +7,3 @@ author			= "flufflesamy";
 onLoadName		= "Selkie Firing Range";
 onLoadMission	= "";
 loadScreen		= "";
-
-// #include "configs\CfgSettings.hpp"
