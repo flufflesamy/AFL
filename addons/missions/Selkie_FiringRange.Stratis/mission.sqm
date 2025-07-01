@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=140;
+		nextID=197;
 	};
 	class Camera
 	{
-		pos[]={6481.5552,23.201509,5372.7861};
-		dir[]={-0.19456007,-0.34946322,0.91658264};
-		up[]={-0.072567277,0.93694782,0.34186924};
-		aside[]={0.97825742,6.868504e-08,0.2076515};
+		pos[]={6376.29,23.201509,5456.9146};
+		dir[]={0.6674298,-0.30830741,-0.67786598};
+		up[]={0.21631005,0.9512862,-0.21969205};
+		aside[]={-0.71257472,-8.1257895e-08,-0.7016055};
 	};
 };
 binarizationWanted=0;
@@ -320,18 +320,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="ENH_saveLoadout";
 			expression="if (!isMultiplayer || !_value || is3DEN || !hasInterface) exitWith {};        0 spawn        {            waitUntil {sleep 1; !isNull player};            player setVariable ['ENH_savedLoadout', getUnitloadout player];            player addMPEventHandler ['MPRespawn',            {                params ['_unit'];                private _loadout = _unit getVariable ['ENH_savedLoadout', []];                if (_loadout isNotEqualTo []) then {_unit setUnitLoadout _loadout};            }];        };";
 			class Value
@@ -340,6 +328,18 @@ class CustomAttributes
 				{
 					singleType="BOOL";
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
 				};
 			};
 		};
@@ -23719,7 +23719,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0.0099999998;
+														value=0.013914294;
 													};
 												};
 												class Item1
@@ -23727,7 +23727,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=2;
+														value=1;
 													};
 												};
 											};
@@ -23773,7 +23773,7 @@ class CustomAttributes
 													class data
 													{
 														singleType="SCALAR";
-														value=0;
+														value=2;
 													};
 												};
 												class Item1

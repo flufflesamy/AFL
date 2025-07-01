@@ -20,11 +20,6 @@
 #define ENTVAR(var1) DOUBLES(fr,var1)
 #define QENTVAR(var1) QUOTE(ENTVAR(var1))
 
-// AFL macros
-#define FRACTURE_TYPE ["none", "simple", "compound", "comminuted"]
-#define PNUMO_TYPE ["initial", "tension", "hepo"]
-#define ARREST_TYPE ["none", "asystole", "pea", "vf", "vt"]
-
 // CBA xeh PREP override
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP

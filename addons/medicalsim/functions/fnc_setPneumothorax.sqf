@@ -16,11 +16,11 @@
 		Nothing
 
 	Examples:
-		[player, "tension"] call afl_common_fnc_setPneumothorax;
+		[player, "tension", 4, true, false] call afl_common_fnc_setPneumothorax;
 */
 
 params ["_unit", "_type", ["_strength", 1], ["_det", false], ["_tam", false]];
-TRACE_2("setPulmo",_unit,_type);
+TRACE_5("setPulmo",_unit,_type,_strength,_det,_tam);
 
 private _pType = PNUMO_TYPE find toLower _type;
 
@@ -32,21 +32,17 @@ if (_pType == -1) exitWith {
     ERROR_1("Invalid pneumothorax type %1",_type);
 };
 
-if (_strength < 0 || _strength > 4) exitWith {
+if (_strength < 1 || _strength > 4) exitWith {
     ERROR_1("Invalid pneumothorax %1. Must be between 1-4.",_strength);
 };
 
-_unit setVariable [QKEGVAR(breathing,deepPenetratingInjury), true, true];
-_unit setVariable [QKEGVAR(breathing,activeChestSeal), false, true];
-
-// tension
-if (_pType == 1) then {_unit setVariable [QKEGVAR(breathing,tensionpneumothorax), true, true];};
-
-// hemo
-if (_pType == 2) then {_unit setVariable [QKEGVAR(breathing,hemopneumothorax), true, true];};
+if (_pType > 0) then {
+    _unit setVariable [QKEGVAR(breathing,deepPenetratingInjury), true, true];
+    _unit setVariable [QKEGVAR(breathing,activeChestSeal), false, true];
+};
 
 // Initial
-if (_pType == 0) then {
+if (_pType == 1) then {
     _unit setVariable [QKEGVAR(breathing,pneumothorax), _strength, true];
 
     [_unit, -12 * _strength, -12 * _strength, "ptx_tension", true] call KEFUNC(circulation,updateBloodPressureChange);
@@ -55,6 +51,12 @@ if (_pType == 0) then {
     // deteriorate after delay
     if (_det) then {[_unit, 15] call KEFUNC(breathing,handlePneumothoraxDeterioration);};
 } else { // Tension or Hemo
+    //tension
+    if (_pType == 2) then {_unit setVariable [QKEGVAR(breathing,tensionpneumothorax), true, true];};
+
+    //hemo
+    if (_pType == 3) then {_unit setVariable [QKEGVAR(breathing,hemopneumothorax), true, true];};
+
     _unit setVariable [QKEGVAR(breathing,pneumothorax), 4, true];
     [_unit, -48, -48, "ptx_tension", true] call KEFUNC(circulation,updateBloodPressureChange);
     [_unit, 0.5] call ACEFUNC(medical_status,adjustPainLevel);
@@ -63,5 +65,5 @@ if (_pType == 0) then {
 // create tamponade
 if (_tam) then {_unit call KEFUNC(breathing,createTamponade);};
 
-[_unit] call KEFUNC(breathing,handleBreathing);
-[_unit] call KEFUNC(circulation,updateInternalBleeding);
+_unit call KEFUNC(breathing,handleBreathing);
+_unit call KEFUNC(circulation,updateInternalBleeding);

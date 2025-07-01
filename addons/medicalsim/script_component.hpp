@@ -4,6 +4,11 @@
 #include "\z\afl\addons\main\script_mod.hpp"
 #include "\z\afl\addons\main\script_macros.hpp"
 
+// AFL macros
+#define FRACTURE_TYPE ["none", "simple", "compound", "comminuted"]
+#define PNUMO_TYPE ["none", "initial", "tension", "hemo"]
+#define ARREST_TYPE ["none", "asystole", "pea", "vf", "vt"]
+
 // idd/idc definitions for UI
 #define IDD_MEDSIM_MENU                 324467
 
@@ -15,7 +20,7 @@
 #define IDC_WOUNDS_CG                   11502
 #define IDC_CARDIAC_CG                  11503
 #define IDC_FRACTURES_CG                11504
-#define IDC_PNEUMOTHORAX_CG             11505
+#define IDC_PTX_CG                      11505
 #define IDC_AIRWAY_CG                   11506
 
 #define IDC_STRETCHERS_LISTBOX          1501
@@ -27,8 +32,14 @@
 #define IDC_WOUNDS_LEFTLEG_SLIDER       14305
 #define IDC_WOUNDS_RIGHTLEG_SLIDER      14306
 #define IDC_AIRWAY_PAO2_SLIDER          14307
+#define IDC_PTX_STRENGTH_SLIDER         14308
 
 #define IDC_CARDIAC_COMBO               1401
+#define IDC_PTX_TYPE_COMBO              1402
+#define IDC_FRACTURES_LEFTARM_COMBO     1403
+#define IDC_FRACTURES_RIGHTARM_COMBO    1404
+#define IDC_FRACTURES_LEFTLEG_COMBO     1405
+#define IDC_FRACTURES_RIGHTLEG_COMBO    1406
 
 #define IDC_WOUNDS_HEAD_VAL             1201
 #define IDC_WOUNDS_TORSO_VAL            1202
@@ -36,9 +47,24 @@
 #define IDC_WOUNDS_RIGHTARM_VAL         1204
 #define IDC_WOUNDS_LEFTLEG_VAL          1205
 #define IDC_WOUNDS_RIGHTLEG_VAL         1206
+#define IDC_AIRWAY_PAO2_VAL             1207
+#define IDC_PTX_STRENGTH_VAL            1208
 
 #define IDC_AIRWAY_OCCLUDED_CHECKBOX    17701
 #define IDC_AIRWAY_OBSTRUCTED_CHECKBOX  17702
+#define IDC_PTX_DETERIORATE_CHECKBOX    17703
+#define IDC_PTX_TAMPONADE_CHECKBOX      17704
+
+#define MEDSIM_SLIDER_ARRAY [\
+[IDC_WOUNDS_HEAD_SLIDER, IDC_WOUNDS_HEAD_VAL], \
+[IDC_WOUNDS_TORSO_SLIDER, IDC_WOUNDS_TORSO_VAL], \
+[IDC_WOUNDS_LEFTARM_SLIDER, IDC_WOUNDS_LEFTARM_VAL], \
+[IDC_WOUNDS_RIGHTARM_SLIDER, IDC_WOUNDS_RIGHTARM_VAL], \
+[IDC_WOUNDS_LEFTLEG_SLIDER, IDC_WOUNDS_LEFTLEG_VAL], \
+[IDC_WOUNDS_RIGHTLEG_SLIDER, IDC_WOUNDS_RIGHTLEG_VAL], \
+[IDC_AIRWAY_PAO2_SLIDER, IDC_AIRWAY_PAO2_VAL], \
+[IDC_PTX_STRENGTH_SLIDER, IDC_PTX_STRENGTH_VAL]\
+]
 
 // UI dimensions
 #define MEDSIM_BACKGROUND_UW            40

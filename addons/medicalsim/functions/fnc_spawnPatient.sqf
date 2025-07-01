@@ -18,9 +18,9 @@
 		fr_stretcher_0 call afl_common_fnc_spawnPatient;
 */
 
-params ["_entity", "_type", "_injuryArgs"];
+params ["_entity"];
+TRACE_1("spawnPatient",_entity);
 
-private _simType = MEDSIM_TYPE find toLower _type;
 private _entityPos = getPos(_entity);
 private _patient = _entity getVariable [QGVAR(simPatient), nil];
 

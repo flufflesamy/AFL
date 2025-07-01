@@ -4,7 +4,7 @@
 fr_vehicleConsole addAction [
     "Spawn Wraith Close",
     {
-        ["OPTRE_FC_Wraith_Tank", "mkrVehClose", fr_vehicleConsole] call EFUNC(medicalsim,createVehOnMarker);
+        ["OPTRE_FC_Wraith_Tank", "mkrVehClose", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
     },
     nil,
     1.5,
@@ -20,7 +20,7 @@ fr_vehicleConsole addAction [
 fr_vehicleConsole addAction [
     "Spawn Wraith Medium",
     {
-        ["OPTRE_FC_Wraith_Tank", "mkrVehMed", fr_vehicleConsole] call EFUNC(medicalsim,createVehOnMarker);
+        ["OPTRE_FC_Wraith_Tank", "mkrVehMed", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
     },
     nil,
     1.5,
@@ -36,7 +36,7 @@ fr_vehicleConsole addAction [
 fr_vehicleConsole addAction [
     "Spawn Wraith Medium-Far",
     {
-        ["OPTRE_FC_Wraith_Tank", "mkrVehMedFar", fr_vehicleConsole] call EFUNC(medicalsim,createVehOnMarker);
+        ["OPTRE_FC_Wraith_Tank", "mkrVehMedFar", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
     },
     nil,
     1.5,
@@ -52,7 +52,7 @@ fr_vehicleConsole addAction [
 fr_vehicleConsole addAction [
     "Spawn Wraith Far",
     {
-        ["OPTRE_FC_Wraith_Tank", "mkrVehFar", fr_vehicleConsole] call EFUNC(medicalsim,createVehOnMarker);
+        ["OPTRE_FC_Wraith_Tank", "mkrVehFar", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
     },
     nil,
     1.5,
@@ -68,72 +68,7 @@ fr_vehicleConsole addAction [
 
 // Initialize medical console
 
-fr_medicalConsole call EFUNC(medicalsim,addSimMenu);
-
-fr_medicalConsole addAction [
-    "Spawn patient",
-    {
-        [fr_stretcher_0, "simple", []] call EFUNC(medicalsim,spawnPatient);
-    },
-    nil,
-    1.5,
-    true,
-    true,
-    "",
-    "true",
-    5,
-    false,
-    "",
-    ""
-];
-
-fr_medicalConsole addAction [
-    "Clear patient",
-    {
-        [fr_stretcher_0] call EFUNC(medicalsim,clearPatient);
-    },
-    nil,
-    1.5,
-    true,
-    true,
-    "",
-    "true",
-    5,
-    false,
-    "",
-    ""
-];
-
-fr_medicalConsole addAction [
-    "Give patient pneumo (tension)",
-    {
-        [(fr_stretcher_0 getVariable QEGVAR(medicalsim,simPatient)), "tension"] call EFUNC(medicalsim,setPneumothorax);
-    },
-    nil,
-    1.5,
-    true,
-    true,
-    "",
-    "true",
-    5,
-    false,
-    "",
-    ""
-];
-
-fr_medicalConsole addAction [
-    "Give patient pneumo (tamponade)",
-    {
-        [(fr_stretcher_0 getVariable QEGVAR(medicalsim,simPatient)), "initial", 1, true, true] call EFUNC(medicalsim,setPneumothorax);
-    },
-    nil,
-    1.5,
-    true,
-    true,
-    "",
-    "true",
-    5,
-    false,
-    "",
-    ""
-];
+[fr_medicalConsole,
+[[fr_stretcher_0, "Stretcher A"],
+[fr_stretcher_1, "Stretcher B"],
+[fr_stretcher_2, "Stretcher C"]]] call EFUNC(medicalsim,addSimMenu);

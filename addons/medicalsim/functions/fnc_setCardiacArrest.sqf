@@ -17,6 +17,7 @@
 */
 
 params["_unit", "_type"];
+TRACE_2("setCardiacArrest",_unit,_type);
 
 private _aType = ARREST_TYPE find toLower _type;
 private _currentState = _unit getVariable [QKEGVAR(circulation,cardiacArrestType), 0];

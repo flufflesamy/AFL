@@ -7,19 +7,19 @@
 
 	Parameter(s):
 		0: Eden entity <OBJECT>
-        1: Stretchers to spawn patients on <OBJECT>[]
+        1: Stretchers to spawn patients on [[<OBJECT>, <STRING>]]
 
 	Returns:
 		Nothing
 
 	Examples:
-		[fr_medicalConsole, [fr_stretcher_0, fr_stretcher_1] call afl_medicalsim_fnc_addSimMenu;
+		[fr_medicalConsole, [[fr_stretcher_0, "Stretcher A"], [fr_stretcher_1, "Stretcher B"]] call afl_medicalsim_fnc_addSimMenu;
 */
 
 params ["_entity", "_stretchers"];
-TRACE_1("addSimMenu",_entity);
+TRACE_2("addSimMenu",_entity,_stretchers);
 
-_entity setVariable [QGVAR(simStretchers), _stretchers];
+_entity setVariable [QGVAR(simStretchers), _stretchers, true];
 
 _entity addAction [
     "Open Simulator Menu",

@@ -17,5 +17,6 @@
 */
 
 params ["_unit", "_allDamages"];
+TRACE_2("setWounds",_unit,_allDamages);
 
 [_unit, _allDamages, "testdamage"] call ACEFUNC(medical_damage,woundsHandlerBase);

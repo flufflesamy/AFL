@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
 	Author: Amy
 
@@ -15,6 +16,7 @@
 */
 
 params ["_veh"];
+TRACE_1("isDestroyed",_veh);
 
 _destroyed = false;
 _hitPoints = ["hitHull", "hitBody"];
