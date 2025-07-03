@@ -21,6 +21,7 @@ TRACE_1("Stretcher: %1",_stretcher);
 // unfocus button
 ctrlSetFocus displayCtrl IDC_STRETCHERS_LISTBOX;
 false call FUNC(ui_updateClearAllButton);
+false call FUNC(ui_updateSpawnAllButton);
 
 // spawn patient
 private _patient = _stretcher call FUNC(spawnPatient);

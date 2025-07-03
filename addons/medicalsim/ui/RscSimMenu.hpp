@@ -342,10 +342,56 @@ class GVAR(RscSimMenu) {
             };
         };
 
+        class PresetsGroup : RscControlsGroupNoScrollbars {
+            idc = IDC_PRESETS_CG;
+            x = QUOTE(MEDSIM_CG_RIGHT_X);
+            y = QUOTE(POS_Y(1.2));
+            w = QUOTE(MEDSIM_CG_W);
+            h = QUOTE(POS_H(7));
+
+            class Controls {
+                class Header : GVAR(RscHeaderText) {
+                    text = "Presets";
+                };
+
+                class PresetListBox : RscListBox {
+                    idc = IDC_PRESETS_LISTBOX;
+                    x = QUOTE(MEDSIM_CG_POS_W(0.2));
+                    y = QUOTE(POS_H(1.1));
+                    h = QUOTE(POS_H(4.8));
+                    w = QUOTE(MEDSIM_CG_POS_W(19.3));
+
+                    colorBackground[] = {0,0,0,0.65};
+                };
+
+                class PresetSpawnButton : RscButtonMenu {
+                    idc = IDC_PRESET_SPAWN_BUTTON;
+                    text = "SPAWN";
+                    x = QUOTE(MEDSIM_CG_POS_W(14.5));
+                    y = QUOTE(POS_H(6));
+                    h = QUOTE(POS_H(1));
+                    w = QUOTE(MEDSIM_CG_POS_W(5));
+
+                    onButtonClick = QUOTE(call FUNC(ui_onPresetSpawnClick));
+                };
+
+                class PresetSpawnAllButton : RscButtonMenu {
+                    idc = IDC_PRESET_SPAWNALL_BUTTON;
+                    text = "SPAWN ALL";
+                    x = QUOTE(MEDSIM_CG_POS_W(9.4));
+                    y = QUOTE(POS_H(6));
+                    h = QUOTE(POS_H(1));
+                    w = QUOTE(MEDSIM_CG_POS_W(5));
+
+                    onButtonClick = QUOTE(call FUNC(ui_onPresetSpawnAllClick));
+                };
+            };
+        };
+
         class PneumothoraxGroup : RscControlsGroupNoScrollbars {
             idc = IDC_PTX_CG;
             x = QUOTE(MEDSIM_CG_RIGHT_X);
-            y = QUOTE(POS_Y(1.2));
+            y = QUOTE(POS_Y(8.3));
             w = QUOTE(MEDSIM_CG_W);
             h = QUOTE(POS_H(5.4));
 
@@ -427,7 +473,7 @@ class GVAR(RscSimMenu) {
         class FracturesGroup : RscControlsGroupNoScrollbars {
             idc = IDC_FRACTURES_CG;
             x = QUOTE(MEDSIM_CG_RIGHT_X);
-            y = QUOTE(POS_Y(6.7));
+            y = QUOTE(POS_Y(13.8));
             w = QUOTE(MEDSIM_CG_W);
             h = QUOTE(POS_H(5.4));
 
@@ -485,7 +531,7 @@ class GVAR(RscSimMenu) {
         class MiscGroup : RscControlsGroupNoScrollbars {
             idc = IDC_MISC_CG;
             x = QUOTE(MEDSIM_CG_RIGHT_X);
-            y = QUOTE(POS_Y(12.2));
+            y = QUOTE(POS_Y(19.3));
             w = QUOTE(MEDSIM_CG_W);
             h = 2.1;
 

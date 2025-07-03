@@ -18,6 +18,7 @@ params ["_control"];
 TRACE_1("ui_onClearAllClick",GVAR(menuTarget));
 
 ctrlSetFocus displayCtrl IDC_STRETCHERS_LISTBOX;
+false call FUNC(ui_updateSpawnAllButton);
 
 if !(GVAR(clearAllConfirm)) exitWith {
     true call FUNC(ui_updateClearAllButton);

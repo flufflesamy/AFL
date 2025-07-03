@@ -10,6 +10,8 @@
 #define IDC_SPAWN_BUTTON                11601
 #define IDC_CLEAR_BUTTON                11602
 #define IDC_CLEARALL_BUTTON             11603
+#define IDC_PRESET_SPAWN_BUTTON         11604
+#define IDC_PRESET_SPAWNALL_BUTTON      11605
 
 #define IDC_STRETCHERS_CG               11501
 #define IDC_WOUNDS_CG                   11502
@@ -18,8 +20,10 @@
 #define IDC_PTX_CG                      11505
 #define IDC_AIRWAY_CG                   11506
 #define IDC_MISC_CG                     11507
+#define IDC_PRESETS_CG                  11508
 
 #define IDC_STRETCHERS_LISTBOX          1501
+#define IDC_PRESETS_LISTBOX             1502
 
 #define IDC_WOUNDS_HEAD_SLIDER          14301
 #define IDC_WOUNDS_TORSO_SLIDER         14302
@@ -80,3 +84,7 @@
 #define MEDSIM_CG_POS_W(N)              POS_W(N * MEDSIM_CG_GRID_W)
 #define MEDSIM_CG_GRID_H                (MEDSIM_CONTROLS_UH / 22)
 #define MEDSIM_CG_POS_H(N)              POS_X(N##.##N)
+
+// colors
+#define COLOR_BUTTON_BKGD               [0, 0, 0, 0.8]
+#define COLOR_BUTTON_TEXT               [1, 1, 1, 1]

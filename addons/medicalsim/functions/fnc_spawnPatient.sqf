@@ -23,7 +23,7 @@ private _entityPos = getPos(_entity);
 private _patient = _entity getVariable [QGVAR(simPatient), nil];
 private _patientItems = [
     ["kat_IV_16", 2],
-    ["kat_layrnx", 4],
+    ["kat_larynx", 4],
     ["ACE_tourniquet", 6],
     ["kat_chestSeal", 3],
     ["ACE_packingBandage", 20],

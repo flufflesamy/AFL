@@ -18,5 +18,11 @@
 params ["_display"];
 TRACE_1("ui_onMenuClose",_display);
 
+// clean up global variables
 GVAR(clearAllConfirm) = nil;
+GVAR(spawnAllConfirm) = nil;
+GVAR(confirmColor) = nil;
+GVAR(confirmTextColor) = nil;
+GVAR(menuTarget) = nil;
+
 uiNamespace setVariable [QGVAR(RscSimMenu), displayNull];

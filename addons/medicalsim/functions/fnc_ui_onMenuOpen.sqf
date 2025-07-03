@@ -37,6 +37,15 @@ private _stretchersListBox = _display displayCtrl IDC_STRETCHERS_LISTBOX;
 _stretchersListBox lbSetCurSel 0;
 ctrlSetFocus displayCtrl IDC_SPAWN_BUTTON;
 
+// Populate presets
+private _presetArray = GVAR(simPresetNames);
+private _presetListBox = _display displayCtrl IDC_PRESETS_LISTBOX;
+_presetListBox lbSetCurSel 0;
+
+{
+    _presetListBox lbAdd _x;
+} forEach _presetArray;
+
 // add eventhandlers for sliders
 {
     _x params ["_idc_slider", "_idc_val"];
@@ -51,5 +60,21 @@ ctrlSetFocus displayCtrl IDC_SPAWN_BUTTON;
     }];
 } forEach _sliderArray;
 
+// Set button colors
+GVAR(confirmColor) = [
+    (profileNamespace getVariable ["GUI_BCG_RGB_R",0.13]),
+    (profileNamespace getVariable ["GUI_BCG_RGB_G",0.54]),
+    (profileNamespace getVariable ["GUI_BCG_RGB_B",0.21]),
+    (profileNamespace getVariable ["GUI_BCG_RGB_A",0.8])
+];
+
+GVAR(confirmTextColor) = [
+    (profileNamespace getVariable ["GUI_TITLETEXT_RGB_R",1.0]),
+    (profileNamespace getVariable ["GUI_TITLETEXT_RGB_G",1.0]),
+    (profileNamespace getVariable ["GUI_TITLETEXT_RGB_B",1.0]),
+    (profileNamespace getVariable ["GUI_TITLETEXT_RGB_A",0.6])
+];
+
 // Init clear button variable
 GVAR(clearAllConfirm) = false;
+GVAR(spawnAllConfirm) = false;

@@ -13,10 +13,6 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
-// #define AFUNC(var) TRIPLES(ADDON,fnc,var)
-// #define AVAR(v) DOUBLES(ADDON,v)
-// #define QAVAR(v) QUOTE(AVAR(v))
-// #define QDAVAR(var1, var2) DOUBLES(AVAR(var1),var2)
 #define ENTVAR(var1) DOUBLES(fr,var1)
 #define QENTVAR(var1) QUOTE(ENTVAR(var1))
 
@@ -33,6 +29,7 @@
 #define FRACTURE_TYPE ["none", "simple", "compound", "comminuted"]
 #define PNUMO_TYPE ["none", "initial", "tension", "hemo"]
 #define ARREST_TYPE ["none", "asystole", "pea", "vf", "vt"]
+#define CHANCE_TO_BOOL(val) val >= random 1
 
 // CBA macros
 #define CBA_PREFIX cba

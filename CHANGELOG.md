@@ -7,11 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Preset system.
+- Default presets.
+
 ### Changed
 
 - Moved defaultControls example to extras folder.
 - Updated function comments.
 - Updated README.md
+
+### Fixed
+
+- Invalid item names for medical sim patients.
 
 ### Removed
 

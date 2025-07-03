@@ -3,7 +3,7 @@
 	Author: flufflesamy
 
 	Description:
-		Clears patient from selected stretcher.
+		Handles preset spawn button click.
 
 	Parameter(s):
 		Nothing.
@@ -12,16 +12,16 @@
 		Nothing.
 
 	Examples:
-		[] call afl_medicalsim_fnc_ui_onClearClick;
+		[] call afl_medicalsim_fnc_ui_onPresetSpawnClick;
 */
+
 private _stretcher = [] call FUNC(ui_getSelectedStretcher);
-TRACE_1("ui_onClearClick",_stretcher);
+private _presetIndex = lbCurSel IDC_PRESETS_LISTBOX;
+private _presetName = lbText [IDC_PRESETS_LISTBOX, _presetIndex];
 
 // unfocus button
 ctrlSetFocus displayCtrl IDC_STRETCHERS_LISTBOX;
 false call FUNC(ui_updateClearAllButton);
 false call FUNC(ui_updateSpawnAllButton);
 
-if (isNil "_stretcher") exitWith {ERROR_1("Stretcher %1 cannot be nil.",_stretcher)};
-
-_stretcher call FUNC(clearPatient);
+[_stretcher, _presetName] call FUNC(presetSpawn);

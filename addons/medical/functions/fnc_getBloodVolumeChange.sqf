@@ -20,7 +20,7 @@
  */
 
 params ["_unit", "_deltaT", "_syncValues"];
-TRACE_3("getBloodVolumeChange",_unit,_deltaT,_syncValues);
+// TRACE_3("getBloodVolumeChange",_unit,_deltaT,_syncValues);
 
 private _bloodLoss = [_unit] call ACEFUNC(medical_status,getBloodLoss);
 private _internalBleeding = GET_INTERNAL_BLEEDING(_unit);

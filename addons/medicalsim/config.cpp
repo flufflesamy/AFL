@@ -25,4 +25,5 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "ACE_Medical_Injuries.hpp"
+#include "AFL_Medicalsim_Presets.hpp"
 #include "ui\RscSimMenu.hpp"

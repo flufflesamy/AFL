@@ -16,7 +16,7 @@
 		Nothing
 
 	Examples:
-		[player, "tension", 4, true, false] call afl_common_fnc_setPneumothorax;
+		[player, "tension", 4, true, false] call afl_medicalsim_fnc_setPneumothorax;
 */
 
 params ["_unit", "_type", ["_strength", 1], ["_det", false], ["_tam", false]];

@@ -15,3 +15,9 @@ PREP(ui_onClearAllClick);
 PREP(ui_onSliderPosChanged);
 PREP(ui_getSelectedStretcher);
 PREP(ui_updateClearAllButton);
+PREP(parseConfigPresets);
+PREP(ui_onPresetSpawnClick);
+PREP(ui_onPresetSpawnAllClick);
+PREP(presetSpawn);
+PREP(chanceArrayToValue);
+PREP(ui_updateSpawnAllButton)
