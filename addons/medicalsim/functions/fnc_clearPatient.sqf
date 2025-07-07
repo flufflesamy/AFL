@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
-	Author: Amy
+	Author: flufflesamy
 
 	Description:
 		Spawns patient for medical treatment with specific ailment.

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
-	Author: Amy
+	Author: flufflesamy
 
 	Description:
 		Sets a unit to be in cardiac arrest

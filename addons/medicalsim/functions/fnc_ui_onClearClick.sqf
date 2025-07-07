@@ -3,7 +3,7 @@
 	Author: flufflesamy
 
 	Description:
-		Handles opening of medical sim menu. Called from onLoad event.
+		Clears patient from selected stretcher.
 
 	Parameter(s):
 		Nothing.
@@ -12,7 +12,7 @@
 		Nothing.
 
 	Examples:
-		[] call afl_medicalsim_fnc_ui_onSpawnClick;
+		[] call afl_medicalsim_fnc_ui_onClearClick;
 */
 private _stretcher = [] call FUNC(ui_getSelectedStretcher);
 TRACE_1("ui_onClearClick",_stretcher);

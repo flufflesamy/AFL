@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
-	Author: Amy
+	Author: flufflesamy
 
 	Description:
 		Adds pneumothorax for a unit.

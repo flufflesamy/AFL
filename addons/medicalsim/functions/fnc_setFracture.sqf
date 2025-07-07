@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
-	Author: Amy
+	Author: flufflesamy
 
 	Description:
 		Adds KAM fracture to bodypart for a unit.

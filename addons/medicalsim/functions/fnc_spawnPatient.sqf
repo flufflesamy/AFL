@@ -1,15 +1,13 @@
 #include "..\script_component.hpp"
 #define MEDSIM_TYPE ["simple", "fracture", "pneumothorax"]
 /*
-	Author: Amy
+	Author: flufflesamy
 
 	Description:
-		Spawns patient for medical treatment with specific ailment.
+		Spawns patient for medical treatment.
 
 	Parameter(s):
 		0: Eden Entity to spawn at <OBJECT>
-        1: Medical Sim Type <STRING>
-        2: Injury Args <ARRAY>
 
 	Returns:
 		0: Patient Unit <OBJECT>
