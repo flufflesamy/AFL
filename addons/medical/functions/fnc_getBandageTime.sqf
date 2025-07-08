@@ -4,7 +4,7 @@
  * which is licensed under GPLv2 or later. This code is therefore licensed
  * under the terms of the GNU Public License, version 3.
  *
- * Authors: kymckay, flufflesamy
+ * Authors: kymckay, Edited by flufflesamy
  * Calculates the time to bandage a wound based on it's size, the patient and the medic.
  *
  * Arguments:
@@ -18,8 +18,6 @@
  *
  * Example:
  * [player, cursorTarget, "head", "FieldDressing"] call ace_medical_treatment_fnc_getBandageTime
- *
- * Public: No
  */
 
 params ["_medic", "_patient", "_bodyPart", "_bandage"];

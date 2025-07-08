@@ -34,3 +34,12 @@
     [0, 20, 8, 1],
     true
 ] call CFUNC(addSetting);
+
+[
+    QGVAR(neckTourniquet),
+    "CHECKBOX",
+    "Enable Neck Tourniquet",
+    ["AFL Medical", "Tourniquet"],
+    [false],
+    true
+] call CFUNC(addSetting);

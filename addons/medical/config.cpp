@@ -25,3 +25,4 @@ class CfgPatches {
 
 #include "CfgFunctions.hpp"
 #include "CfgEventHandlers.hpp"
+#include "ACE_Medical_Treatment_Actions.hpp"
