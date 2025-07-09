@@ -21,6 +21,7 @@
  */
 
 params ["_medic", "_patient", "_bodyPart", "_bandage"];
+TRACE_4("getBandageTime",_medic,_patient,_bodyPart,_bandage);
 
 private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 if (_partIndex < 0) exitWith { ERROR_1("invalid partIndex - %1",_this); 0 };

@@ -9,7 +9,17 @@ class ACE_Medical_Treatment_Actions {
         items[] = {"ACE_tourniquet"};
         treatmentTime = QACEGVAR(medical_treatment,treatmentTimeTourniquet);
         condition = QUOTE(!([ARR_2(_patient,_bodyPart)] call ACEFUNC(medical_treatment,hasTourniquetAppliedTo)) && GVAR(neckTourniquet));
-        callbackSuccess = QFUNC(headTourniquet);
+        callbackSuccess = QFUNC(neckTourniquet);
         litter[] = {};
+        allowedUnderwater = 1;
+    };
+
+    class RemoveNeckTourniquet : ApplyNeckTourniquet {
+        displayName = ACECSTRING(medical_treatment,Actions_RemoveTourniquet);
+        displayNameProgress = ACECSTRING(medical_treatment,RemovingTourniquet);
+        items[] = {};
+        condition = QUOTE(([ARR_2(_patient,_bodyPart)] call ACEFUNC(medical_treatment,hasTourniquetAppliedTo)) && GVAR(neckTourniquet));
+        callbackSuccess = QACEFUNC(medical_treatment,tourniquetRemove);
+        allowedUnderwater = 1;
     };
 };
