@@ -1,8 +1,3 @@
-// AFL macros
-#define FRACTURE_TYPE ["none", "simple", "compound", "comminuted"]
-#define PNUMO_TYPE ["none", "initial", "tension", "hemo"]
-#define ARREST_TYPE ["none", "asystole", "pea", "vf", "vt"]
-
 // idd/idc definitions for UI
 #define IDD_MEDSIM_MENU                 324467
 
