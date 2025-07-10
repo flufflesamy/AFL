@@ -524,3 +524,7 @@ class GVAR(RscSimMenu) {
         };
     };
 };
+
+class GVAR(RscPatientMonitor) {
+
+};
