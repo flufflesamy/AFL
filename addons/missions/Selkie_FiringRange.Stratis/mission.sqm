@@ -1,18 +1,18 @@
 version=54;
 class EditorData
 {
-	moveGridStep=0.25;
+	moveGridStep=0.125;
 	angleGridStep=0.08726646;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=514;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=816;
+		nextID=948;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=215;
+		nextID=232;
 	};
 	class Camera
 	{
-		pos[]={6493.1729,32.394371,5384.1035};
-		dir[]={-0.55106878,-0.56576729,0.61341727};
-		up[]={-0.37811896,0.82454228,0.42089814};
-		aside[]={0.74391729,8.6892396e-07,0.66830772};
+		pos[]={6494.6157,10.32209,5374.4395};
+		dir[]={0.74342728,-0.19709912,-0.63932967};
+		up[]={0.14944845,0.98042816,-0.12851927};
+		aside[]={-0.6520884,-2.2451859e-06,-0.75825274};
 	};
 };
 binarizationWanted=0;
@@ -37,16 +37,18 @@ addons[]=
 	"A3_Structures_F_Training",
 	"A3_Structures_F_Mark_Training",
 	"A3_Modules_F_Multiplayer",
-	"OPTRE_UNSC_Structure_Military_Crate",
 	"A3_Ui_F",
 	"A3_Modules_F_Curator_Curator",
-	"OPTRE_UNSC_Units_Army",
+	"A3_Characters_F",
 	"A3_Weapons_F",
-	"MA_Armor",
-	"OPTRE_BW_DoorConsole",
 	"A3_Props_F_Orange_Humanitarian_Camps",
-	"OPTRE_Corvette_Interior",
-	"A3_Structures_F_Globe_Civilian_Graffiti"
+	"A3_Structures_F_Globe_Civilian_Graffiti",
+	"A3_Props_F_Enoch_Military_Camps",
+	"A3_Props_F_Globe_Military_Equipment",
+	"A3_Supplies_F_Exp_Ammoboxes",
+	"ace_dragging",
+	"A3_Props_F_Enoch_Military_Equipment",
+	"Structures_Globe_Signs_Helpers"
 };
 class AddonsMetaData
 {
@@ -76,75 +78,83 @@ class AddonsMetaData
 		};
 		class Item3
 		{
-			className="OPTRE_UNSC_Structure_Military_Crate";
-			name="OPTRE_UNSC_Structure_Military_Crate";
-			author="Kenny";
-			url="https://www.reddit.com/r/OperationTrebuchet/";
-		};
-		class Item4
-		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item5
+		class Item4
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item5
 		{
-			className="OPTRE_UNSC_Units";
-			name="OPTRE_UNSC_Units_Army";
-			author="Article 2 Studios";
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
-		class Item7
+		class Item6
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
-		{
-			className="MA_Armor";
-			name="MA_Armor";
-			author="Misriah Armory";
-		};
-		class Item9
-		{
-			className="OPTRE_BW_Buildings";
-			name="OPTRE_BW_DoorConsole";
-		};
-		class Item10
+		class Item7
 		{
 			className="A3_Props_F_Orange";
 			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item11
-		{
-			className="OPTRE_Corvette";
-			name="OPTRE_Corvette_Interior";
-		};
-		class Item12
+		class Item8
 		{
 			className="A3_Structures_F_Globe";
 			name="O&T Expansion Eden - Buildings and Structures";
 			author="Trager";
 			url="https://steamcommunity.com/workshop/filedetails/?id=1923321700";
 		};
+		class Item9
+		{
+			className="A3_Props_F_Enoch";
+			name="Arma 3 Contact Platform - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item10
+		{
+			className="A3_Props_F_Globe";
+			name="O&T Expansion Eden - Decorative and Mission Objects";
+			author="Trager";
+			url="https://steamcommunity.com/workshop/filedetails/?id=1923321700";
+		};
+		class Item11
+		{
+			className="A3_Supplies_F_Exp";
+			name="Arma 3 Apex - Ammoboxes and Supplies";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item12
+		{
+			className="ace_dragging";
+			name="ACE3 - Dragging";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
 	};
 };
 dlcs[]=
 {
 	"Mark",
-	"OPTRE",
-	"Orange"
+	"Orange",
+	"Contact",
+	"Enoch",
+	"Expansion"
 };
 randomSeed=12333172;
 class ScenarioData
@@ -46834,7 +46844,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=14;
+		items=24;
 		class Item0
 		{
 			dataType="Layer";
@@ -47714,301 +47724,6 @@ class Mission
 		};
 		class Item2
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6429.3599,9.286726,5392.6362};
-				angles[]={0,5.4608207,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=126;
-			type="OPTRE_Weapon_Crate_ODST_HW";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectCollision";
-					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_arsenal_attribute";
-					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="ARRAY";
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-		class Item3
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6396.459,8.9556751,5416.4678};
-				angles[]={0,5.4977875,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=148;
-			type="OPTRE_Weapon_Crate_ODST_S";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectCollision";
-					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_arsenal_attribute";
-					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="ARRAY";
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-		class Item4
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6391.938,9.3314781,5387.644};
-				angles[]={0,5.4977875,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=149;
-			type="OPTRE_Weapon_Crate_ODST_S";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="allowDamage";
-					expression="_this allowdamage _value;";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=0;
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectCollision";
-					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="ace_arsenal_attribute";
-					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="ARRAY";
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-						};
-					};
-				};
-				nAttributes=3;
-			};
-		};
-		class Item5
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={6419.9971,9.3314781,5360.8071};
-				angles[]={0,5.497787,0};
-			};
-			side="Empty";
-			flags=5;
-			class Attributes
-			{
-			};
-			id=150;
-			type="OPTRE_Weapon_Crate_ODST_S";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="ace_arsenal_attribute";
-					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="ARRAY";
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="ObjectCollision";
-					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-					class Value
-					{
-						class data
-						{
-							singleType="BOOL";
-							value=1;
-						};
-					};
-				};
-				nAttributes=2;
-			};
-		};
-		class Item6
-		{
 			dataType="Marker";
 			position[]={6322.9834,4.6742678,5539.8525};
 			name="mkrVehMed";
@@ -48073,7 +47788,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item7
+		class Item3
 		{
 			dataType="Layer";
 			name="spawn_comp_blufor";
@@ -48366,156 +48081,10 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6490.1924,7.7236729,5381.603};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								name="zeus2";
-								description="CM Instructor (Zeus)@Corpsmaid Training";
-								isPlayable=1;
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="MA_Marine_BDU_ODST_HJ";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									gps="ItemGPS";
-									headgear="CH252D_Helmet";
-								};
-							};
-							id=783;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male03ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={6488.9199,7.7268877,5380.96};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								name="zeus3";
-								description="CM Instructor (Zeus)@Corpsmaid Training";
-								isPlayable=1;
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="MA_Marine_BDU_ODST_HJ";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									gps="ItemGPS";
-									headgear="CH252D_Helmet";
-								};
-							};
-							id=784;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male03ENG";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={6493,7.7264385,5377.0498};
 							};
 							side="West";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
 								description="Trainee@Corpsmaid Training";
@@ -48524,17 +48093,115 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=785;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
+							id=834;
+							type="B_Soldier_unarmed_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6491,7.7314386,5378.0498};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								description="Trainee@Corpsmaid Training";
+								isPlayable=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="U_B_CombatUniform_mcam";
+										isBackpack=0;
+									};
+									map="ItemMap";
+									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
+									gps="ItemGPS";
+									headgear="H_HelmetB";
+								};
+							};
+							id=835;
+							type="B_Soldier_unarmed_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6490,7.7314386,5379.0498};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								description="Trainee@Corpsmaid Training";
+								isPlayable=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="U_B_CombatUniform_mcam";
+										isBackpack=0;
+									};
+									map="ItemMap";
+									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
+									gps="ItemGPS";
+									headgear="H_HelmetB";
+								};
+							};
+							id=836;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -48558,10 +48225,10 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6491,7.7314386,5378.0498};
+								position[]={6488,7.7314386,5380.0498};
 							};
 							side="West";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
 								description="Trainee@Corpsmaid Training";
@@ -48570,17 +48237,19 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=786;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
+							id=837;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -48604,10 +48273,10 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6490,7.7314386,5379.0498};
+								position[]={6491,7.7314386,5380.0498};
 							};
 							side="West";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
 								description="Trainee@Corpsmaid Training";
@@ -48616,17 +48285,19 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=787;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
+							id=838;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -48650,10 +48321,10 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6488,7.7314386,5380.0498};
+								position[]={6492.9497,7.7266903,5379.0503};
 							};
 							side="West";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
 								description="Trainee@Corpsmaid Training";
@@ -48662,17 +48333,19 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=788;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
+							id=839;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -48696,10 +48369,10 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6491,7.7314386,5380.0498};
+								position[]={6494.7085,7.7178969,5378.2183};
 							};
 							side="West";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
 								description="Trainee@Corpsmaid Training";
@@ -48708,17 +48381,20 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=789;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
+							id=840;
+							type="B_Soldier_unarmed_F";
+							atlOffset=4.7683716e-07;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -48742,29 +48418,32 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6492.9497,7.7266903,5379.0503};
+								position[]={6490.1924,7.7236729,5381.603};
 							};
 							side="West";
-							flags=5;
+							flags=6;
 							class Attributes
 							{
-								description="Trainee@Corpsmaid Training";
+								name="zeus2";
+								description="CM Instructor (Zeus)@Corpsmaid Training";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=790;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
+							id=841;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -48780,7 +48459,33 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male03ENG";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=3;
 							};
 						};
 						class Item8
@@ -48788,30 +48493,32 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6494.7085,7.7178969,5378.2183};
+								position[]={6488.9199,7.7268877,5380.96};
 							};
 							side="West";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
-								description="Trainee@Corpsmaid Training";
+								name="zeus3";
+								description="CM Instructor (Zeus)@Corpsmaid Training";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=791;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
-							atlOffset=4.7683716e-07;
+							id=842;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -48827,7 +48534,33 @@ class Mission
 										};
 									};
 								};
-								nAttributes=1;
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male03ENG";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.98000002;
+										};
+									};
+								};
+								nAttributes=3;
 							};
 						};
 					};
@@ -48935,17 +48668,19 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=793;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
+							id=843;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -49009,7 +48744,7 @@ class Mission
 							class PositionInfo
 							{
 								position[]={6433.7471,7.8754749,5401.2427};
-								angles[]={0.0049914722,3.8505628,0};
+								angles[]={0.0049916417,3.8505628,0};
 							};
 							side="West";
 							flags=4;
@@ -49021,17 +48756,19 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=794;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=844;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -49180,181 +48917,7 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6432.8672,7.8900199,5395.9917};
-								angles[]={0,3.8505628,0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								name="zeus1";
-								description="Team Leader (Zeus)@Panther";
-								isPlayable=1;
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="MA_Marine_BDU_ODST_HJ";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									gps="ItemGPS";
-									headgear="CH252D_Helmet";
-								};
-							};
-							id=796;
-							type="OPTRE_UNSC_Marine_Soldier_TeamLead";
-							atlOffset=-0.012000084;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="attachMarker";
-									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male01GRE";
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0.95999998;
-										};
-									};
-								};
-								nAttributes=4;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={6432.2979,7.8944345,5397.4507};
-								angles[]={0,3.9244077,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								description="Corpsmaid@Panther";
-								isPlayable=1;
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="MA_Marine_BDU_ODST_HJ";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									gps="ItemGPS";
-									headgear="CH252D_Helmet";
-								};
-							};
-							id=797;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="attachMarker";
-									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male03ENG";
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=4;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={6431.9106,7.9189019,5394.6885};
+								position[]={6431.9106,7.9189024,5394.6885};
 								angles[]={0.012496647,3.8505628,6.278194};
 							};
 							side="West";
@@ -49367,17 +48930,196 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=798;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=828;
+							type="B_Soldier_unarmed_F";
+							atlOffset=4.7683716e-07;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="attachMarker";
+									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6431.8711,7.902688,5396.0015};
+								angles[]={0.012496647,3.8505628,6.278194};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								description="Riflemaid@Panther";
+								isPlayable=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="U_B_CombatUniform_mcam";
+										isBackpack=0;
+									};
+									map="ItemMap";
+									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
+									gps="ItemGPS";
+									headgear="H_HelmetB";
+								};
+							};
+							id=829;
+							type="B_Soldier_unarmed_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="attachMarker";
+									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6433.2588,7.916853,5394.5649};
+								angles[]={0.012496647,3.8505628,6.2806959};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								description="Riflemaid@Panther";
+								isPlayable=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="U_B_CombatUniform_mcam";
+										isBackpack=0;
+									};
+									map="ItemMap";
+									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
+									gps="ItemGPS";
+									headgear="H_HelmetB";
+								};
+							};
+							id=830;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -49440,8 +49182,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6431.8711,7.902688,5396.0015};
-								angles[]={0.012496647,3.8505628,6.278194};
+								position[]={6430.9863,7.8996811,5396.96};
+								angles[]={0.0075011365,3.8505628,6.278194};
 							};
 							side="West";
 							flags=4;
@@ -49453,17 +49195,20 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=799;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=831;
+							type="B_Soldier_unarmed_F";
+							atlOffset=4.7683716e-07;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -49526,30 +49271,33 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6433.2588,7.916853,5394.5649};
-								angles[]={0.012496647,3.8505628,6.2806959};
+								position[]={6432.2979,7.8944349,5397.4507};
+								angles[]={0,3.9244077,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
-								description="Riflemaid@Panther";
+								description="Corpsmaid@Panther";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=800;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=833;
+							type="B_Soldier_unarmed_F";
+							atlOffset=4.7683716e-07;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -49587,7 +49335,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="Male06GRE";
+											value="Male03ENG";
 										};
 									};
 								};
@@ -49600,7 +49348,7 @@ class Mission
 										class data
 										{
 											singleType="SCALAR";
-											value=1.05;
+											value=0.98000002;
 										};
 									};
 								};
@@ -49612,30 +49360,34 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6430.9863,7.8996806,5396.96};
-								angles[]={0.0075011365,3.8505628,6.278194};
+								position[]={6432.8672,7.8900204,5395.9917};
+								angles[]={0,3.8505628,0};
 							};
 							side="West";
-							flags=4;
+							flags=6;
 							class Attributes
 							{
-								description="Riflemaid@Panther";
+								name="zeus1";
+								description="Team Leader (Zeus)@Panther";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=801;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=846;
+							type="B_Soldier_unarmed_F";
+							atlOffset=-0.011999607;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -49673,7 +49425,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="Male06GRE";
+											value="Male01GRE";
 										};
 									};
 								};
@@ -49686,7 +49438,7 @@ class Mission
 										class data
 										{
 											singleType="SCALAR";
-											value=1.05;
+											value=0.95999998;
 										};
 									};
 								};
@@ -49698,7 +49450,7 @@ class Mission
 					{
 					};
 					id=795;
-					atlOffset=-0.012000084;
+					atlOffset=-0.011999607;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -49785,31 +49537,33 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6435.1348,7.8851299,5396.9116};
-								angles[]={0,3.8505628,0};
+								position[]={6435.5259,7.9070883,5395.4849};
+								angles[]={0.0099949092,3.8505628,0};
 							};
 							side="West";
-							flags=7;
+							flags=4;
 							class Attributes
 							{
-								description="Team Leader@Dingo";
+								description="Riflemaid@Dingo";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=803;
-							type="OPTRE_UNSC_Marine_Soldier_TeamLead";
-							atlOffset=-0.012000084;
+							id=824;
+							type="B_Soldier_unarmed_F";
+							atlOffset=-4.7683716e-07;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -49847,7 +49601,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="Male01GRE";
+											value="Male06GRE";
 										};
 									};
 								};
@@ -49860,7 +49614,7 @@ class Mission
 										class data
 										{
 											singleType="SCALAR";
-											value=0.95999998;
+											value=1.05;
 										};
 									};
 								};
@@ -49872,30 +49626,32 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6434.5649,7.8898354,5398.3706};
-								angles[]={0,3.9244077,0};
+								position[]={6434.1782,7.9058485,5395.6089};
+								angles[]={0.0099949092,3.8505628,0};
 							};
 							side="West";
-							flags=5;
+							flags=4;
 							class Attributes
 							{
-								description="Corpsmaid@Dingo";
+								description="Riflemaid@Dingo";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=804;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
+							id=825;
+							type="B_Soldier_unarmed_F";
 							atlOffset=4.7683716e-07;
 							class CustomAttributes
 							{
@@ -49934,7 +49690,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="Male03ENG";
+											value="Male06GRE";
 										};
 									};
 								};
@@ -49947,7 +49703,7 @@ class Mission
 										class data
 										{
 											singleType="SCALAR";
-											value=0.98000002;
+											value=1.05;
 										};
 									};
 								};
@@ -49959,8 +49715,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6435.5259,7.9070888,5395.4849};
-								angles[]={0.0099949092,3.8505628,0};
+								position[]={6434.1392,7.8970785,5396.9219};
+								angles[]={0.0049914722,3.8505628,0};
 							};
 							side="West";
 							flags=4;
@@ -49972,17 +49728,20 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=805;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=826;
+							type="B_Soldier_unarmed_F";
+							atlOffset=-4.7683716e-07;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -50045,8 +49804,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6434.1782,7.905848,5395.6089};
-								angles[]={0.0099949092,3.8505628,0};
+								position[]={6433.2539,7.8922882,5397.8799};
+								angles[]={0.0049914722,3.8505628,0};
 							};
 							side="West";
 							flags=4;
@@ -50058,17 +49817,19 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=806;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=827;
+							type="B_Soldier_unarmed_F";
 							class CustomAttributes
 							{
 								class Attribute0
@@ -50131,30 +49892,33 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6434.1392,7.897079,5396.9219};
-								angles[]={0.0049914722,3.8505628,0};
+								position[]={6434.5649,7.8898358,5398.3706};
+								angles[]={0,3.9244077,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
-								description="Riflemaid@Dingo";
+								description="Corpsmaid@Dingo";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=807;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=832;
+							type="B_Soldier_unarmed_F";
+							atlOffset=9.5367432e-07;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -50192,7 +49956,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="Male06GRE";
+											value="Male03ENG";
 										};
 									};
 								};
@@ -50205,7 +49969,7 @@ class Mission
 										class data
 										{
 											singleType="SCALAR";
-											value=1.05;
+											value=0.98000002;
 										};
 									};
 								};
@@ -50217,30 +49981,33 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6433.2539,7.8922882,5397.8799};
-								angles[]={0.0049914722,3.8505628,0};
+								position[]={6435.1348,7.8851299,5396.9116};
+								angles[]={0,3.8505628,0};
 							};
 							side="West";
-							flags=4;
+							flags=6;
 							class Attributes
 							{
-								description="Riflemaid@Dingo";
+								description="Team Leader@Dingo";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=808;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=845;
+							type="B_Soldier_unarmed_F";
+							atlOffset=-0.012000084;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -50278,7 +50045,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="Male06GRE";
+											value="Male01GRE";
 										};
 									};
 								};
@@ -50291,7 +50058,7 @@ class Mission
 										class data
 										{
 											singleType="SCALAR";
-											value=1.05;
+											value=0.95999998;
 										};
 									};
 								};
@@ -50390,180 +50157,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6432.1421,7.8814836,5400.041};
-								angles[]={0,3.8505628,0};
-							};
-							side="West";
-							flags=7;
-							class Attributes
-							{
-								description="Team Leader@Cabbit";
-								isPlayable=1;
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="MA_Marine_BDU_ODST_HJ";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									gps="ItemGPS";
-									headgear="CH252D_Helmet";
-								};
-							};
-							id=810;
-							type="OPTRE_UNSC_Marine_Soldier_TeamLead";
-							atlOffset=4.7683716e-07;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="attachMarker";
-									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male01GRE";
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0.95999998;
-										};
-									};
-								};
-								nAttributes=4;
-							};
-						};
-						class Item1
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={6431.5718,7.8861876,5401.5};
-								angles[]={0,3.9244077,0};
-							};
-							side="West";
-							flags=5;
-							class Attributes
-							{
-								description="Corpsmaid@Cabbit";
-								isPlayable=1;
-								class Inventory
-								{
-									class uniform
-									{
-										typeName="MA_Marine_BDU_ODST_HJ";
-										isBackpack=0;
-									};
-									map="ItemMap";
-									compass="ItemCompass";
-									gps="ItemGPS";
-									headgear="CH252D_Helmet";
-								};
-							};
-							id=811;
-							type="OPTRE_UNSC_ODST_Soldier_Paramedic";
-							atlOffset=0.011999607;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="ObjectCollision";
-									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="attachMarker";
-									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="";
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="speaker";
-									expression="_this setspeaker _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="Male03ENG";
-										};
-									};
-								};
-								class Attribute3
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0.98000002;
-										};
-									};
-								};
-								nAttributes=4;
-							};
-						};
-						class Item2
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={6432.5332,7.9006195,5398.6138};
 								angles[]={0.0049914722,3.8505628,0};
 							};
@@ -50577,18 +50170,198 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=812;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=816;
+							type="B_Soldier_unarmed_F";
 							atlOffset=0.012000084;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="attachMarker";
+									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6431.1851,7.9020367,5398.7378};
+								angles[]={0.0049914722,3.8505628,6.2806959};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								description="Riflemaid@Cabbit";
+								isPlayable=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="U_B_CombatUniform_mcam";
+										isBackpack=0;
+									};
+									map="ItemMap";
+									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
+									gps="ItemGPS";
+									headgear="H_HelmetB";
+								};
+							};
+							id=817;
+							type="B_Soldier_unarmed_F";
+							atlOffset=0.012000084;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="attachMarker";
+									expression="if (_value isNotEqualTo '') then {[_this, _value] spawn expEden_fnc_markerAttachToObject}";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male06GRE";
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=1.05;
+										};
+									};
+								};
+								nAttributes=4;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6431.146,7.8955736,5400.0498};
+								angles[]={0.0075011365,3.8505628,6.2806959};
+							};
+							side="West";
+							flags=4;
+							class Attributes
+							{
+								description="Riflemaid@Cabbit";
+								isPlayable=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="U_B_CombatUniform_mcam";
+										isBackpack=0;
+									};
+									map="ItemMap";
+									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
+									gps="ItemGPS";
+									headgear="H_HelmetB";
+								};
+							};
+							id=818;
+							type="B_Soldier_unarmed_F";
+							atlOffset=0.011999607;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -50651,8 +50424,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6431.1851,7.9020367,5398.7378};
-								angles[]={0.0049914722,3.8505628,6.2806959};
+								position[]={6430.2612,7.8905935,5401.0088};
+								angles[]={0.0075011365,3.8505628,6.2806959};
 							};
 							side="West";
 							flags=4;
@@ -50664,17 +50437,19 @@ class Mission
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=813;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=819;
+							type="B_Soldier_unarmed_F";
 							atlOffset=0.012000084;
 							class CustomAttributes
 							{
@@ -50738,31 +50513,33 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6431.146,7.8955741,5400.0498};
-								angles[]={0.0075011365,3.8505628,6.2806959};
+								position[]={6432.1421,7.8814836,5400.041};
+								angles[]={0,3.8505628,0};
 							};
 							side="West";
-							flags=4;
+							flags=6;
 							class Attributes
 							{
-								description="Riflemaid@Cabbit";
+								description="Team Leader@Cabbit";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=814;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
-							atlOffset=0.012000084;
+							id=822;
+							type="B_Soldier_unarmed_F";
+							atlOffset=4.7683716e-07;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -50800,7 +50577,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="Male06GRE";
+											value="Male01GRE";
 										};
 									};
 								};
@@ -50813,7 +50590,7 @@ class Mission
 										class data
 										{
 											singleType="SCALAR";
-											value=1.05;
+											value=0.95999998;
 										};
 									};
 								};
@@ -50825,30 +50602,32 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={6430.2612,7.8905935,5401.0088};
-								angles[]={0.0075011365,3.8505628,6.2806959};
+								position[]={6431.5718,7.886188,5401.5};
+								angles[]={0,3.9244077,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
-								description="Riflemaid@Cabbit";
+								description="Corpsmaid@Cabbit";
 								isPlayable=1;
 								class Inventory
 								{
 									class uniform
 									{
-										typeName="MA_Marine_BDU_ODST_HJ";
+										typeName="U_B_CombatUniform_mcam";
 										isBackpack=0;
 									};
 									map="ItemMap";
 									compass="ItemCompass";
+									watch="ItemWatch";
+									radio="ItemRadio";
 									gps="ItemGPS";
-									headgear="CH252D_Helmet";
+									headgear="H_HelmetB";
 								};
 							};
-							id=815;
-							type="OPTRE_UNSC_ODST_Soldier_Rifleman_AR";
+							id=823;
+							type="B_Soldier_unarmed_F";
 							atlOffset=0.012000084;
 							class CustomAttributes
 							{
@@ -50887,7 +50666,7 @@ class Mission
 										class data
 										{
 											singleType="STRING";
-											value="Male06GRE";
+											value="Male03ENG";
 										};
 									};
 								};
@@ -50900,7 +50679,7 @@ class Mission
 										class data
 										{
 											singleType="SCALAR";
-											value=1.05;
+											value=0.98000002;
 										};
 									};
 								};
@@ -50991,7 +50770,7 @@ class Mission
 			id=159;
 			atlOffset=-0.013852596;
 		};
-		class Item8
+		class Item4
 		{
 			dataType="Marker";
 			position[]={6374.6724,2.4673548,5493.5166};
@@ -51057,7 +50836,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item9
+		class Item5
 		{
 			dataType="Marker";
 			position[]={6271.9438,3.849,5591.0659};
@@ -51124,7 +50903,7 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item10
+		class Item6
 		{
 			dataType="Marker";
 			position[]={6148.292,3.072,5685.686};
@@ -51191,49 +50970,14 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item11
+		class Item7
 		{
 			dataType="Layer";
 			name="MedicalSim";
 			class Entities
 			{
-				items=18;
+				items=9;
 				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6500,8.8160076,5370};
-						angles[]={0,3.9269907,0};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						name="fr_medicalConsole_0";
-						description="Test";
-					};
-					id=178;
-					type="OPTRE_RS_ConsoleCorvette_SysYellow";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ObjectCollision";
-							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -51281,7 +51025,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Object";
 					class PositionInfo
@@ -51329,7 +51073,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item3
+				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
@@ -51377,7 +51121,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -51425,41 +51169,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6484.4395,9.5010071,5354.2056};
-						angles[]={0,3.9269907,0};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						name="fr_medicalConsole_1";
-					};
-					id=202;
-					type="OPTRE_RS_ConsoleCorvette_SysYellow";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ObjectCollision";
-							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item6
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -51507,7 +51217,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item7
+				class Item5
 				{
 					dataType="Object";
 					class PositionInfo
@@ -51555,7 +51265,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item8
+				class Item6
 				{
 					dataType="Object";
 					class PositionInfo
@@ -51603,238 +51313,13 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item9
+				class Item7
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6414.5869,9.7916622,5461.313};
-						angles[]={0,2.3561945,0};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-						name="fr_vehicleConsole";
-					};
-					id=141;
-					type="OPTRE_RS_ConsoleCorvette_SysGreen";
-					atlOffset=9.5367432e-07;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ObjectCollision";
-							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item10
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6495.9233,7.9300423,5370.1396};
-						angles[]={0,2.3380432,0};
-					};
-					side="Empty";
-					flags=1;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=370;
-					type="OPTRE_Corvette_Decal_Numbers_0";
-					atlOffset=9.059906e-06;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ObjectCollision";
-							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item11
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6493.8628,8.0513105,5368.1172};
-						angles[]={0,2.3609419,0};
-					};
-					side="Empty";
-					flags=1;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=374;
-					type="OPTRE_Corvette_Decal_Numbers_1";
-					atlOffset=6.6757202e-06;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ObjectCollision";
-							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item12
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6491.8208,8.180748,5366.0801};
-						angles[]={0,2.3546934,0};
-					};
-					side="Empty";
-					flags=1;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=376;
-					type="OPTRE_Corvette_Decal_Numbers_2";
-					atlOffset=1.7166138e-05;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ObjectCollision";
-							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item13
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6489.8228,8.2849531,5364.1089};
-						angles[]={0,2.3291245,0};
-					};
-					side="Empty";
-					flags=1;
-					class Attributes
-					{
-						disableSimulation=1;
-					};
-					id=377;
-					type="OPTRE_Corvette_Decal_Numbers_3";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ObjectCollision";
-							expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=1;
-					};
-				};
-				class Item14
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6487.9434,8.3959675,5362.1294};
-						angles[]={0,2.3393898,0};
-					};
-					side="Empty";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=378;
-					type="OPTRE_Corvette_Decal_Numbers_4";
-					atlOffset=9.5367432e-07;
-				};
-				class Item15
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6485.834,8.5670376,5360.127};
-						angles[]={0,2.3454542,0};
-					};
-					side="Empty";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=379;
-					type="OPTRE_Corvette_Decal_Numbers_5";
-					atlOffset=0.00015258789;
-				};
-				class Item16
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6483.8545,8.6122255,5358.1289};
-						angles[]={0,2.3363168,0};
-					};
-					side="Empty";
-					flags=1;
-					class Attributes
-					{
-					};
-					id=380;
-					type="OPTRE_Corvette_Decal_Numbers_6";
-					atlOffset=1.0490417e-05;
-				};
-				class Item17
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={6500.9399,9.788064,5368.5615};
-						angles[]={0,2.3556733,0};
+						position[]={6500.9399,9.537364,5368.562};
+						angles[]={0,2.3556709,0};
 					};
 					side="Empty";
 					class Attributes
@@ -51842,7 +51327,7 @@ class Mission
 					};
 					id=368;
 					type="Graffiti_HygieiaBowl_01";
-					atlOffset=1.8006668;
+					atlOffset=1.5499997;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -51861,28 +51346,652 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item8
+				{
+					dataType="Layer";
+					name="patient monitors";
+					class Entities
+					{
+						items=14;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6494.2583,8.4798717,5364.5366};
+								angles[]={0.077345207,5.4984155,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								createAsSimpleObject=1;
+							};
+							id=922;
+							type="Land_DeskChair_01_black_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6494.2549,8.8686056,5364.5586};
+								angles[]={0.077352993,2.3579223,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="fr_monitor_2";
+							};
+							id=921;
+							type="Laptop_03_olive_GSC";
+							atlOffset=0.0003118515;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6492.2173,8.5728016,5362.6255};
+								angles[]={0.042475242,5.4984155,6.2531939};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								createAsSimpleObject=1;
+							};
+							id=924;
+							type="Land_DeskChair_01_black_F";
+							atlOffset=-0.00019359589;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6492.2139,8.9605188,5362.6475};
+								angles[]={0.042481314,2.3579223,6.2531657};
+							};
+							side="Empty";
+							class Attributes
+							{
+								name="fr_monitor_3";
+							};
+							id=925;
+							type="Laptop_03_olive_GSC";
+							atlOffset=0.44180679;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item4
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6490.1807,8.658596,5360.6958};
+								angles[]={0.079830162,5.4984155,6.270689};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								createAsSimpleObject=1;
+							};
+							id=928;
+							type="Land_DeskChair_01_black_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item5
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6490.1729,9.0436974,5360.7622};
+								angles[]={0.079831354,2.3579223,6.2706542};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="fr_monitor_4";
+							};
+							id=929;
+							type="Laptop_03_olive_GSC";
+							atlOffset=8.1062317e-05;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item6
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6488.1948,8.7612352,5358.605};
+								angles[]={0.014998405,5.4984155,6.2806959};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								createAsSimpleObject=1;
+							};
+							id=930;
+							type="Land_DeskChair_01_black_F";
+							atlOffset=-2.5749207e-05;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item7
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6488.1958,9.1497259,5358.5903};
+								angles[]={0.014992379,2.3579223,6.2806892};
+							};
+							side="Empty";
+							class Attributes
+							{
+								name="fr_monitor_5";
+							};
+							id=931;
+							type="Laptop_03_olive_GSC";
+							atlOffset=0.44163895;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item8
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6486.167,8.7957458,5356.6763};
+								angles[]={0.0075011365,5.4984155,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								createAsSimpleObject=1;
+							};
+							id=932;
+							type="Land_DeskChair_01_black_F";
+							atlOffset=1.8119812e-05;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item9
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6486.1392,9.184516,5356.7026};
+								angles[]={0.0075011365,2.3579223,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="fr_monitor_6";
+							};
+							id=933;
+							type="Laptop_03_olive_GSC";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item10
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6498.374,8.2152805,5368.5146};
+								angles[]={0.069885373,5.4984155,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								createAsSimpleObject=1;
+							};
+							id=910;
+							type="Land_DeskChair_01_black_F";
+							atlOffset=-4.3869019e-05;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item11
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6498.3491,8.6023235,5368.5352};
+								angles[]={0.069882989,2.3579223,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+								name="fr_monitor_0";
+							};
+							id=909;
+							type="Laptop_03_olive_GSC";
+							atlOffset=0.44195986;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6496.3638,8.3439274,5366.5337};
+								angles[]={0.06739822,5.4984155,6.2656889};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								createAsSimpleObject=1;
+							};
+							id=919;
+							type="Land_DeskChair_01_black_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
+						class Item13
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={6496.3481,8.7308321,5366.5762};
+								angles[]={0.067404613,2.3579223,6.2656446};
+							};
+							side="Empty";
+							class Attributes
+							{
+								name="fr_monitor_1";
+							};
+							id=918;
+							type="Laptop_03_olive_GSC";
+							atlOffset=0.44299984;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectCollision";
+									expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=2;
+							};
+						};
+					};
+					id=923;
+					atlOffset=0.28064537;
+				};
 			};
 			id=189;
-			atlOffset=0.36809921;
+			atlOffset=0.50090599;
 		};
-		class Item12
+		class Item8
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6494.1631,9.0214386,5381.6699};
-				angles[]={0,5.4291782,0};
+				position[]={6429.2236,8.3426876,5392.2207};
+				angles[]={0.012496647,2.3192339,6.278194};
 			};
 			side="Empty";
-			flags=5;
+			flags=4;
 			class Attributes
 			{
 			};
-			id=279;
-			type="OPTRE_Weapon_Crate_ODST_S";
+			id=866;
+			type="Box_NATO_Equip_F";
+			atlOffset=-4.7683716e-07;
 			class CustomAttributes
 			{
 				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
 				{
 					property="ace_arsenal_attribute";
 					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
@@ -51910,6 +52019,710 @@ class Mission
 									};
 								};
 							};
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_cookoff_enableAmmoCookoff";
+					expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6396.7363,8.0025902,5416.7031};
+				angles[]={0.0049893702,2.2689714,0.0075013889};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=867;
+			type="Box_NATO_Equip_F";
+			atlOffset=-4.7683716e-07;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_cookoff_enableAmmoCookoff";
+					expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6391.938,8.3815289,5387.644};
+				angles[]={0,5.4977875,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=868;
+			type="Box_NATO_Equip_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_cookoff_enableAmmoCookoff";
+					expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6419.9971,8.3815289,5360.8071};
+				angles[]={0,5.497787,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=869;
+			type="Box_NATO_Equip_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_cookoff_enableAmmoCookoff";
+					expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6494.165,8.0714264,5381.6768};
+				angles[]={0,5.4291782,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=870;
+			type="Box_NATO_Equip_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_cookoff_enableAmmoCookoff";
+					expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6381.4458,8.3526764,5394.5259};
+				angles[]={0,5.497787,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=871;
+			type="Box_NATO_Equip_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[],[]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_arsenal_attribute";
+					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					class Value
+					{
+						class data
+						{
+							singleType="ARRAY";
+							class value
+							{
+								items=2;
+								class Item0
+								{
+									class data
+									{
+										singleType="ARRAY";
+									};
+								};
+								class Item1
+								{
+									class data
+									{
+										singleType="SCALAR";
+										value=1;
+									};
+								};
+							};
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_cookoff_enableAmmoCookoff";
+					expression="if (!_value) then {_this setVariable ['ace_cookoff_enableAmmoCookoff', _value, true]}";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6499.9521,8.7460117,5369.9565};
+				angles[]={0.067404613,5.5865898,6.2781935};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="fr_medicalConsole_0";
+			};
+			id=887;
+			type="Land_TripodScreen_01_dual_v2_black_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6484.1499,9.4242849,5354.4658};
+				angles[]={-0,5.5865898,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="fr_medicalConsole_1";
+			};
+			id=934;
+			type="Land_TripodScreen_01_dual_v2_black_F";
+			atlOffset=-0.001999855;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6414.769,9.9544897,5464.127};
+				angles[]={0,0.69813168,6.2826962};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="fr_vehicleConsole";
+			};
+			id=936;
+			type="Land_MultiScreenComputer_01_olive_F";
+			atlOffset=1.1129999;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=0;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6499.1738,9.5913906,5366.8403};
+				angles[]={0,2.3560169,-0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=937;
+			type="UserTexture1m_textTamplate";
+			atlOffset=1.5034075;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="#(rgb,512,512,3)text(1,1,""puristabold"",0.75,""#00000000"",""#ff69b4"",""0"")";
 						};
 					};
 				};
@@ -51929,51 +52742,263 @@ class Mission
 				nAttributes=2;
 			};
 		};
-		class Item13
+		class Item18
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6381.4453,9.30264,5394.5225};
-				angles[]={0,5.497787,0};
+				position[]={6497.0688,9.5918131,5364.8071};
+				angles[]={0,2.35602,0};
 			};
 			side="Empty";
-			flags=5;
 			class Attributes
 			{
 			};
-			id=381;
-			type="OPTRE_Weapon_Crate_ODST_S";
+			id=942;
+			type="UserTexture1m_textTamplate";
+			atlOffset=1.3649998;
 			class CustomAttributes
 			{
 				class Attribute0
 				{
-					property="ace_arsenal_attribute";
-					expression="if (!is3DEN) then {[_this, +_value] call ace_arsenal_fnc_attributeInit}";
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
 					class Value
 					{
 						class data
 						{
-							singleType="ARRAY";
-							class value
-							{
-								items=2;
-								class Item0
-								{
-									class data
-									{
-										singleType="ARRAY";
-									};
-								};
-								class Item1
-								{
-									class data
-									{
-										singleType="SCALAR";
-										value=1;
-									};
-								};
-							};
+							singleType="STRING";
+							value="#(rgb,512,512,3)text(1,1,""puristabold"",0.75,""#00000000"",""#ff69b4"",""1"")";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item19
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6495.147,9.5911236,5362.9502};
+				angles[]={0,2.35602,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=943;
+			type="UserTexture1m_textTamplate";
+			atlOffset=1.2780008;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="#(rgb,512,512,3)text(1,1,""puristabold"",0.75,""#00000000"",""#ff69b4"",""2"")";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item20
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6493.127,9.5909824,5360.9932};
+				angles[]={0,2.35602,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=944;
+			type="UserTexture1m_textTamplate";
+			atlOffset=1.1970005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="#(rgb,512,512,3)text(1,1,""puristabold"",0.75,""#00000000"",""#ff69b4"",""3"")";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item21
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6491.0239,9.5914965,5358.9082};
+				angles[]={0,2.35602,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=945;
+			type="UserTexture1m_textTamplate";
+			atlOffset=1.0819998;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="#(rgb,512,512,3)text(1,1,""puristabold"",0.75,""#00000000"",""#ff69b4"",""4"")";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item22
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6489,9.5912323,5356.9512};
+				angles[]={0,2.35602,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=946;
+			type="UserTexture1m_textTamplate";
+			atlOffset=1.0279999;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="#(rgb,512,512,3)text(1,1,""puristabold"",0.75,""#00000000"",""#ff69b4"",""5"")";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ObjectCollision";
+					expression="[_this, if (_value isEqualType []) then {	(			[false,true] select (if 		(_value in [true,false]) 	then 	{parseNumber _value} else {_value # 0}		 ) ) 	}] remoteExecCall ['setPhysicsCollisionFlag', 0, _this];";
+					class Value
+					{
+						class data
+						{
+							singleType="BOOL";
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item23
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6486.9951,9.5909996,5354.9922};
+				angles[]={0,2.35602,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=947;
+			type="UserTexture1m_textTamplate";
+			atlOffset=1.0109997;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="#(rgb,512,512,3)text(1,1,""puristabold"",0.75,""#00000000"",""#ff69b4"",""6"")";
 						};
 					};
 				};
