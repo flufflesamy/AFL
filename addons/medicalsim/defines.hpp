@@ -77,3 +77,6 @@
 #define MEDSIM_CG_POS_W(N)              POS_W(N * MEDSIM_CG_GRID_W)
 #define MEDSIM_CG_GRID_H                (MEDSIM_CONTROLS_UH / 22)
 #define MEDSIM_CG_POS_H(N)              POS_X(N##.##N)
+
+// Patient Monitor defines
+#define IDD_PATIENT_MONITOR             324468

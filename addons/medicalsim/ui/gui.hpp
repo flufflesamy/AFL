@@ -75,33 +75,39 @@ class GVAR(RscPropCheckbox) : RscCheckBox {
     h = QUOTE(POS_H(1));
 };
 
+class GVAR(RscWindowTitle) : RscText {
+    idc = -1;
+    text = "Amy Medical Sim";
+    colorText[] = GUI_TITLETEXT_COLOR;
+    colorBackground[] = GUI_BCG_COLOR;
+    x = QUOTE(POS_X(0));
+    y = QUOTE(POS_Y(0));
+    w = QUOTE(POS_W(40));
+    h = QUOTE(POS_H(1));
+};
+
+class GVAR(RscWindowBackground) : RscText {
+    idc = -1;
+    colorBackground[] = {0, 0, 0, 0.65};
+    x = QUOTE(POS_X(0));
+    y = QUOTE(POS_Y(1.1));
+    w = QUOTE(POS_W(40));
+    h = QUOTE(POS_H(22));
+};
+
 class GVAR(RscSimMenu) {
     idd = IDD_MEDSIM_MENU;
     enableSimulation = 1;
-    duration = 1e+6;
+    // duration = 1e+6;
     movingEnable = 0;
     onLoad = QUOTE(_this select 0 call FUNC(ui_onMenuOpen));
     onUnload = QUOTE(_this select 0 call FUNC(ui_onMenuClose));
 
     class ControlsBackground {
-        class Title : RscText {
-            idc = -1;
+        class Title : GVAR(RscWindowTitle) {
             text = "Amy Medical Sim";
-            colorText[] = GUI_TITLETEXT_COLOR;
-            colorBackground[] = GUI_BCG_COLOR;
-            x = QUOTE(POS_X(0));
-            y = QUOTE(POS_Y(0));
-            w = QUOTE(POS_W(40));
-            h = QUOTE(POS_H(1));
         };
-        class Background : RscText {
-            idc = -1;
-            colorBackground[] = {0, 0, 0, 0.65};
-            x = QUOTE(POS_X(0));
-            y = QUOTE(POS_Y(1.1));
-            w = QUOTE(POS_W(40));
-            h = QUOTE(POS_H(22));
-        };
+        class Background : GVAR(RscWindowBackground) {};
     };
 
     class Controls {
@@ -526,5 +532,20 @@ class GVAR(RscSimMenu) {
 };
 
 class GVAR(RscPatientMonitor) {
+    idc = IDD_PATIENT_MONITOR;
+    enableSimulation = 1;
+    movingEnable = 0;
+    onLoad = QUOTE(_this select 0 call FUNC(ui_onMonitorOpen));
+    onUnload = QUOTE(_this select 0 call FUNC(ui_onMonitorClose));
 
+    class ControlsBackground {
+        class Title : GVAR(RscWindowTitle) {
+            text = "Patient Monitor";
+        };
+        class Background : GVAR(RscWindowBackground) {};
+    };
+
+    class Controls {
+
+    };
 };
