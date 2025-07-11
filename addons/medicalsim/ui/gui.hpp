@@ -546,6 +546,13 @@ class GVAR(RscPatientMonitor) {
     };
 
     class Controls {
-
+        class CloseButton : RscButtonMenu {
+            idc = 2;
+            text = "CLOSE";
+            x = QUOTE(POS_X(0));
+            y = QUOTE(POS_Y(23.2));
+            w = QUOTE(POS_W(5));
+            h = QUOTE(POS_H(1));
+        };
     };
 };

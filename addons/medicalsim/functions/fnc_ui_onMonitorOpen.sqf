@@ -31,15 +31,17 @@ private _monitorPFH = [{
 
     // Patient vitals
     private _HR = 0;
-    private _SpO2 = 0;
+    private _SpO2 = GET_KAT_SPO2(_patient);
     private _cardiac = "None";
     private _pneumo = "None";
     private _bleeding = 0;
-    private _bloodVol = 0;
+    private _bloodVol = GET_BLOOD_VOLUME_ML(_patient);
     private _arrestTimer = 0;
-    private _systolic = 0;
-    private _diastolic = 0;
-    private _isAlive = true;
+    private _bp = GET_BLOOD_PRESSURE(_patient);
+    private _systolic = _bp select 0;
+    private _diastolic = _bp select 1;
+    private _isAlive = alive _patient;
+    private _isAwake = !(IS_UNCONSCIOUS(_patient));
 
     if (isNil "_patient") exitWith {
         // TODO: Show Empty Stretcher.

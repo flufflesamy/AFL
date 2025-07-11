@@ -13,10 +13,6 @@
 #define POS_W(N) ((N) * GUI_GRID_W)
 #define POS_H(N) ((N) * GUI_GRID_H)
 
-// #define AFUNC(var) TRIPLES(ADDON,fnc,var)
-// #define AVAR(v) DOUBLES(ADDON,v)
-// #define QAVAR(v) QUOTE(AVAR(v))
-// #define QDAVAR(var1, var2) DOUBLES(AVAR(var1),var2)
 #define ENTVAR(var1) DOUBLES(fr,var1)
 #define QENTVAR(var1) QUOTE(ENTVAR(var1))
 
@@ -177,7 +173,8 @@
 
 // END ACE3 reference macros
 
-// KAT Macros
+// BEGIN KAT Macros
+
 #define DEFAULT_PACO2 40
 #define DEFAULT_PAO2 90
 #define DEFAULT_O2SAT 0.96

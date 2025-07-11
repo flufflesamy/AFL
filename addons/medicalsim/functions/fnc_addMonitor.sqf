@@ -22,7 +22,7 @@ TRACE_2("addSimMenu",_entity,_stretcher);
 _entity setVariable [QGVAR(monitorStretcher), _stretcher, true];
 
 _entity addAction [
-    "Open Simulator Menu",
+    "Open Patient Monitor",
     {
         _this select 3 call FUNC(openMonitor);
     },

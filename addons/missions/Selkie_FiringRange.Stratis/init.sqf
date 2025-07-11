@@ -4,7 +4,7 @@
 fr_vehicleConsole addAction [
     "Spawn Wraith Close",
     {
-        ["OPTRE_FC_Wraith_Tank", "mkrVehClose", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
+        ["OPTRE_FC_Wraith_Tank", "mkrVehClose", fr_vehicleConsole] call EFUNC(misc,createVehOnMarker);
     },
     nil,
     1.5,
@@ -20,7 +20,7 @@ fr_vehicleConsole addAction [
 fr_vehicleConsole addAction [
     "Spawn Wraith Medium",
     {
-        ["OPTRE_FC_Wraith_Tank", "mkrVehMed", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
+        ["OPTRE_FC_Wraith_Tank", "mkrVehMed", fr_vehicleConsole] call EFUNC(misc,createVehOnMarker);
     },
     nil,
     1.5,
@@ -36,7 +36,7 @@ fr_vehicleConsole addAction [
 fr_vehicleConsole addAction [
     "Spawn Wraith Medium-Far",
     {
-        ["OPTRE_FC_Wraith_Tank", "mkrVehMedFar", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
+        ["OPTRE_FC_Wraith_Tank", "mkrVehMedFar", fr_vehicleConsole] call EFUNC(misc,createVehOnMarker);
     },
     nil,
     1.5,
@@ -52,7 +52,7 @@ fr_vehicleConsole addAction [
 fr_vehicleConsole addAction [
     "Spawn Wraith Far",
     {
-        ["OPTRE_FC_Wraith_Tank", "mkrVehFar", fr_vehicleConsole] call EFUNC(common,createVehOnMarker);
+        ["OPTRE_FC_Wraith_Tank", "mkrVehFar", fr_vehicleConsole] call EFUNC(misc,createVehOnMarker);
     },
     nil,
     1.5,
@@ -80,3 +80,7 @@ private _stretchers = [
 
 [fr_medicalConsole_0, _stretchers] call EFUNC(medicalsim,addSimMenu);
 [fr_medicalConsole_1, _stretchers] call EFUNC(medicalsim,addSimMenu);
+
+// Init patient monitors
+
+[fr_monitor_0, fr_stretcher_0] call EFUNC(medicalsim,addMonitor);
