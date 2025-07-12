@@ -5,3 +5,6 @@ PREP(neckTourniquetEffects);
 PREP(ui_updateBodyImage);
 PREP(neckTourniquetVisual);
 PREP(hasBradycardia);
+PREP(fluidBlock);
+PREP(setCoagHash);
+PREP(salineFlush);

@@ -1,5 +1,6 @@
 class ACE_Medical_Treatment_Actions {
     class BasicBandage;
+    class Carbonate;
 
     class ApplyNeckTourniquet: BasicBandage {
         displayName = ACECSTRING(medical_treatment,Apply_Tourniquet);
@@ -22,4 +23,15 @@ class ACE_Medical_Treatment_Actions {
         callbackSuccess = QACEFUNC(medical_treatment,tourniquetRemove);
         allowedUnderwater = 1;
     };
+
+    // Make KAM inspect cathether and saline flush respect med level settings
+    class Inspect : Carbonate {
+        medicRequired = QKEGVAR(pharma,medLvl_ApplyIV);
+    };
+
+    // class SalineFlush : Carbonate {
+    //     medicRequired = QKEGVAR(pharma,medLvl_ApplyIV);
+    //     // Fix condition so you can actually flush a line
+    //     condition = QFUNC(flushCheck);
+    // };
 };

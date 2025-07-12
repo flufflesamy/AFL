@@ -54,6 +54,11 @@
 
 #define KEGVAR(module,var) TRIPLES(KAM_PREFIX,module,var)
 #define QKEGVAR(module,var) QUOTE(KEGVAR(module,var))
+#define QQKEGVAR(module,var) QUOTE(QKEGVAR(module,var))
+
+#define KELSTRING(module,string) QUOTE(TRIPLES(STR,DOUBLES(KAM_PREFIX,module),string))
+#define KELLSTRING(module,string) localize KELSTRING(module,string)
+#define KCSTRING(module,string) QUOTE(TRIPLES($STR,DOUBLES(KAM_PREFIX,module),string))
 
 // BEGIN ACE3 medical reference macros (from KAM)
 

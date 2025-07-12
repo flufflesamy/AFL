@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Mazinski.H Edited by flufflesamy
- * Locates and Removes Bradycardia Effect.
+ * Checks if patient has bradycardia
  *
  * Arguments:
  * 0: Patient <OBJECT>
@@ -10,13 +10,11 @@
  * Has bradycardia <BOOL>
  *
  * Example:
- * [player] call kat_pharma_fnc_treatmentAdvanced_AtropineLocal;
- *
- * Public: No
+ * [player] call afl_medical_fnc_hasBradycardia;
  */
 
 params ["_patient"];
-// TRACE_1("hasBradycardia",_patient);
+TRACE_1("hasBradycardia",_patient);
 
 private _medicationArray = _patient getVariable [QACEGVAR(medical,medications), []];
 private _hasBradycardia = false;

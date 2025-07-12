@@ -3,16 +3,16 @@
 	Author: flufflesamy
 
 	Description:
-		Handles neck tourniquet effects.
+		Handles showing low spo2 visual to neck TQ victims
 
 	Parameter(s):
-		0: Unit <OBJECT>
+		0: Enable effect <BOOL>
 
 	Returns:
 		Nothing
 
 	Examples:
-		[player] call afl_medical_fnc_neckTourniquetEffects
+		true call afl_medical_fnc_neckTourniquetVisual
 */
 params ["_enable"];
 TRACE_1("neckTourniquetVisual",_enable);

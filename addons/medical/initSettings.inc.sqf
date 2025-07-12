@@ -43,3 +43,21 @@
     [false],
     true
 ] call CFUNC(addSetting);
+
+[
+    QGVAR(enableFluidBlock),
+    "CHECKBOX",
+    "Enable IV Fluid Blocking",
+    ["AFL Medical", "IV"],
+    [false],
+    true
+] call CFUNC(addSetting);
+
+[
+    QGVAR(fluidBlockCoef),
+    "SLIDER",
+    "IV Block Chance Coefficient",
+    ["AFL Medical", "IV"],
+    [0.05, 10.00, 1.00, 2, false],
+    true
+] call CFUNC(addSetting);
