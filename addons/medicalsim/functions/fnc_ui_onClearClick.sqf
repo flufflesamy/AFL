@@ -16,6 +16,11 @@
 */
 private _stretcher = [] call FUNC(ui_getSelectedStretcher);
 TRACE_1("ui_onClearClick",_stretcher);
+
+// unfocus button
+ctrlSetFocus displayCtrl IDC_STRETCHERS_LISTBOX;
+false call FUNC(ui_updateClearAllButton);
+
 if (isNil "_stretcher") exitWith {ERROR_1("Stretcher %1 cannot be nil.",_stretcher)};
 
 _stretcher call FUNC(clearPatient);

@@ -15,3 +15,4 @@ PREP(ui_onClearClick);
 PREP(ui_onClearAllClick);
 PREP(ui_onSliderPosChanged);
 PREP(ui_getSelectedStretcher);
+PREP(ui_updateClearAllButton);

@@ -6,13 +6,14 @@
 		Handles slider position changes and updates editbox value.
 
 	Parameter(s):
-		0: Medical sim display <DISPLAY>
+		0: Slider <CONTROL>
+        1: New value of slider <NUMBER>
 
 	Returns:
 		Nothing.
 
 	Examples:
-		[DISPLAY] call afl_medicalsim_fnc_ui_onMenuOpen;
+		[slider1, 10] call afl_medicalsim_fnc_ui_onSliderPosChanged;
 */
 
 params ["_slider", "_newValue"];

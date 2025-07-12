@@ -20,6 +20,10 @@
 private _stretcher = [] call FUNC(ui_getSelectedStretcher);
 TRACE_1("Stretcher: %1",_stretcher);
 
+// unfocus button
+ctrlSetFocus displayCtrl IDC_STRETCHERS_LISTBOX;
+false call FUNC(ui_updateClearAllButton);
+
 // spawn patient
 private _patient = _stretcher call FUNC(spawnPatient);
 TRACE_1("Patient: %1",_patient);
@@ -97,3 +101,4 @@ if (_fracRLegIndex > 0) then {
     [_patient, "RightLeg", _fracRLegText] call FUNC(setFracture);
     TRACE_3("RightLeg Fracture",_patient,_fracRLegIndex,_fracRLegText);
 };
+

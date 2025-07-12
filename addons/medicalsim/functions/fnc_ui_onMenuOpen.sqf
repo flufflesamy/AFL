@@ -48,3 +48,6 @@ private _stretchersListBox = _display displayCtrl IDC_STRETCHERS_LISTBOX;
         [_this select 0, _this select 1] call FUNC(ui_onSliderPosChanged);
     }];
 } forEach _sliderArray;
+
+// Init clear button variable
+GVAR(clearAllConfirm) = false;

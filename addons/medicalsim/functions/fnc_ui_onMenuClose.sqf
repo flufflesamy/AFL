@@ -18,4 +18,5 @@
 params ["_display"];
 TRACE_1("ui_onMenuClose",_display);
 
+GVAR(clearAllConfirm) = nil;
 uiNamespace setVariable [QGVAR(RscSimMenu), displayNull];
