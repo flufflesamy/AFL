@@ -4,10 +4,6 @@
 
 // #define DEBUG_MODE_FULL
 
-#ifdef DEBUG_MODE_FULL
-    #define DISABLE_COMPILE_CACHE
-#endif
-
 #include "script_version.hpp"
 
 #define REQUIRED_VERSION 2.20

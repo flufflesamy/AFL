@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=232;
+		nextID=252;
 	};
 	class Camera
 	{
-		pos[]={6494.6157,10.32209,5374.4395};
-		dir[]={0.74342728,-0.19709912,-0.63932967};
-		up[]={0.14944845,0.98042816,-0.12851927};
-		aside[]={-0.6520884,-2.2451859e-06,-0.75825274};
+		pos[]={6481.6904,14.895704,5376.4932};
+		dir[]={0.37814733,-0.56023985,-0.73707932};
+		up[]={0.25574258,0.82831848,-0.49849072};
+		aside[]={-0.8897962,-1.7439015e-07,-0.45649615};
 	};
 };
 binarizationWanted=0;
@@ -52466,6 +52466,7 @@ class Mission
 			};
 			id=871;
 			type="Box_NATO_Equip_F";
+			atlOffset=-4.7683716e-07;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52570,6 +52571,7 @@ class Mission
 			};
 			id=887;
 			type="Land_TripodScreen_01_dual_v2_black_F";
+			atlOffset=-2.4795532e-05;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52607,7 +52609,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6484.1499,9.4242849,5354.4658};
-				angles[]={-0,5.5865898,0};
+				angles[]={0,5.5865898,0};
 			};
 			side="Empty";
 			flags=4;
@@ -52702,7 +52704,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6499.1738,9.5913906,5366.8403};
-				angles[]={0,2.3560169,-0};
+				angles[]={0,2.3560169,0};
 			};
 			side="Empty";
 			class Attributes

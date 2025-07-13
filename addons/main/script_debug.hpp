@@ -1,3 +1,7 @@
+#ifdef DEBUG_MODE_FULL
+    #define DISABLE_COMPILE_CACHE
+#endif
+
 /**
 Fast Recompiling via function
 **/

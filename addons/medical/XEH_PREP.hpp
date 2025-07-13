@@ -1,5 +1,7 @@
 PREP(getBandageTime);
 PREP(neckTourniquet);
 PREP(neckTourniquetLocal);
-PREP(handleNeckTourniquetEffects);
+PREP(neckTourniquetEffects);
 PREP(ui_updateBodyImage);
+PREP(neckTourniquetVisual);
+PREP(hasBradycardia);
