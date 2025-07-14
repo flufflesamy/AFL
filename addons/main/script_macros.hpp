@@ -29,6 +29,11 @@
     #define PREP(function) ['\MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT_F\functions\DOUBLES(fnc,function).sqf', 'TRIPLES(ADDON,fnc,function)'] call SLX_XEH_COMPILE_NEW
 #endif
 
+// AFL macros
+#define FRACTURE_TYPE ["none", "simple", "compound", "comminuted"]
+#define PNUMO_TYPE ["none", "initial", "tension", "hemo"]
+#define ARREST_TYPE ["none", "asystole", "pea", "vf", "vt"]
+
 // CBA macros
 #define CBA_PREFIX cba
 #define CBA_ADDON(component) DOUBLES(CBA_PREFIX,component)
@@ -171,3 +176,86 @@
 #define PAIN_UNCONSCIOUS ACEGVAR(medical,painUnconsciousThreshold)
 
 // END ACE3 reference macros
+
+// KAT Macros
+#define DEFAULT_PACO2 40
+#define DEFAULT_PAO2 90
+#define DEFAULT_O2SAT 0.96
+#define DEFAULT_HCO3 24
+#define DEFAULT_PH 7.4
+#define DEFAULT_ETCO2 37
+#define DEFAULT_BLOOD_GAS [DEFAULT_PACO2, DEFAULT_PAO2, DEFAULT_O2SAT, DEFAULT_HCO3, DEFAULT_PH, DEFAULT_ETCO2]
+#define DEFAULT_RESPIRATORY_DEPTH       10
+
+#define DEFAULT_ANEROBIC_EXCHANGE 0.8
+#define DEFAULT_TEMPERATURE 37
+
+#define DEFAULT_ECB 2700
+#define DEFAULT_ECP 3300
+#define DEFAULT_SRBC 500
+#define DEFAULT_ISP 10000
+#define DEFAULT_BODY_FLUID [2700, 3300, 500, 10000, 6000]
+
+#define LITERS_TO_ML 1000
+#define ML_TO_LITERS 1000
+
+// Airway
+#define OXYGEN_PERCENTAGE_CRITICAL 85
+#define OXYGEN_PERCENTAGE_ARREST 80
+#define OXYGEN_PERCENTAGE_FATAL 75
+
+// Breathing
+#define VAR_SURFACE_AREA                400
+#define GET_KAT_SURFACE_AREA(unit)      (VAR_SURFACE_AREA - (((unit getVariable [QKEGVAR(breathing,pneumothorax), 0]) * 75)))
+
+#define VAR_RESPIRATORY_DEPTH           QKEGVAR(vitals,respiratoryDepth)
+#define GET_KAT_RESPIRATORY_DEPTH(unit)      (unit getVariable [QKEGVAR(vitals,respiratoryDepth), 10])
+
+#define VAR_BLOOD_GAS                  QKEGVAR(circulation,bloodGas)
+#define VAR_BREATHING_RATE             QKEGVAR(breathing,breathRate)
+
+#define GET_BLOOD_GAS(unit)            (unit getVariable [VAR_BLOOD_GAS, DEFAULT_BLOOD_GAS])
+#define GET_PAO2(unit)                 ((unit getVariable [VAR_BLOOD_GAS, DEFAULT_BLOOD_GAS]) select 1)
+#define GET_KAT_SPO2(unit)             (((unit getVariable [VAR_BLOOD_GAS, DEFAULT_BLOOD_GAS]) select 2) * 100)
+#define GET_PH(unit)                   ((unit getVariable [VAR_BLOOD_GAS, DEFAULT_BLOOD_GAS]) select 4)
+#define GET_ETCO2(unit)                ((unit getVariable [VAR_BLOOD_GAS, DEFAULT_BLOOD_GAS]) select 5)
+#define GET_BREATHING_RATE(unit)       (unit getVariable [VAR_BREATHING_RATE, 15])
+
+// Circulation
+#define VAR_INTERNAL_BLEEDING          QKEGVAR(circulation,internalBleeding)
+#define GET_INTERNAL_BLEEDING(unit)    (unit getVariable [VAR_INTERNAL_BLEEDING, 0])
+
+#define VAR_BODY_FLUID                 QKEGVAR(circulation,bodyFluid)
+#define GET_BODY_FLUID(unit)           (unit getVariable [VAR_BODY_FLUID, DEFAULT_BODY_FLUID])
+
+#define GET_BLOOD_VOLUME_LITERS(unit)  ((GET_BODY_FLUID(unit) select 4) / 1000)
+#define GET_BLOOD_VOLUME_ML(unit)      (GET_BODY_FLUID(unit) select 4)
+#define GET_SIMPLE_BLOOD_VOLUME(unit)  (unit getVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME])
+
+#define REDUCE_TOTAL_BLOOD_VOLUME(unit,volume) (unit setVariable [VAR_BODY_FLUID, [(GET_BODY_FLUID(unit) select 0) - (volume / 2), (GET_BODY_FLUID(unit) select 1) - (volume / 2), (GET_BODY_FLUID(unit) select 2), (GET_BODY_FLUID(unit) select 3), (GET_BODY_FLUID(unit) select 4) - volume], true])
+
+#undef GET_BLOOD_PRESSURE
+#define GET_BLOOD_PRESSURE(unit)       ([unit] call KEFUNC(circulation,getBloodPressure))
+#define VAR_BLOODPRESSURE_CHANGE       QKEGVAR(circulation,bloodPressureChange)
+#define GET_BLOODPRESSURE_CHANGE(unit) (unit getVariable [VAR_BLOODPRESSURE_CHANGE, [0,0]])
+
+// Pharma
+#define VAR_VASOCONSTRICTION           QKEGVAR(pharma,alphaAction)
+#define GET_VASOCONSTRICTION(unit)     (unit getVariable [VAR_VASOCONSTRICTION, 1])
+
+//Surgery
+#define STRING_BODY_PARTS ["head", "body", "left arm", "right arm", "left leg", "right leg"]
+#define GET_REBOA_VOLUME(unit)         ([unit] call KEFUNC(surgery,reboaVolume))
+
+//Feedback
+#define VAR_PP QKEGVAR(feedback,ppEffect)
+#define GET_PP(unit) (unit getVariable [VAR_PP, 0])
+
+#define IS_AIRPOISONED(unit) (unit getVariable [QKEGVAR(chemical,airPoisoning), false])
+#define IN_TEARGAS(unit) (unit getVariable [QKEGVAR(chemical,CSGas), 0])
+
+//Ophthalmology
+#define GET_DUST_INJURY(unit) ((unit getVariable [QKEGVAR(ophthalmology,dustInjuryLight), 0]) + (unit getVariable [QKEGVAR(ophthalmology,dustInjuryHeavy), 0]))
+#define GET_EYE_INJURIES(unit) (unit getVariable [QKEGVAR(ophthalmology,eyeInjuries), [1,1]])
+
+// END KAT Macros
