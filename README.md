@@ -1,4 +1,4 @@
-# Amy Functions Library for Arma 3 (AFL)
+# Amy Functions Library - Selkie Medical Mod
 
 ## Components
 
@@ -38,7 +38,7 @@ This repo uses HEMTT for packaging. See [the docs](https://hemtt.dev/) for more 
 
 ## License
 
-Copyright (C) 2025 flufflesamy
+Copyright (C) 2025 flufflesamy and AFL Contributors
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
