@@ -1,5 +1,9 @@
 #include "..\script_component.hpp"
 /*
+ * The following code is a derivative work of the code from the KAM project,
+ * which is licensed under GPLv3. This code is therefore also licensed
+ * under the terms of the GNU Public License, version 3.
+ *
  * Author: Mazinski.H Edited by flufflesamy
  * Checks if patient has bradycardia
  *

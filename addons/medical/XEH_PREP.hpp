@@ -8,3 +8,6 @@ PREP(hasBradycardia);
 PREP(fluidBlock);
 PREP(setCoagHash);
 PREP(salineFlush);
+PREP(getIVFlowRate);
+PREP(getBloodVolumeChange);
+PREP(ui_updateInjuryListPart);

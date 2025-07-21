@@ -9,4 +9,14 @@ class CfgFunctions {
             };
         };
     };
+
+    class Overwrite_Pharma {
+        tag = "kat_pharma";
+
+        class KAT_Pharma {
+            class getBloodVolumeChange {
+                file = QPATHTOF(functions\ovr_getBloodVolumeChange.sqf);
+            };
+        };
+    };
 };

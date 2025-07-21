@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFL">
+    <Package name="Medical">
+        <Key ID="STR_AFL_Medical_noIVBags">
+            <English>No IV bags on this bodypart...</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_recievingBloodIVBags">
+            <English>%1x Blood [%2ml]</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_recievingPlasmaIVBags">
+            <English>%1x Plasma [%2ml]</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_recievingSalineIVBags">
+            <English>%1x Saline [%2ml]</English>
+        </Key>
+    </Package>
+</Project>
