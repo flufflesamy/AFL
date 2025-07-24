@@ -44,7 +44,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Make neck tourniquets much more realistic. Now, neck TQs simulate the effects of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
+- Make neck tourniquets much more realistic. Now, neck TQs simulate the effects
+of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 - Update mission and server mod settings to reflect current Selkie platoon ones.
 - Update mod preset to 2025-07-13.
 

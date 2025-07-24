@@ -7,7 +7,8 @@ mainprefix = "z"
 include = [
     "LICENSE",
     "README.md",
-    "logo.paa"
+    "logo.paa",
+    "CHANGELOG.md"
 ]
 
 [version]
