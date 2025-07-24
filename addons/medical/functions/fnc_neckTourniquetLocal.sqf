@@ -27,9 +27,6 @@ private _tourniquets = GET_TOURNIQUETS(_patient);
 _tourniquets set [_partIndex, CBA_missionTime];
 _patient setVariable [VAR_TOURNIQUET, _tourniquets, true];
 
-// make target have severe pain
-// [_patient, 0.5] call ACEFUNC(medical_status,adjustPainLevel);
-
 // Apply rope burn to head
 [_patient, [[0.2, "Head"]], "ropeburn"] call ACEFUNC(medical_damage,woundsHandlerBase);
 

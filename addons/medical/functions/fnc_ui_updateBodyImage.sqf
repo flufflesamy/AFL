@@ -17,10 +17,8 @@
 */
 
 params ["_ctrlGroup", "_target"];
-// TRACE_2("ui_updateBodyImage",_ctrlGroup,_target);
 
 private _neckTourniquets = ([ARR_2(_target,"Head")] call ACEFUNC(medical_treatment,hasTourniquetAppliedTo));
 private _tqControl = _ctrlGroup controlsGroupCtrl IDC_BODY_HEAD_T;
-// TRACE_2("neckTQControl",_neckTourniquets,_tqControl);
 
 _tqControl ctrlShow _neckTourniquets;

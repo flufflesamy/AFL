@@ -60,7 +60,6 @@ if (!isNil {_unit getVariable [QACEGVAR(medical,ivBags),[]]}) then {
 
         if ((_tourniquets select _bodyPart isEqualTo 0) && (_IVarray select _bodyPart isNotEqualTo 3)) then {
             private _bagFlowRate = ([_bloodPressure, _bodyPart, _type] call FUNC(getIVFlowRate)) / (_partBagArray select _bodyPart); // normalize flow rate
-            TRACE_5("Bag Flow Rate",_bagFlowRate,_bloodPressure,_bodyPart,_type,_partBagArray);
             private _IVflow = _unit getVariable [QKEGVAR(pharma,IVflow), [0,0,0,0,0,0]];
             private _flowCalculation = _bagFlowRate * _deltaT * ACEGVAR(medical,ivFlowRate) * (_IVflow select _bodyPart min 1);
             private _bagChange = _flowCalculation min _bagVolumeRemaining; // absolute value of the change in miliLiters

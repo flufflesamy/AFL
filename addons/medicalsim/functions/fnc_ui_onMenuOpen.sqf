@@ -34,10 +34,11 @@ private _stretchersListBox = _display displayCtrl IDC_STRETCHERS_LISTBOX;
     _stretchersListBox lbSetData [_index, QUOTE(_stretcher)];
 } forEach _stretchersArray;
 
+_stretchersListBox lbSetCurSel 0;
+
 // add eventhandlers for sliders
 {
     _x params ["_idc_slider", "_idc_val"];
-    TRACE_2("forEach _sliderArray",_idc_slider,_idc_val);
 
     private _slider = _display displayCtrl _idc_slider;
     private _val = _display displayCtrl _idc_val;
