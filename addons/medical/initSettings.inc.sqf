@@ -1,13 +1,3 @@
-// // Enable checkbox
-// [
-//     QGVAR(enable),
-//     "CHECKBOX",
-//     "Enable:",
-//     ["AFL Medical"],
-//     [true],
-//     true
-// ] call CFUNC(addSetting);
-
 [
     QGVAR(bandageTimeS),
     "SLIDER",
