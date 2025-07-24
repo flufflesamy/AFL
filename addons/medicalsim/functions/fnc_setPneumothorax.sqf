@@ -65,5 +65,5 @@ if (_pType == 1) then {
 // create tamponade
 if (_tam) then {_unit call KEFUNC(breathing,createTamponade);};
 
-_unit call KEFUNC(breathing,handleBreathing);
 _unit call KEFUNC(circulation,updateInternalBleeding);
+_unit call ACEFUNC(medical_vitals,handleUnitVitals);

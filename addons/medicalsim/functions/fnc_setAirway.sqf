@@ -30,4 +30,4 @@ _bloodGas set [1, _pao2];
 
 _unit setVariable [QKEGVAR(circulation,bloodGas), _bloodGas, true];
 
-[_unit] call KEFUNC(breathing,handleBreathing);
+_unit call ACEFUNC(medical_vitals,handleUnitVitals);
