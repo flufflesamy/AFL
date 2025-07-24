@@ -17,6 +17,7 @@
 #define IDC_FRACTURES_CG                11504
 #define IDC_PTX_CG                      11505
 #define IDC_AIRWAY_CG                   11506
+#define IDC_MISC_CG                     11507
 
 #define IDC_STRETCHERS_LISTBOX          1501
 
@@ -49,6 +50,7 @@
 #define IDC_AIRWAY_OBSTRUCTED_CHECKBOX  17702
 #define IDC_PTX_DETERIORATE_CHECKBOX    17703
 #define IDC_PTX_TAMPONADE_CHECKBOX      17704
+#define IDC_MISC_UNCON_CHECKBOX         17705
 
 #define MEDSIM_SLIDER_ARRAY [\
 [IDC_WOUNDS_HEAD_SLIDER, IDC_WOUNDS_HEAD_VAL], \

@@ -482,6 +482,31 @@ class GVAR(RscSimMenu) {
             };
         };
 
+        class MiscGroup : RscControlsGroupNoScrollbars {
+            idc = IDC_MISC_CG;
+            x = QUOTE(MEDSIM_CG_RIGHT_X);
+            y = QUOTE(POS_Y(12.2));
+            w = QUOTE(MEDSIM_CG_W);
+            h = 2.1;
+
+            class Controls {
+                class Header : GVAR(RscHeaderText) {
+                    text = "Misc";
+                };
+
+                // Uncon
+                class UnconText : GVAR(RscPropTitle) {
+                    text = "Unconscious:";
+                    y = QUOTE(POS_H(1.1));
+                };
+
+                class UnconCheckbox : GVAR(RscPropCheckbox) {
+                    idc = IDC_MISC_UNCON_CHECKBOX;
+                    y = QUOTE(POS_H(1.1));
+                };
+            };
+        };
+
         class SpawnButton : RscButtonMenu {
             idc = IDC_SPAWN_BUTTON;
             text = "SPAWN";

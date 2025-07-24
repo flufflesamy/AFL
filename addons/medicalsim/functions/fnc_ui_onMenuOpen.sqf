@@ -35,6 +35,7 @@ private _stretchersListBox = _display displayCtrl IDC_STRETCHERS_LISTBOX;
 } forEach _stretchersArray;
 
 _stretchersListBox lbSetCurSel 0;
+ctrlSetFocus displayCtrl IDC_SPAWN_BUTTON;
 
 // add eventhandlers for sliders
 {

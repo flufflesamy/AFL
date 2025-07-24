@@ -29,6 +29,13 @@ private _patient = _stretcher call FUNC(spawnPatient);
 TRACE_1("Patient: %1",_patient);
 if (isNil "_patient") exitWith {ERROR_1("Patient %1 cannot be nil",_patient)};
 
+// set uncon
+private _uncon = cbChecked displayCtrl IDC_MISC_UNCON_CHECKBOX;
+
+if (_uncon) then {
+    [_patient, true, 300] call KEFUNC(misc,setUnconscious);
+};
+
 // set wounds
 private _damageArray = [];
 _damageArray pushBack [sliderPosition IDC_WOUNDS_HEAD_SLIDER, "Head"];
