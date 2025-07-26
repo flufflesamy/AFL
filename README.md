@@ -12,8 +12,10 @@ Modifies the behavior of ACE Medical and KAT Advanced Medical. Currently contain
 
 - Add setting for base bandage time.
 - Re-add ability to tourniquet necks.
+- Normalize IV flow rates based on IRL data.
+- Add IV clog chance based on coagulation factor.
 
-### Medicalsim
+### Medical Simulator
 
 Medical simulator code for practicing KAT Advanced Medical.
 
@@ -27,10 +29,13 @@ Includes missions. Currently only has Selkie_FiringRange.Stratis which is a map 
 
 ## Required Mods
 
-- CBA
-- ace
-- KAM
-- OPTRE
+- [CBA](https://github.com/CBATeam/CBA_A3)
+- [ace](https://github.com/acemod/ACE3)
+- [KAM](https://github.com/KAT-Advanced-Medical/KAM)
+
+## Download
+
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3513989482)
 
 ## Build Instructions
 
