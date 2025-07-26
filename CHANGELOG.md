@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Moved defaultControls example to extras folder.
+- Updated function comments.
+- Updated README.md
+
+### Removed
+
+- Unused comments.
+
 ## [v0.4.0] - 2025-07-24
 
 ### Added

@@ -3,7 +3,7 @@
 	Author: flufflesamy
 
 	Description:
-		<function description>
+		Create vehicle on marker.
 
 	Parameter(s):
 		0: Name of Vehicle <STRING>
@@ -15,7 +15,7 @@
 		0: Vehicle <OBJECT>
 
 	Examples:
-		<example>
+		["OPTRE_FC_Wraith_Tan", "myMkr", vehicleConsole, nil] call afl_misc_fnc_createVehOnMarker
 */
 
 params ["_vehName", "_markerName", "_entity", ["_caller", nil]];

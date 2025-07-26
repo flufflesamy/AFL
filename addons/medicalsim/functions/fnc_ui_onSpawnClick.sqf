@@ -3,7 +3,7 @@
 	Author: flufflesamy
 
 	Description:
-		Handles opening of medical sim menu. Called from onLoad event.
+		Handles onClick event of the Spawn button.
 
 	Parameter(s):
 		Nothing.
@@ -14,8 +14,6 @@
 	Examples:
 		[] call afl_medicalsim_fnc_ui_onSpawnClick;
 */
-// private _display = uiNamespace getVariable [QGVAR(RscSimMenu), displayNull];
-// if (isNil "_display") exitWith {};
 
 private _stretcher = [] call FUNC(ui_getSelectedStretcher);
 TRACE_1("Stretcher: %1",_stretcher);

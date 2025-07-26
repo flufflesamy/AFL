@@ -3,16 +3,16 @@
 	Author: flufflesamy
 
 	Description:
-		<function description>
+		Gets if a vehicle is destroyed.
 
 	Parameter(s):
 		0: Vehicle <OBJECT>
 
 	Returns:
-		0: <BOOL>
+		0: Is destroyed <BOOL>
 
 	Examples:
-		<example>
+		[myVeh] call afl_misc_fnc_isDestroyed
 */
 
 params ["_veh"];

@@ -3,7 +3,7 @@
 	Author: flufflesamy
 
 	Description:
-		Adds pneumothorax for a unit.
+		Sets airway for unit.
 
 	Parameter(s):
 		0: Unit <OBJECT>

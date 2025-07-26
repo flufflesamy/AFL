@@ -3,7 +3,7 @@
 	Author: flufflesamy
 
 	Description:
-		Updates injury list for given body part for the target.
+		Adds visual indication of IV bags on limbs in medical menu.
 
 	Parameter(s):
 		0: Injury list <CONTROL>

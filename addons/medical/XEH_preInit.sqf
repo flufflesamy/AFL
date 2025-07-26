@@ -9,6 +9,4 @@ PREP_RECOMPILE_END;
 #define CBA_SETTINGS_CAT "AFL - Amy Functions Library: Medical"
 #include "initSettings.inc.sqf"
 
-FUNC(test);
-
 ADDON = true;

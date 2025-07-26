@@ -28,10 +28,4 @@ class ACE_Medical_Treatment_Actions {
     class Inspect : Carbonate {
         medicRequired = QKEGVAR(pharma,medLvl_ApplyIV);
     };
-
-    // class SalineFlush : Carbonate {
-    //     medicRequired = QKEGVAR(pharma,medLvl_ApplyIV);
-    //     // Fix condition so you can actually flush a line
-    //     condition = QFUNC(flushCheck);
-    // };
 };

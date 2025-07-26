@@ -1,3 +1,4 @@
+// All default controls
 class RscText;
 class RscTextSmall;
 class RscTitle;

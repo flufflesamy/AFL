@@ -35,5 +35,3 @@ _patient setVariable [VAR_TOURNIQUET, _tourniquets, true];
 private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call ACEFUNC(common,isPlayer)};
 TRACE_1("clearConditionCaches: tourniquetLocal",_nearPlayers);
 [QACEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CFUNC(targetEvent);
-
-// [KEGVAR(breathing,handleBreathing), [_patient]] call CFUNC(localEvent);
