@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFL">
+    <Package name="Statusmonitor">
+        <Key ID="STR_AFL_StatusMonitor_Description">
+            <English>Monitors heart rate of group members.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Interact_Hide">
+            <English>Hide Status Monitor</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Interact_Show">
+            <English>Show Status Monitor</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Name">
+            <English>AFL Status Monitor</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_AbnormalColor">
+            <English>Abnormal Color</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_AbnormalColor_Description">
+            <English>Color when unit heart rate is not in normal range.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_CriticalColor">
+            <English>Critical Color</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_CriticalColor_Description">
+            <English>Color when unit is dead or out of range.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_HeartColor">
+            <English>Heart Color</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_HeartColor_Description">
+            <English>Color of heart icon.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_MainCategory">
+            <English>AFL Status Monitor</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_MonitorRange">
+            <English>Range (m)</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_MonitorRange_Description">
+            <English>Distance between player and unit in meters before monitor shows as out of range.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_NormalColor">
+            <English>Normal Color</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_NormalColor_Description">
+            <English>Color when unit heart rate is in normal range.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_ServerCategory">
+            <English>Server Settings</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_ShowCross">
+            <English>Critical on PR 0</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_ShowCross_Description">
+            <English>Treat units that have a PR of 0 as if they are out of range or dead.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_TextColor">
+            <English>Text Color</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_TextColor_Description">
+            <English>Color of text, including unit name, PR, and icons.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_UpdateInterval">
+            <English>Update Interval (s)</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_UpdateInterval_Description">
+            <English>Interval in seconds of how often status monitor updates.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_UserCategory">
+            <English>User Settings</English>
+        </Key>
+    </Package>
+</Project>

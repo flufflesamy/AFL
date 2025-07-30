@@ -8,6 +8,15 @@
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\a3\ui_f\hpp\defineCommonColors.inc"
 
+// GUI defines for configs
+#define C_GRID_CUSTOMINFOLEFT_X		    (profilenamespace getvariable ["IGUI_GRID_CUSTOMINFOLEFT_X",IGUI_GRID_CUSTOMINFOLEFT_XDef])
+#define C_GRID_CUSTOMINFOLEFT_Y		    (profilenamespace getvariable ["IGUI_GRID_CUSTOMINFOLEFT_Y",IGUI_GRID_CUSTOMINFOLEFT_YDef])
+#define C_GRID_CUSTOMINFORIGHT_X		(profilenamespace getvariable ["IGUI_GRID_CUSTOMINFORIGHT_X",IGUI_GRID_CUSTOMINFORIGHT_XDef])
+#define C_GRID_CUSTOMINFORIGHT_Y		(profilenamespace getvariable ["IGUI_GRID_CUSTOMINFORIGHT_Y",IGUI_GRID_CUSTOMINFORIGHT_YDef])
+#define C_GRID_CUSTOMINFO_WAbs		    (profilenamespace getvariable ["IGUI_GRID_CUSTOMINFORIGHT_W",IGUI_GRID_CUSTOMINFO_WDef])
+#define C_GRID_CUSTOMINFO_HAbs		    (profilenamespace getvariable ["IGUI_GRID_CUSTOMINFORIGHT_H",IGUI_GRID_CUSTOMINFO_HDef])
+
+// Center Grids
 #define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
 #define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)
 #define POS_W(N) ((N) * GUI_GRID_W)

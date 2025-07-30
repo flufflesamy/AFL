@@ -1,0 +1,11 @@
+PREP(canShow);
+PREP(canHide);
+PREP(hasMonitor);
+PREP(showMonitor);
+PREP(hideMonitor);
+PREP(parseMonitorItems);
+PREP(ui_onMonitorShow);
+PREP(ui_onMonitorHide);
+PREP(initMonitor);
+PREP(ui_updateMonitor);
+PREP(getUnitStatus);
