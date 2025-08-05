@@ -10,7 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Preset system.
-- Default presets.
+  - Default presets.
+- Status monitor feature.
+  - Status monitor UI.
+  - Status monitor item.
+  - Status monitor CBA settings.
 
 ### Changed
 
