@@ -13,3 +13,8 @@ include = [
 
 [version]
 git_hash = 0
+
+[rapify]
+exclude = [
+    "*.ext"
+]

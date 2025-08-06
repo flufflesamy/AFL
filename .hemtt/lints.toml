@@ -5,5 +5,15 @@ options.ignore = [
 
 [sqf.banned_macros]
 options.release = [
-    "DEBUG_MODE_FULL", "DISABLE_COMPILE_CACHE", "ENABLE_PERFORMANCE_COUNTERS"
+    "DEBUG_MODE_FULL",
+    "DISABLE_COMPILE_CACHE",
+    "ENABLE_PERFORMANCE_COUNTERS"
 ]
+
+[sqf.command_case]
+options.ignore = true
+
+[stringtables.usage]
+options.ignore_unused = true
+options.ignore_missing = false
+options.ignore_duplicate = false
