@@ -11,7 +11,9 @@ options.release = [
 ]
 
 [sqf.command_case]
-options.ignore = true
+options.ignore = [
+    "*"
+]
 
 [stringtables.usage]
 options.ignore_unused = true

@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Moved defaultControls example to extras folder.
 - Updated function comments.
-- Updated README.md
+- Update README.md
 - Update lints.
 - Update build config.
 

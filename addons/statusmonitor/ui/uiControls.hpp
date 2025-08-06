@@ -1,7 +1,5 @@
-class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscText;
-class RscPicture;
 class RscPictureKeepAspect;
 
 class GVAR(RscEntries) : RscControlsGroupNoScrollbars {

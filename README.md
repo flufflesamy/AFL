@@ -1,5 +1,7 @@
 # Amy Functions Library - Selkie Medical Mod
 
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3513989482)
+
 ## Components
 
 ### Main
@@ -17,7 +19,7 @@ Modifies the behavior of ACE Medical and KAT Advanced Medical. Currently contain
 
 ### Medical Simulator
 
-Medical simulator code for practicing KAT Advanced Medical.
+Medical simulator interface for practicing KAT Advanced Medical.
 
 ### Misc
 
@@ -27,15 +29,15 @@ Currently contains code for the vehicle spawner.
 
 Includes missions. Currently only has Selkie_FiringRange.Stratis which is a map intended for training members of the Selkie Platoon.
 
+## Status Monitor
+
+Status monitor HUD overlay that shows heart rate of units in player's group.
+
 ## Required Mods
 
 - [CBA](https://github.com/CBATeam/CBA_A3)
 - [ace](https://github.com/acemod/ACE3)
 - [KAM](https://github.com/KAT-Advanced-Medical/KAM)
-
-## Download
-
-[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3513989482)
 
 ## Build Instructions
 
