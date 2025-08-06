@@ -26,13 +26,15 @@ private _monitorPFH = [{
     _args params ["_monitorDisplay"];
 
     // Remove PFH if display does not exist
-    if (isNil "_monitorDisplay" || isNull _display) exitWith {
+    if (isNil "_monitorDisplay" || isNull _monitorDisplay) exitWith {
+        LOG("Removing monitor PFH.");
         _idPFH call CFUNC(removePerFrameHandler);
         uiNamespace setVariable [QGVAR(statusMonitorPFH), -1];
     };
 
     // Close display if player removes monitor item
     if (!(player call FUNC(hasMonitor))) exitWith {
+
         [] call FUNC(hideMonitor);
     };
 

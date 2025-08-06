@@ -8,12 +8,14 @@ class CfgVehicles {
                     condition = QUOTE([_player] call FUNC(canShow));
                     statement = QUOTE([] call FUNC(showMonitor));
                     showDisabled = 0;
+                    icon = QPATHTOF(data\statusmonitor_icon2.paa);
                 };
                 class GVAR(Hide) {
                     displayName = CSTRING(Interact_Hide);
                     condition = QUOTE([_player] call FUNC(canHide));
                     statement = QUOTE([] call FUNC(hideMonitor));
                     showDisabled = 0;
+                    icon = QPATHTOF(data\statusmonitor_icon2.paa);
                 };
             };
         };

@@ -2,7 +2,7 @@
 #define PREFIX afl
 #define SUBPREFIX addons
 
-// #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 
 #include "script_version.hpp"
 

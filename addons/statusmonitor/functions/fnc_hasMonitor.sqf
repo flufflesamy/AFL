@@ -15,13 +15,13 @@
 		[] call afl_statusmonitor_fnc_hasMonitor
 */
 params ["_unit"];
-// TRACE_1("hasMonitor",_unit);
 
-private _unitItems = _unit call ACEFUNC(common,uniqueUnitItems);
+private _unitItems = uniqueUnitItems [_unit];
 private _hasMonitor = false;
+private _monitorItems = GVAR(monitorItems);
 
 {
-    if (_x in _unitItems) exitWith { hasMonitor = true };
-} forEach GVAR(monitorItems);
+    if (_x in _unitItems) exitWith { _hasMonitor = true };
+} forEach _monitorItems;
 
-hasMonitor;
+_hasMonitor;

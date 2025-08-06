@@ -14,6 +14,7 @@
 	Examples:
 		[] call afl_statusmonitor_fnc_hasMonitor
 */
+LOG("Hiding status monitor.");
 
 // Hide status monitor
 QGVAR(statusMonitor) cutRsc ["Default", "PLAIN"];

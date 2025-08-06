@@ -14,5 +14,6 @@
 	Examples:
 		[] call afl_statusmonitor_fnc_hasMonitor
 */
+LOG("Showing status monitor.");
 
 QGVAR(statusMonitor) cutRsc [QGVAR(RscStatusMonitor), "PLAIN"];

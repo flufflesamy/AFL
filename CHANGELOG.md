@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Status monitor UI.
   - Status monitor item.
   - Status monitor CBA settings.
+  - Logging to functions.
 
 ### Changed
 
@@ -27,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Invalid item names for medical sim patients.
+- Status monitor not hiding when item removed.
 
 ### Removed
 
