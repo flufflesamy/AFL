@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.5.0]
+
 ### Added
 
 - Preset system.
@@ -106,6 +108,7 @@ of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 - Initial release containing medical simulator and firing range.
 
 [Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.4.0...HEAD
+[v0.5.0]: https://github.com/flufflesamy/AFL/compare/v0.3.0..v0.5.0
 [v0.4.0]: https://github.com/flufflesamy/AFL/compare/v0.3.0..v0.4.0
 [v0.3.0]: https://github.com/flufflesamy/AFL/compare/v0.2.0..v0.3.0
 [v0.2.0]: https://github.com/flufflesamy/AFL/compare/v0.1.2..v0.2.0
