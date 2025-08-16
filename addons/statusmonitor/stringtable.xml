@@ -4,6 +4,9 @@
         <Key ID="STR_AFL_StatusMonitor_Description">
             <English>Monitors heart rate of group members.</English>
         </Key>
+        <Key ID="STR_AFL_StatusMonitor_DescriptionLite">
+            <English>Monitors distance and status of group members.</English>
+        </Key>
         <Key ID="STR_AFL_StatusMonitor_Interact_Hide">
             <English>Hide Status Monitor</English>
         </Key>
@@ -12,6 +15,9 @@
         </Key>
         <Key ID="STR_AFL_StatusMonitor_Name">
             <English>AFL Status Monitor</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_NameLite">
+            <English>AFL TL Monitor</English>
         </Key>
         <Key ID="STR_AFL_StatusMonitor_Setting_AbnormalColor">
             <English>Abnormal Color</English>
@@ -46,14 +52,26 @@
         <Key ID="STR_AFL_StatusMonitor_Setting_NormalColor_Description">
             <English>Color when unit heart rate is in normal range.</English>
         </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_OORColor">
+            <English>Out-of-Range Color</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_OORColor_Description">
+            <English>Color when unit is out-of-range.</English>
+        </Key>
         <Key ID="STR_AFL_StatusMonitor_Setting_ServerCategory">
             <English>Server Settings</English>
         </Key>
         <Key ID="STR_AFL_StatusMonitor_Setting_ShowCross">
-            <English>Critical on PR 0</English>
+            <English>X on PR 0</English>
         </Key>
         <Key ID="STR_AFL_StatusMonitor_Setting_ShowCross_Description">
-            <English>Treat units that have a PR of 0 as if they are out of range or dead.</English>
+            <English>Show X if unit is in cardiac arrest.</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_ShowOOR">
+            <English>Out-of-Range</English>
+        </Key>
+        <Key ID="STR_AFL_StatusMonitor_Setting_ShowOOR_Description">
+            <English>Show OOR indicator if unit is out of range.</English>
         </Key>
         <Key ID="STR_AFL_StatusMonitor_Setting_TextColor">
             <English>Text Color</English>

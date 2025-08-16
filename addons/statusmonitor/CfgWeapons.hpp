@@ -15,4 +15,10 @@ class CfgWeapons {
             mass = 1;
         };
     };
+
+    class AFL_StatusMonitorLite : AFL_StatusMonitor {
+        displayName = CSTRING(NameLite);
+        descriptionShort = CSTRING(DescriptionLite);
+        AFL_isMonitor = 2;
+    };
 };

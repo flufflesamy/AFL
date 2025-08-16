@@ -4,10 +4,12 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-            "AFL_Item_StatusMonitor"
+            "AFL_Item_StatusMonitor",
+            "AFL_Item_StatusMonitorLite"
         };
         weapons[] = {
-            "AFL_StatusMonitor"
+            "AFL_StatusMonitor",
+            "AFL_StatusMonitorLite"
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {

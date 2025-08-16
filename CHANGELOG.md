@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- TL version of status monitor that shows distance to player.
+- TL status monitor item.
+- Status monitor out of range indicator.
+- Status monitor out of range CBA option.
+
+### Changed
+
+- Refactor ui_updateMonitor.
+- Update README.md
+
+### Removed
+
+- Unnecessary status monitor init call in PostInit.
+
 ## [v0.5.0] - 2025-08-06
 
 ### Added
@@ -107,7 +123,7 @@ of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 
 - Initial release containing medical simulator and firing range.
 
-[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.5.0...HEAD
 [v0.5.0]: https://github.com/flufflesamy/AFL/compare/v0.4.0..v0.5.0
 [v0.4.0]: https://github.com/flufflesamy/AFL/compare/v0.3.0..v0.4.0
 [v0.3.0]: https://github.com/flufflesamy/AFL/compare/v0.2.0..v0.3.0

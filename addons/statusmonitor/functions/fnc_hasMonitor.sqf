@@ -21,7 +21,19 @@ private _hasMonitor = false;
 private _monitorItems = GVAR(monitorItems);
 
 {
-    if (_x in _unitItems) exitWith { _hasMonitor = true };
+    _x params ["_itemName", "_type"];
+
+    if (_itemName in _unitItems) then {
+        _hasMonitor = true;
+
+        // If CM version of monitor, end loop
+        if (_type == 1) exitWith {
+            _unit setVariable [QGVAR(monitorType), _type, false];
+        };
+
+        _unit setVariable [QGVAR(monitorType), _type, false];
+    };
+
 } forEach _monitorItems;
 
 _hasMonitor;

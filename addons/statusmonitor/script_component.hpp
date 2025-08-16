@@ -11,6 +11,10 @@
 #define IDC_NAME            1004
 #define IDC_PR              1005
 #define IDC_ENTRIES_CG      1100
+#define IDC_RANGEBARS       1006
+#define IDC_RANGEBARS_CROSS 1007
+#define IDC_RANGEBARS_OL    1008
+#define IDC_DISTANCE        1009
 
 #define MONITOR_TEXT_COLOR  [1, 1, 1, 1]
 #define C_MONITOR_TEXT_COLOR {1, 1, 1, 1}

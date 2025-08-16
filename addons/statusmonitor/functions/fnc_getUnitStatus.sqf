@@ -12,6 +12,7 @@
 		0: Unit Name <STRING>
         1: Unit PR <NUMBER>
         2: In Range <BOOL>
+        3: Distance <NUMBER>
 
 	Examples:
 		[] call afl_statusmonitor_fnc_canShow
@@ -29,4 +30,4 @@ if (_inRange) then {
     _unitPR = GET_HEART_RATE(_unit);
 };
 
-[_unitName, _unitPR, _inRange];
+[_unitName, _unitPR, _inRange, _playerDistance];

@@ -26,6 +26,15 @@
 ] call CFUNC(addSetting);
 
 [
+    QGVAR(showOOR),
+    "CHECKBOX",
+    [LLSTRING(Setting_showOOR), LLSTRING(Setting_showOOR_Description)],
+    [LLSTRING(Setting_MainCategory), LLSTRING(Setting_ServerCategory)],
+    false,
+    1
+] call CFUNC(addSetting);
+
+[
     QGVAR(textColor),
     "COLOR",
     [LLSTRING(Setting_TextColor), LLSTRING(Setting_TextColor_Description)],
@@ -49,6 +58,15 @@
     [LLSTRING(Setting_AbnormalColor), LLSTRING(Setting_AbnormalColor_Description)],
     [LLSTRING(Setting_MainCategory), LLSTRING(Setting_UserCategory)],
     [1, 0.82, 0.25, 1],
+    2
+] call CFUNC(addSetting);
+
+[
+    QGVAR(OORColor),
+    "COLOR",
+    [LLSTRING(Setting_OORColor), LLSTRING(Setting_OORColor_Description)],
+    [LLSTRING(Setting_MainCategory), LLSTRING(Setting_UserCategory)],
+    [0.3, 0.3, 0.3, 1],
     2
 ] call CFUNC(addSetting);
 

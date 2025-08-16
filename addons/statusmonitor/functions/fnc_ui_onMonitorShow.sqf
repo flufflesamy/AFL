@@ -34,7 +34,7 @@ private _monitorPFH = [{
 
     // Close display if player removes monitor item
     if (!(player call FUNC(hasMonitor))) exitWith {
-
+        player setVariable [QGVAR(monitorType), 0, false]; // Reset monitor type
         [] call FUNC(hideMonitor);
     };
 

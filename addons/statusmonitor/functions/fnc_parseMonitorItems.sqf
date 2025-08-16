@@ -26,7 +26,7 @@ GVAR(monitorItems) = [];
     private _isMonitor = GET_NUMBER(_entry >> "AFL_isMonitor",0);
     // TRACE_3("configProperties",_entry,_className,_isMonitor);
 
-    if (_isMonitor == 1) then {
-        GVAR(monitorItems) pushBack _className;
+    if (_isMonitor > 0) then {
+        GVAR(monitorItems) pushBack [_className, _isMonitor];
     };
 } forEach configProperties [_configBase, "isClass _x"];

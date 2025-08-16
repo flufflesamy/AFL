@@ -36,4 +36,19 @@ class CfgVehicles {
             };
         };
     };
+
+    class AFL_Item_StatusMonitorLite : Item_Base_F {
+        author = "flufflesamy";
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(NameLite);
+        vehicleClass = "Items";
+
+        class TransportItems {
+            class AFL_StatusMonitorLite {
+                name = "AFL_StatusMonitorLite";
+                count = 1;
+            };
+        };
+    };
 };

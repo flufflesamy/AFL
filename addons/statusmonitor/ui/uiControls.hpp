@@ -36,6 +36,16 @@ class GVAR(RscEntryGroup) : RscControlsGroupNoScrollbars {
             colorText[] = {1, 0.35, 0.47, 1};
         };
 
+        class Distance : RscPictureKeepAspect {
+            idc = IDC_DISTANCE;
+            x = 0;
+            y = 0;
+            h = QUOTE(POS_H(1.25));
+            w = QUOTE(POS_W(2.5));
+            text = QPATHTOF(data\statusmonitor_distance.paa);
+            colorText[] = {1, 1, 1, 1};
+        };
+
         class Cross : RscPictureKeepAspect {
             idc = IDC_CROSS;
             x = 0;
@@ -43,6 +53,39 @@ class GVAR(RscEntryGroup) : RscControlsGroupNoScrollbars {
             h = QUOTE(POS_H(1.25));
             w = QUOTE(POS_W(2.5));
             text = QPATHTOF(data\statusmonitor_cross2.paa);
+            colorText[] = {1, 1, 1, 1};
+            show = 0;
+        };
+
+        class RangeBars : RscPictureKeepAspect {
+            idc = IDC_RANGEBARS;
+            x = 0;
+            y = 0;
+            h = QUOTE(POS_H(1.25));
+            w = QUOTE(POS_W(2.5));
+            text = QPATHTOF(data\statusmonitor_oor_bars.paa);
+            colorText[] = {1, 1, 1, 1};
+            show = 0;
+        };
+
+        class RangeBarsOutline : RscPictureKeepAspect {
+            idc = IDC_RANGEBARS_OL;
+            x = 0;
+            y = 0;
+            h = QUOTE(POS_H(1.25));
+            w = QUOTE(POS_W(2.5));
+            text = QPATHTOF(data\statusmonitor_oor_outline.paa);
+            colorText[] = {0.35, 0.76, 1, 1};
+            show = 0;
+        };
+
+        class RangeBarsCross : RscPictureKeepAspect {
+            idc = IDC_RANGEBARS_CROSS;
+            x = 0;
+            y = 0;
+            h = QUOTE(POS_H(1.25));
+            w = QUOTE(POS_W(2.5));
+            text = QPATHTOF(data\statusmonitor_oor_cross.paa);
             colorText[] = {1, 1, 1, 1};
             show = 0;
         };
