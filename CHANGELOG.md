@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- KAM NPWT being interrupted.
+- KAM NPWT not clearing trauma.
+- KAM NPWT closing medical menu after treatment.
+
 ## [v0.6.0] - 2025-08-16
 
 ### Added

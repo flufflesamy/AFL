@@ -28,4 +28,9 @@ class ACE_Medical_Treatment_Actions {
     class Inspect : Carbonate {
         medicRequired = QKEGVAR(pharma,medLvl_ApplyIV);
     };
+
+    class NPWT: BasicBandage {
+        callbackProgress = QFUNC(npwtProgress);
+        callbackStart = "";
+    };
 };

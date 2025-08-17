@@ -11,3 +11,5 @@ PREP(salineFlush);
 PREP(getIVFlowRate);
 PREP(getBloodVolumeChange);
 PREP(ui_updateInjuryListPart);
+PREP(isPartBleeding);
+PREP(npwtProgress);
