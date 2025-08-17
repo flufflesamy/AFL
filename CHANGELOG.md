@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.6.0] - 2025-08-16
+
 ### Added
 
 - TL version of status monitor that shows distance to player.
@@ -20,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Critical color for status monitor on HR 0.
 - Refactor ui_updateMonitor.
 - Update changelog.
+- Update README.
 
 ### Removed
 
@@ -125,7 +128,8 @@ of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 
 - Initial release containing medical simulator and firing range.
 
-[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.6.0...HEAD
+[v0.6.0]: https://github.com/flufflesamy/AFL/compare/v0.5.0..v0.6.0
 [v0.5.0]: https://github.com/flufflesamy/AFL/compare/v0.4.0..v0.5.0
 [v0.4.0]: https://github.com/flufflesamy/AFL/compare/v0.3.0..v0.4.0
 [v0.3.0]: https://github.com/flufflesamy/AFL/compare/v0.2.0..v0.3.0

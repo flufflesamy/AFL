@@ -31,7 +31,7 @@ Includes missions. Currently only has Selkie_FiringRange.Stratis which is a map 
 
 ## Status Monitor
 
-Status monitor HUD overlay that shows heart rate of units in player's group.
+Status monitor HUD overlay that shows heart rate of units in player's group. Additional TL version that shows distance instead of heart rate.
 
 ## Required Mods
 
