@@ -13,3 +13,4 @@ PREP(getBloodVolumeChange);
 PREP(ui_updateInjuryListPart);
 PREP(isPartBleeding);
 PREP(npwtProgress);
+PREP(ui_onKeyDown);

@@ -7,11 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Convert medical sim strings to use stringtable.
+
 ### Fixed
 
 - KAM NPWT being interrupted.
 - KAM NPWT not clearing trauma.
 - KAM NPWT closing medical menu after treatment.
+- KAM surgery tab not accessible via hotkeys.
 
 ## [v0.6.0] - 2025-08-16
 
