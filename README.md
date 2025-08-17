@@ -38,6 +38,7 @@ Status monitor HUD overlay that shows heart rate of units in player's group. Add
 - [CBA](https://github.com/CBATeam/CBA_A3)
 - [ace](https://github.com/acemod/ACE3)
 - [KAM](https://github.com/KAT-Advanced-Medical/KAM)
+- [O&T Expansion Eden](https://steamcommunity.com/workshop/filedetails/?id=1923321700) (Firing Range Only)
 
 ## Build Instructions
 
