@@ -46,6 +46,16 @@ class GVAR(RscEntryGroup) : RscControlsGroupNoScrollbars {
             colorText[] = {1, 1, 1, 1};
         };
 
+        class CrossPR : RscPictureKeepAspect {
+            idc = IDC_CROSSPR;
+            x = 0;
+            y = 0;
+            h = QUOTE(POS_H(1.25));
+            w = QUOTE(POS_W(2.5));
+            text = QPATHTOF(data\statusmonitor_crossPR.paa);
+            colorText[] = {1, 1, 1, 1};
+        };
+
         class Cross : RscPictureKeepAspect {
             idc = IDC_CROSS;
             x = 0;

@@ -56,13 +56,14 @@ private _baseCG = _display displayCtrl IDC_ENTRIES_CG;
     private _barsCrossCtrl = _entryGroup controlsGroupCtrl IDC_RANGEBARS_CROSS;
     private _barsOutlineCtrl = _entryGroup controlsGroupCtrl IDC_RANGEBARS_OL;
     private _distance = _entryGroup controlsGroupCtrl IDC_DISTANCE;
+    private _crossPRCtrl = _entryGroup controlsGroupCtrl IDC_CROSSPR;
 
     // Initialize options
     private _options = createHashMapFromArray [
         ["pillColor", GVAR(normalColor)],
         ["showPR", false],
         ["showBars", false],
-        ["showCross", false]
+        ["showCritical", false]
     ];
 
     // if unit is in range
@@ -76,10 +77,9 @@ private _baseCG = _display displayCtrl IDC_ENTRIES_CG;
             };
         } else { // If unit has no HR
             _options set ["pillColor", GVAR(criticalColor)];
+            _options set ["showCritical", true];
 
-            if GVAR(showCross) then {
-                _options set ["showCross", true];
-            } else {
+            if !GVAR(showCross) then {
                 _options set ["showPR", true]; // Show text
             };
         };
@@ -90,7 +90,7 @@ private _baseCG = _display displayCtrl IDC_ENTRIES_CG;
             _options set ["showBars", true];
         } else { // If not
             _options set ["pillColor", GVAR(criticalColor)];
-            _options set ["showCross", true];
+            _options set ["showCritical", true];
         };
     };
 
@@ -99,6 +99,7 @@ private _baseCG = _display displayCtrl IDC_ENTRIES_CG;
     private _showCross = _options get "showCross";
     private _showBars = _options get "showBars";
     private _showPR = _options get "showPR";
+    private _showCritical = _options get "showCritical";
 
     // Set CG position
     _entryGroup ctrlSetPosition [0, POS_H(11 - (_forEachIndex + 1) * 1.35)];
@@ -121,7 +122,7 @@ private _baseCG = _display displayCtrl IDC_ENTRIES_CG;
     _nameCtrl ctrlSetText _unitName;
 
     // Show controls based on options
-    _crossCtrl ctrlShow _showCross;
+    _crossCtrl ctrlShow (!_showPR && _showCritical);
     _barsCtrl ctrlShow _showBars;
     _barsOutlineCtrl ctrlShow _showBars;
     _barsCrossCtrl ctrlShow _showBars;
@@ -130,12 +131,14 @@ private _baseCG = _display displayCtrl IDC_ENTRIES_CG;
     // Set based on monitor type
     if (_monitorType == 1) then {
         _prCtrl ctrlSetText format ["%1", floor _unitPR];
-        _heartCtrl ctrlShow _showPR;
+        _heartCtrl ctrlShow (_showPR && !_showCritical);
+        _crossPRCtrl ctrlShow _showCritical;
         _distance ctrlShow false;
     } else {
         _prCtrl ctrlSetText format ["%1m", floor _unitDistance];
         _distance ctrlShow _showPR;
         _heartCtrl ctrlShow false;
+        _crossPRCtrl ctrlShow false;
     };
 
     // Commit changes

@@ -13,9 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - TL status monitor item.
 - Status monitor out of range indicator.
 - Status monitor out of range CBA option.
+- New icon for status monitor uncon HR.
 
 ### Changed
 
+- Critical color for status monitor on HR 0.
 - Refactor ui_updateMonitor.
 - Update changelog.
 

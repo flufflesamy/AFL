@@ -15,6 +15,7 @@
 #define IDC_RANGEBARS_CROSS 1007
 #define IDC_RANGEBARS_OL    1008
 #define IDC_DISTANCE        1009
+#define IDC_CROSSPR         1010
 
 #define MONITOR_TEXT_COLOR  [1, 1, 1, 1]
 #define C_MONITOR_TEXT_COLOR {1, 1, 1, 1}
