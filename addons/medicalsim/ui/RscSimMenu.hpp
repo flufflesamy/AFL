@@ -33,17 +33,17 @@ class GVAR(RscPropCombo) : RscCombo {
 class GVAR(RscFractureCombo) : GVAR(RscPropCombo) {
     class Items {
         class None {
-            text = "None";
+            text = CSTRING(Fractures_Type_None);
             default = 1;
         };
         class Simple {
-            text = "Simple";
+            text = CSTRING(Fractures_Type_Simple);
         };
         class Compound {
-            text = "Compound";
+            text = CSTRING(Fractures_Type_Compound);
         };
         class Comminuted {
-            text = "Comminuted";
+            text = CSTRING(Fractures_Type_Comminuted);
         };
     };
 };
@@ -86,7 +86,7 @@ class GVAR(RscSimMenu) {
     class ControlsBackground {
         class Title : RscText {
             idc = -1;
-            text = "Amy Medical Sim";
+            text = CSTRING(Title);
             colorText[] = GUI_TITLETEXT_COLOR;
             colorBackground[] = GUI_BCG_COLOR;
             x = QUOTE(POS_X(0));
@@ -119,7 +119,7 @@ class GVAR(RscSimMenu) {
 
             class Controls {
                 class Header : GVAR(RscHeaderText) {
-                    text = "Stretchers";
+                    text = CSTRING(Stretchers_Title);
                 };
 
                 class StretchersList : RscListBox {
@@ -143,13 +143,13 @@ class GVAR(RscSimMenu) {
 
             class Controls {
                 class Header : GVAR(RscHeaderText) {
-                    text = "Wounds";
+                    text = CSTRING(Wounds_Title);
                 };
 
                 // Head
                 class HeadText : GVAR(RscPropTitle) {
                     y = QUOTE(POS_H(1.1));
-                    text = "Head:";
+                    text = CSTRING(BodyPart_Head);
                 };
 
                 class HeadSlider : GVAR(RscWoundsSlider) {
@@ -165,7 +165,7 @@ class GVAR(RscSimMenu) {
                 // Torso
                 class TorsoText : GVAR(RscPropTitle) {
                     y = QUOTE(POS_H(2.2));
-                    text = "Torso:";
+                    text = CSTRING(BodyPart_Torso);
                 };
 
                 class TorsoSlider : GVAR(RscWoundsSlider) {
@@ -181,7 +181,7 @@ class GVAR(RscSimMenu) {
                 // Left Arm
                 class LeftArmText : GVAR(RscPropTitle) {
                     y = QUOTE(POS_H(3.3));
-                    text = "Left Arm:";
+                    text = CSTRING(BodyPart_LeftArm);
                 };
 
                 class LeftArmSlider : GVAR(RscWoundsSlider) {
@@ -197,7 +197,7 @@ class GVAR(RscSimMenu) {
                 // Right Arm
                 class RightArmText : GVAR(RscPropTitle) {
                     y = QUOTE(POS_H(4.4));
-                    text = "Left Arm:";
+                    text = CSTRING(BodyPart_RightArm);
                 };
 
                 class RightArmSlider : GVAR(RscWoundsSlider) {
@@ -213,7 +213,7 @@ class GVAR(RscSimMenu) {
                 // Left Leg
                 class LeftLegText : GVAR(RscPropTitle) {
                     y = QUOTE(POS_H(5.5));
-                    text = "Left Leg:";
+                    text = CSTRING(BodyPart_LeftLeg);
                 };
 
                 class LeftLegSlider : GVAR(RscWoundsSlider) {
@@ -229,7 +229,7 @@ class GVAR(RscSimMenu) {
                 // Right Leg
                 class RightLegText : GVAR(RscPropTitle) {
                     y = QUOTE(POS_H(6.6));
-                    text = "Right Leg:";
+                    text = CSTRING(BodyPart_RightLeg);
                 };
 
                 class RightLegSlider : GVAR(RscWoundsSlider) {
@@ -253,11 +253,11 @@ class GVAR(RscSimMenu) {
 
             class Controls {
                 class Header : GVAR(RscHeaderText) {
-                    text = "Circulation";
+                    text = CSTRING(Cardiac_Title);
                 };
 
                 class CardiacText : GVAR(RscPropTitle) {
-                    text = "Cardiac Arrest Type:";
+                    text = CSTRING(Cardiac_Arrest);
                     y = QUOTE(POS_H(1.1));
                 };
 
@@ -267,27 +267,27 @@ class GVAR(RscSimMenu) {
 
                     class Items {
                         class None {
-                            text = "None";
+                            text = CSTRING(Cardiac_Arrest_None);
                             default = 1;
                         };
                         class Asystole {
-                            text = "Asystole";
+                            text = CSTRING(Cardiac_Arrest_Asystole);
                         };
                         class PEA {
-                            text = "PEA";
+                            text = CSTRING(Cardiac_Arrest_PEA);
                         };
                         class VF {
-                            text = "VF";
+                            text = CSTRING(Cardiac_Arrest_VF);
                         };
                         class VT {
-                            text = "VT";
+                            text = CSTRING(Cardiac_Arrest_VT);
                         };
                     };
                 };
 
                 // PAO2
                 class PAO2Text : GVAR(RscPropTitle) {
-                    text = "PAO2:";
+                    text = CSTRING(Cardiac_PAO2);
                     y = QUOTE(POS_H(2.2));
                 };
 
@@ -315,12 +315,12 @@ class GVAR(RscSimMenu) {
 
             class Controls {
                 class Header : GVAR(RscHeaderText) {
-                    text = "Airway";
+                    text = CSTRING(Airway_Title);
                 };
 
                 // Occluded
                 class OcculudedText : GVAR(RscPropTitle) {
-                    text = "Occuluded:";
+                    text = CSTRING(Airway_Occluded);
                     y = QUOTE(POS_H(1.1));
                 };
 
@@ -331,7 +331,7 @@ class GVAR(RscSimMenu) {
 
                 // Obstructed
                 class ObstructedText : GVAR(RscPropTitle) {
-                    text = "Obstructed:";
+                    text = CSTRING(Airway_Obstructed);
                     y = QUOTE(POS_H(2.2));
                 };
 
@@ -351,7 +351,7 @@ class GVAR(RscSimMenu) {
 
             class Controls {
                 class Header : GVAR(RscHeaderText) {
-                    text = "Presets";
+                    text = CSTRING(Presets_Title);
                 };
 
                 class PresetListBox : RscListBox {
@@ -366,7 +366,7 @@ class GVAR(RscSimMenu) {
 
                 class PresetSpawnButton : RscButtonMenu {
                     idc = IDC_PRESET_SPAWN_BUTTON;
-                    text = "SPAWN";
+                    text = CSTRING(Button_Spawn);
                     x = QUOTE(MEDSIM_CG_POS_W(14.5));
                     y = QUOTE(POS_H(6));
                     h = QUOTE(POS_H(1));
@@ -377,7 +377,7 @@ class GVAR(RscSimMenu) {
 
                 class PresetSpawnAllButton : RscButtonMenu {
                     idc = IDC_PRESET_SPAWNALL_BUTTON;
-                    text = "SPAWN ALL";
+                    text = CSTRING(Button_SpawnAll);
                     x = QUOTE(MEDSIM_CG_POS_W(9.4));
                     y = QUOTE(POS_H(6));
                     h = QUOTE(POS_H(1));
@@ -397,12 +397,12 @@ class GVAR(RscSimMenu) {
 
             class Controls {
                 class Header : GVAR(RscHeaderText) {
-                    text = "Pneumothorax";
+                    text = CSTRING(PTX_Title);
                 };
 
                 // Type
                 class TypeText : GVAR(RscPropTitle) {
-                    text = "Type:";
+                    text = CSTRING(PTX_Type);
                     y = QUOTE(POS_H(1.1));
                 };
 
@@ -412,24 +412,24 @@ class GVAR(RscSimMenu) {
 
                     class Items {
                         class None {
-                            text = "None";
+                            text = CSTRING(PTX_Type_None);
                             default = 1;
                         };
                         class Initial {
-                            text = "Initial";
+                            text = CSTRING(PTX_Type_Initial);
                         };
                         class Tension {
-                            text = "Tension";
+                            text = CSTRING(PTX_Type_Tension);
                         };
                         class Hemo {
-                            text = "Hemo";
+                            text = CSTRING(PTX_Type_Hemo);
                         };
                     };
                 };
 
                 // Strength
                 class StrengthText : GVAR(RscPropTitle) {
-                    text = "Strength:";
+                    text = CSTRING(PTX_Strength);
                     y = QUOTE(POS_H(2.2));
                 };
 
@@ -448,7 +448,7 @@ class GVAR(RscSimMenu) {
 
                 // Deteriorate
                 class DeteriorateText : GVAR(RscPropTitle) {
-                    text = "Deteriorate:";
+                    text = CSTRING(PTX_Deteriorate);
                     y = QUOTE(POS_H(3.3));
                 };
 
@@ -459,7 +459,7 @@ class GVAR(RscSimMenu) {
 
                 // Tamponade
                 class TamponadeText : GVAR(RscPropTitle) {
-                    text = "Tamponade:";
+                    text = CSTRING(PTX_Tamponade);
                     y = QUOTE(POS_H(4.4));
                 };
 
@@ -479,12 +479,12 @@ class GVAR(RscSimMenu) {
 
             class Controls {
                 class Header : GVAR(RscHeaderText) {
-                    text = "Fractures";
+                    text = CSTRING(Fractures_Title);
                 };
 
                 // Left Arm
                 class LeftArmText : GVAR(RscPropTitle) {
-                    text = "Left Arm:";
+                    text = CSTRING(BodyPart_LeftArm);
                     y = QUOTE(POS_H(1.1));
                 };
 
@@ -495,7 +495,7 @@ class GVAR(RscSimMenu) {
 
                 // Right Arm
                 class RightArmText : GVAR(RscPropTitle) {
-                    text = "Right Arm:";
+                    text = CSTRING(BodyPart_RightArm);
                     y = QUOTE(POS_H(2.2));
                 };
 
@@ -506,7 +506,7 @@ class GVAR(RscSimMenu) {
 
                 // Left Leg
                 class LeftLegText : GVAR(RscPropTitle) {
-                    text = "Left Leg:";
+                    text = CSTRING(BodyPart_LeftLeg);
                     y = QUOTE(POS_H(3.3));
                 };
 
@@ -517,7 +517,7 @@ class GVAR(RscSimMenu) {
 
                 // Right Leg
                 class RightLegText : GVAR(RscPropTitle) {
-                    text = "Right Leg:";
+                    text = CSTRING(BodyPart_RightLeg);
                     y = QUOTE(POS_H(4.4));
                 };
 
@@ -537,12 +537,12 @@ class GVAR(RscSimMenu) {
 
             class Controls {
                 class Header : GVAR(RscHeaderText) {
-                    text = "Misc";
+                    text = CSTRING(Misc_Title);
                 };
 
                 // Uncon
                 class UnconText : GVAR(RscPropTitle) {
-                    text = "Unconscious:";
+                    text = CSTRING(Misc_Uncon);
                     y = QUOTE(POS_H(1.1));
                 };
 
@@ -555,7 +555,7 @@ class GVAR(RscSimMenu) {
 
         class SpawnButton : RscButtonMenu {
             idc = IDC_SPAWN_BUTTON;
-            text = "SPAWN";
+            text = CSTRING(Button_Spawn);
             colorBackground[] = {GUI_BCG_MENU_RGB, 0.8};
             color[] = GUI_TITLETEXT_COLOR;
             x = QUOTE(POS_X(35));
@@ -567,7 +567,7 @@ class GVAR(RscSimMenu) {
 
         class CancelButton : RscButtonMenu {
             idc = 2;
-            text = "CANCEL";
+            text = CSTRING(Button_Cancel);
             x = QUOTE(POS_X(0));
             y = QUOTE(POS_Y(23.2));
             w = QUOTE(POS_W(5));
@@ -576,7 +576,7 @@ class GVAR(RscSimMenu) {
 
         class ClearButton : RscButtonMenu {
             idc = IDC_CLEAR_BUTTON;
-            text = "CLEAR";
+            text = CSTRING(Button_Clear);
             x = QUOTE(POS_X(29.9));
             y = QUOTE(POS_Y(23.2));
             w = QUOTE(POS_W(5));
@@ -586,7 +586,7 @@ class GVAR(RscSimMenu) {
 
         class ClearAllButton : RscButtonMenu {
             idc = IDC_CLEARALL_BUTTON;
-            text = "CLEAR ALL";
+            text = CSTRING(Button_ClearAll);
             x = QUOTE(POS_X(24.8));
             y = QUOTE(POS_Y(23.2));
             w = QUOTE(POS_W(5));

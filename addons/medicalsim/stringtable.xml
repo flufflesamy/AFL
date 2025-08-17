@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFL">
+    <Package name="MedicalSim">
+        <Key ID="STR_AFL_MedicalSim_Airway_Obstructed">
+            <English>Obstructed:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Airway_Occluded">
+            <English>Occluded:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Airway_Title">
+            <English>Airways</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_BodyPart_Head">
+            <English>Head:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_BodyPart_LeftArm">
+            <English>Left Arm:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_BodyPart_LeftLeg">
+            <English>Left Leg:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_BodyPart_RightArm">
+            <English>Right Arm:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_BodyPart_RightLeg">
+            <English>Right Leg:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_BodyPart_Torso">
+            <English>Torso:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Button_Cancel">
+            <English>CANCEL</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Button_Clear">
+            <English>CLEAR</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Button_ClearAll">
+            <English>CLEAR ALL</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Button_Confirm">
+            <English>CONFIRM?</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Button_Spawn">
+            <English>SPAWN</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Button_SpawnAll">
+            <English>SPAWN ALL</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Cardiac_Arrest">
+            <English>Cardiac Arrest Type:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Cardiac_Arrest_Asystole">
+            <English>Asystole</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Cardiac_Arrest_None">
+            <English>None</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Cardiac_Arrest_PEA">
+            <English>PEA</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Cardiac_Arrest_VF">
+            <English>VF</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Cardiac_Arrest_VT">
+            <English>VT</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Cardiac_PAO2">
+            <English>PAO2</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Cardiac_Title">
+            <English>Circulation</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Fractures_Title">
+            <English>Fractures</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Fractures_Type_Comminuted">
+            <English>Comminuted</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Fractures_Type_Compound">
+            <English>Compound</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Fractures_Type_None">
+            <English>None</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Fractures_Type_Simple">
+            <English>Simple</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Misc_Title">
+            <English>Misc</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Misc_Uncon">
+            <English>Unconscious:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_PTX_Strength">
+            <English>Strength:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_PTX_Tamponade">
+            <English>Tamponade:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_PTX_Title">
+            <English>Pneumothorax</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_PTX_Type">
+            <English>Type:</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_PTX_Type_Hemo">
+            <English>Hemo</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_PTX_Type_Initial">
+            <English>Initial</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_PTX_Type_None">
+            <English>None</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_PTX_Type_Tension">
+            <English>Tension</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Presets_Title">
+            <English>Presets</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Stretchers_Title">
+            <English>Stretchers</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Title">
+            <English>AFL Medical Simulator</English>
+        </Key>
+        <Key ID="STR_AFL_MedicalSim_Wounds_Title">
+            <English>Wounds</English>
+        </Key>
+    </Package>
+</Project>

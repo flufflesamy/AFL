@@ -39,13 +39,13 @@ private _control = displayCtrl IDC_CLEARALL_BUTTON;
 if (!(_isConfirmed)) then {
     _control ctrlSetBackgroundColor COLOR_BUTTON_BKGD;
     _control ctrlSetTextColor COLOR_BUTTON_TEXT;
-    _control ctrlSetText "CLEAR ALL";
+    _control ctrlSetText LLSTRING(Button_ClearAll);
     GVAR(clearAllConfirm) = false;
 };
 
 if ((_isConfirmed)) then {
     _control ctrlSetBackgroundColor GVAR(confirmColor);
     _control ctrlSetTextColor GVAR(confirmTextColor);
-    _control ctrlSetText "CONFIRM?";
+    _control ctrlSetText LLSTRING(Button_Confirm);
     GVAR(clearAllConfirm) = true;
 };
