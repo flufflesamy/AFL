@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.6.1] - 2025-08-17
+
 ### Changed
 
 - Convert medical sim strings to use stringtable.
@@ -17,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - KAM NPWT not clearing trauma.
 - KAM NPWT closing medical menu after treatment.
 - KAM surgery tab not accessible via hotkeys.
+- "Left Arm" showing up twice in medical simulator.
 
 ## [v0.6.0] - 2025-08-16
 
@@ -139,7 +142,8 @@ of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 
 - Initial release containing medical simulator and firing range.
 
-[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.6.0...HEAD
+[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.6.1...HEAD
+[v0.6.1]: https://github.com/flufflesamy/AFL/compare/v0.6.0..v0.6.1
 [v0.6.0]: https://github.com/flufflesamy/AFL/compare/v0.5.0..v0.6.0
 [v0.5.0]: https://github.com/flufflesamy/AFL/compare/v0.4.0..v0.5.0
 [v0.4.0]: https://github.com/flufflesamy/AFL/compare/v0.3.0..v0.4.0

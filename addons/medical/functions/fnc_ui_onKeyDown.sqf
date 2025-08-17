@@ -20,7 +20,7 @@
  * None
  *
  * Example:
- * ["", [displayNull, 5, false, false, false]] call ace_medical_gui_fnc_onKeyDown
+ * ["", [displayNull, 5, false, false, false]] call afl_medical_fnc_ui_onKeyDown
  *
  * Public: No
 */
