@@ -132,7 +132,7 @@ private _baseCG = _display displayCtrl IDC_ENTRIES_CG;
     if (_monitorType == 1) then {
         _prCtrl ctrlSetText format ["%1", floor _unitPR];
         _heartCtrl ctrlShow (_showPR && !_showCritical);
-        _crossPRCtrl ctrlShow _showCritical;
+        _crossPRCtrl ctrlShow (_showPR && _showCritical);
         _distance ctrlShow false;
     } else {
         _prCtrl ctrlSetText format ["%1m", floor _unitDistance];
