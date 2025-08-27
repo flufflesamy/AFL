@@ -24,44 +24,35 @@
  *
  * Public: No
 */
-// TODO: Is the airway category ever visible? Can the dynamic category stuff be removed?
-
 #define NUMBER_KEYS [DIK_1, DIK_2, DIK_3, DIK_4, DIK_5, DIK_6, DIK_7, DIK_8, DIK_9, DIK_0]
 #define ALL_CATEGORIES ["triage", "examine", "bandage", "medication", "airway", "advanced", "surgery", "drag", "toggle"]
+#define CATEGORY_IDC [1300, 1310, 1320, 1330, 1340, 1350, 1385, 1360, 1370]
 
 params ["", "_args"];
-_args params ["_display", "_keyPressed", "_shiftState", "_ctrlState", "_altState"];
+_args params ["", "_keyPressed", "", "", ""];
 
 private _return = true; // Override existing keybinds for keys used here
-
-private _visibleCategories = [
-    "bandage","medication","airway","advanced", "surgery", "drag"
-] select {
-    private _category = _x;
-    (ACEGVAR(medical_gui,actions) findIf {_category == _x select 1}) > -1
-};
-
-private _allCategories = ["triage", "examine"] + _visibleCategories + ["toggle"];
 
 // Use hashmap as a shortcut to "zip" two arrays together
 // Use categories as keys in hashmap because there are fewer,
 // otherwise the hashmap is padded with nil
-private _keyCategoryPairs = _allCategories createHashMapFromArray NUMBER_KEYS;
+private _keyCategoryPairs = ALL_CATEGORIES createHashMapFromArray NUMBER_KEYS;
+private _idcCategoryPairs = ALL_CATEGORIES createHashMapFromArray CATEGORY_IDC;
 
-private _temp_category = "";
-private _temp_idc = 0;
+private _category = "";
+private _idc = 0;
 
 switch (true) do {
 // Dynamically assign number keys to visible categories
     {
-        _temp_category = _x; // _x does not exist inside case code
-        _temp_idc = IDC_TRIAGE + (ALL_CATEGORIES find _temp_category) * 10;
-        case (_keyPressed == _y && {ACEGVAR(medical_gui,selectedCategory) != _temp_category}): {
-            if (ctrlEnabled _temp_idc) then {
-                if (_temp_category == "toggle") then {
+        _category = _x; // _x does not exist inside case code
+        _idc = _idcCategoryPairs get _x;
+        case (_keyPressed == _y && {ACEGVAR(medical_gui,selectedCategory) != _category}): {
+            if (ctrlEnabled _idc) then {
+                if (_category == "toggle") then {
                     call ACEFUNC(medical_gui,handleToggle);
                 } else {
-                    ACEGVAR(medical_gui,selectedCategory) = _temp_category;
+                    ACEGVAR(medical_gui,selectedCategory) = _category;
                 };
             } else {
                 _return = false;

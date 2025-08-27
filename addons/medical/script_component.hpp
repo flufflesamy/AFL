@@ -5,4 +5,3 @@
 #include "\z\afl\addons\main\script_macros.hpp"
 
 #define IDC_BODY_HEAD_T 16035
-#define IDC_TRIAGE 1300

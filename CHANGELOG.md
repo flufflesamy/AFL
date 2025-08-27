@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix cross icon showing up twice in some circumstances.
+- Cross icon showing up twice in some circumstances.
+- Medical menu keybinds not working as expected.
 
 ## [v0.6.1] - 2025-08-17
 
