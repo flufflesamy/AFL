@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Current Selkie modlist.
+
 ### Fixed
 
 - Cross icon showing up twice in some circumstances.
@@ -15,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Redundant firing range map objects.
+- Old Selkie modlists.
 
 ## [v0.6.1] - 2025-08-17
 
