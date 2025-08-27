@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cross icon showing up twice in some circumstances.
 - Medical menu keybinds not working as expected.
 
+### Removed
+
+- Redundant firing range map objects.
+
 ## [v0.6.1] - 2025-08-17
 
 ### Changed
