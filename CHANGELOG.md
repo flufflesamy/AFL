@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.6.2] - 2025-08-27
+
 ### Added
 
 - Current Selkie modlist.
@@ -156,7 +158,8 @@ of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 
 - Initial release containing medical simulator and firing range.
 
-[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.6.1...HEAD
+[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.6.2...HEAD
+[v0.6.2]: https://github.com/flufflesamy/AFL/compare/v0.6.1..v0.6.2
 [v0.6.1]: https://github.com/flufflesamy/AFL/compare/v0.6.0..v0.6.1
 [v0.6.0]: https://github.com/flufflesamy/AFL/compare/v0.5.0..v0.6.0
 [v0.5.0]: https://github.com/flufflesamy/AFL/compare/v0.4.0..v0.5.0
