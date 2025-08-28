@@ -27,15 +27,33 @@ _args params ["_medic", "_patient", "_bodyPart"];
 private _bodyPart = toLowerANSI _bodyPart;
 private _isPartBleeding = [_patient, _bodyPart] call FUNC(isPartBleeding);
 private _bandagedWoundsOnPart = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
+private _counter = _medic getVariable [QGVAR(treatmentCounter), 0];
+private _treatmentInterval = _medic getVariable [QGVAR(treatmentInterval), 0];
 
-// Bandage wounds
-if (_isPartBleeding) then {
-    [QACEGVAR(medical_treatment,bandageLocal), [_patient, _bodyPart, "Dressing"], _patient] call CFUNC(targetEvent);
+// On first run
+if (_counter == 0) then {
+    private _initialOpenWounds = (GET_OPEN_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
+    _treatmentInterval = _totalTime / (count _initialOpenWounds);
+    TRACE_1("initialopenwounds",_initialOpenWounds);
+    _medic setVariable [QGVAR(treatmentInterval), _treatmentInterval, false];
 };
 
-// Stitch wounds
-if (_bandagedWoundsOnPart isNotEqualTo []) then {
-    private _stitched = [_patient, _bodyPart] call ACEFUNC(medical_treatment,stitchWound);
+private _interval = (_treatmentInterval * _counter) max _treatmentInterval;
+
+if (_elapsedTime >= _interval) then {
+    TRACE_4("npwt treatment", _treatmentInterval, _counter, _interval, _elapsedTime);
+    // Bandage wounds
+    if (_isPartBleeding) then {
+        [QACEGVAR(medical_treatment,bandageLocal), [_patient, _bodyPart, "Dressing"], _patient] call CFUNC(targetEvent);
+    };
+
+    // Stitch wounds
+    if (_bandagedWoundsOnPart isNotEqualTo []) then {
+        private _stitched = [_patient, _bodyPart] call ACEFUNC(medical_treatment,stitchWound);
+    };
+
+    INC(_counter);
+    _medic setVariable [QGVAR(treatmentCounter), _counter, false];
 };
 
 // Continue if treatement time not reached

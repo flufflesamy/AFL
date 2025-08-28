@@ -14,3 +14,5 @@ PREP(ui_updateInjuryListPart);
 PREP(isPartBleeding);
 PREP(npwtProgress);
 PREP(ui_onKeyDown);
+PREP(npwtStart);
+PREP(npwtSuccess);

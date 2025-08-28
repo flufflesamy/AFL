@@ -31,6 +31,7 @@ class ACE_Medical_Treatment_Actions {
 
     class NPWT: BasicBandage {
         callbackProgress = QFUNC(npwtProgress);
-        callbackStart = "";
+        callbackStart = QFUNC(npwtStart);
+        callbackSuccess = QFUNC(npwtSuccess);
     };
 };
