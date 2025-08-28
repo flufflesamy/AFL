@@ -4,6 +4,6 @@ workshop = [
     "1751569185"
 ]
 presets = [
-    "Selkie_2025_07_25.html",
+    "Selkie_2025_08_25.html",
 ]
 mission = "addons\\missions\\Selkie_FiringRange.Stratis"
