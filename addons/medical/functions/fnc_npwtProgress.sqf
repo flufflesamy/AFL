@@ -49,7 +49,10 @@ if (_elapsedTime >= _interval) then {
 
     // Stitch wounds
     if (_bandagedWoundsOnPart isNotEqualTo []) then {
-        private _stitched = [_patient, _bodyPart] call ACEFUNC(medical_treatment,stitchWound);
+        private _stitched = false;
+        while {not _stitched} do {
+            _stitched = [_patient, _bodyPart] call ACEFUNC(medical_treatment,stitchWound);
+        };
     };
 
     INC(_counter);
