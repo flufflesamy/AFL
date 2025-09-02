@@ -26,19 +26,29 @@ _args params ["_medic", "_patient", "_bodyPart"];
 
 private _bodyPart = toLowerANSI _bodyPart;
 private _isPartBleeding = [_patient, _bodyPart] call FUNC(isPartBleeding);
-private _bandagedWoundsOnPart = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
 private _counter = _medic getVariable [QGVAR(treatmentCounter), 0];
 private _treatmentInterval = _medic getVariable [QGVAR(treatmentInterval), 0];
+private _bandagedWoundsOnPart = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
+private _interval = 0;
 
 // On first run
-if (_counter == 0) then {
+if (_counter == 0 && _treatmentInterval == 0) then {
+    // Get total number of bandaged and open wounds
+    private _initialBandagedWounds = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
     private _initialOpenWounds = (GET_OPEN_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
-    _treatmentInterval = _totalTime / (count _initialOpenWounds);
-    TRACE_1("initialopenwounds",_initialOpenWounds);
+    private _totalWoundsCount = (count _initialBandagedWounds) + (count _initialOpenWounds);
+
+    _treatmentInterval = _totalTime / _totalWoundsCount;
+    TRACE_1("total wounds",_totalWoundsCount);
+
     _medic setVariable [QGVAR(treatmentInterval), _treatmentInterval, false];
 };
 
-private _interval = (_treatmentInterval * _counter) max _treatmentInterval;
+if (_counter == 0) then { // On first run
+    _interval = _treatmentInterval;
+} else { // Subsequent runs
+    _interval = _treatmentInterval * (_counter + 1);
+};
 
 if (_elapsedTime >= _interval) then {
     TRACE_4("npwt treatment",_treatmentInterval,_counter,_interval,_elapsedTime);
@@ -48,11 +58,9 @@ if (_elapsedTime >= _interval) then {
     };
 
     // Stitch wounds
-    if (_bandagedWoundsOnPart isNotEqualTo []) then {
-        private _stitched = false;
-        while {not _stitched} do {
-            _stitched = [_patient, _bodyPart] call ACEFUNC(medical_treatment,stitchWound);
-        };
+    private _stitched = false;
+    while {not _stitched} do {
+        _stitched = [_patient, _bodyPart] call ACEFUNC(medical_treatment,stitchWound);
     };
 
     INC(_counter);
