@@ -41,7 +41,7 @@ if (_counter == 0) then {
 private _interval = (_treatmentInterval * _counter) max _treatmentInterval;
 
 if (_elapsedTime >= _interval) then {
-    TRACE_4("npwt treatment", _treatmentInterval, _counter, _interval, _elapsedTime);
+    TRACE_4("npwt treatment",_treatmentInterval,_counter,_interval,_elapsedTime);
     // Bandage wounds
     if (_isPartBleeding) then {
         [QACEGVAR(medical_treatment,bandageLocal), [_patient, _bodyPart, "Dressing"], _patient] call CFUNC(targetEvent);

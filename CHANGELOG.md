@@ -7,9 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.6.3] - 2025-09-02
+
 ### Changed
 
-- Normalize NPWT progress.
+- Normalize NPWT function so treatment is not completed before timer.
+
+### Fixed
+
+- Fix launch.toml preset typo.
 
 ## [v0.6.2] - 2025-08-27
 
