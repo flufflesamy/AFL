@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.6.4] - 2025-09-02
+
+### Fixed
+
+- NPWT not completing on time.
+
 ## [v0.6.3] - 2025-09-02
 
 ### Changed
