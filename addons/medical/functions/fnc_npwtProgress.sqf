@@ -24,37 +24,18 @@
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_medic", "_patient", "_bodyPart"];
 
-private _bodyPart = toLowerANSI _bodyPart;
 private _isPartBleeding = [_patient, _bodyPart] call FUNC(isPartBleeding);
+private _initialWoundsCount = _medic getVariable [QGVAR(initialWoundsCount), 0];
 private _counter = _medic getVariable [QGVAR(treatmentCounter), 0];
-private _treatmentInterval = _medic getVariable [QGVAR(treatmentInterval), 0];
-private _bandagedWoundsOnPart = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
-private _interval = 0;
 
-// On first run
-if (_counter == 0 && _treatmentInterval == 0) then {
-    // Get total number of bandaged and open wounds
-    private _initialBandagedWounds = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
-    private _initialOpenWounds = (GET_OPEN_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
-    private _totalWoundsCount = (count _initialBandagedWounds) + (count _initialOpenWounds);
+private _treatmentInterval = _totalTime / _initialWoundsCount;
+private _threshold = _treatmentInterval * _counter + _treatmentInterval;
 
-    _treatmentInterval = _totalTime / _totalWoundsCount;
-    TRACE_1("total wounds",_totalWoundsCount);
-
-    _medic setVariable [QGVAR(treatmentInterval), _treatmentInterval, false];
-};
-
-if (_counter == 0) then { // On first run
-    _interval = _treatmentInterval;
-} else { // Subsequent runs
-    _interval = _treatmentInterval * (_counter + 1);
-};
-
-if (_elapsedTime >= _interval) then {
-    TRACE_4("npwt treatment",_treatmentInterval,_counter,_interval,_elapsedTime);
+if (_elapsedTime >= _threshold) then {
+    TRACE_4("npwt treatment",_treatmentInterval,_counter,_threshold,_elapsedTime);
     // Bandage wounds
     if (_isPartBleeding) then {
-        [QACEGVAR(medical_treatment,bandageLocal), [_patient, _bodyPart, "Dressing"], _patient] call CFUNC(targetEvent);
+        [QACEGVAR(medical_treatment,bandageLocal), [_patient, _bodyPart, "PackingBandage", 1000], _patient] call CFUNC(targetEvent);
     };
 
     // Stitch wounds
@@ -67,8 +48,6 @@ if (_elapsedTime >= _interval) then {
     _medic setVariable [QGVAR(treatmentCounter), _counter, false];
 };
 
-// Continue if treatement time not reached
-if (_totalTime - _elapsedTime > ([_patient, _patient, _bodyPart] call KEFUNC(surgery,getNPWTTime)) - KEGVAR(surgery,npwtTime)) exitWith {true};
+private _return = true;
 
-// Stop only if all parts are bandaged and stitched
-if (!_isPartBleeding && _bandagedWoundsOnPart isEqualTo []) exitWith {false};
+_return;

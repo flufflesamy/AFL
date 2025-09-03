@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=560;
+		nextID=564;
 	};
 	class Camera
 	{
@@ -52672,11 +52672,11 @@ class Mission
 					dataType="Layer";
 					name="patient monitors";
 					id=923;
-					atlOffset=0.28064537;
+					atlOffset=142.91;
 				};
 			};
 			id=189;
-			atlOffset=0.50090599;
+			atlOffset=-167.72992;
 		};
 		class Item8
 		{
