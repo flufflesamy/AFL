@@ -33,5 +33,8 @@ class ACE_Medical_Treatment_Actions {
         callbackProgress = QFUNC(npwtProgress);
         callbackStart = QFUNC(npwtStart);
         callbackSuccess = QFUNC(npwtSuccess);
+        callbackFailure = "";
+        treatmentTime = QFUNC(npwtTime);
+        condition = QFUNC(npwtCan);
     };
 };

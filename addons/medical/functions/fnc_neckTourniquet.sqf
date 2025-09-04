@@ -4,24 +4,23 @@
  * projects, which is licensed under GPLv3. This code is therefore also licensed
  * under the terms of the GNU Public License, version 3.
  *
- * Author: Glowbal, mharis001, Edited by flufflesamy
+ * Author: Glowbal, mharis001, flufflesamy
  * Applies a tourniquet to the patient on the given body part.
  *
  * Arguments:
  * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
  * 2: Body Part <STRING>
- * 3: Treatment (not used) <STRING>
- * 4: Item User (not used) <OBJECT>
+ * 3: Treatment (unused) <STRING>
+ * 4: Item User (unused) <OBJECT>
  * 5: Used Item <STRING>
  *
  * Return Value:
- * None
+ * Nothing
  *
  * Example:
  * [player, cursorObject, "LeftLeg", "", objNull, "ACE_tourniquet"] call afl_medical_fnc_neckTourniquet
  */
-
 params ["_medic", "_patient", "_bodyPart", "", "", "_usedItem"];
 TRACE_2("neckTourniquet",_medic,_patient);
 

@@ -4,7 +4,7 @@
  * which is licensed under GPLv2 or later. This code is therefore licensed
  * under the terms of the GNU Public License, version 3.
  *
- * Author: Glowbal, Edited by flufflesamy
+ * Author: Glowbal, flufflesamy
  * Local callback for applying a tourniquet to a patient.
  *
  * Arguments:
@@ -17,7 +17,6 @@
  * Example:
  * [player, "LeftLeg"] call afl_medical_fnc_neckTourniquetLocal
  */
-
 params ["_patient", "_bodyPart"];
 TRACE_2("neckTourniquetLocal",_patient,_bodyPart);
 

@@ -1,21 +1,19 @@
 #include "..\script_component.hpp"
 /*
-	Author: flufflesamy
-
-	Description:
-		Adds visual indication of IV bags on limbs in medical menu.
-
-	Parameter(s):
-		0: Injury list <CONTROL>
-        1: Target <OBJECT>
-        2: Body part, -1 to only show overall health info <NUMBER>
-        3: Entries <ARRAY>
-
-	Returns:
-		Nothing
-P
-	Examples:
-		[CONTROL, _Target, 0, []] call afl_medical_fnc_updateInjuryListPart
+* Author: flufflesamy
+* Adds visual indication of IV bags on limbs in medical menu.
+*
+* Arguments:
+* 0: Injury List <CONTROL>
+* 1: Target <OBJECT>
+* 2: Body Part <NUMBER>
+* 3: Entries <ARRAY>
+*
+* Return Value:
+* Nothing
+*
+* Example:
+* [objectNull, player, 0, []] call afl_medical_fnc_updateInjuryListPart
 */
 params ["_ctrl", "_target", "_selectionN", "_entries"];
 

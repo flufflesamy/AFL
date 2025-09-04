@@ -4,11 +4,11 @@
  * which is licensed under GPLv3. This code is therefore also licensed
  * under the terms of the GNU Public License, version 3.
  *
- * Author: Glowbal, Edited by flufflesamy
+ * Author: Glowbal, flufflesamy
  * Calculates the blood volume change and decreases the IVs given to the unit.
  *
  * Arguments:
- * 0: The Unit <OBJECT>
+ * 0: Unit <OBJECT>
  * 1: Time since last update <NUMBER>
  * 2: Global Sync Values (bloodbags) <BOOL>
  *
@@ -18,7 +18,6 @@
  * Example:
  * [player, 1, true] call afl_medical_fnc_getBloodVolumeChange
  */
-
 params ["_unit", "_deltaT", "_syncValues"];
 // TRACE_3("getBloodVolumeChange",_unit,_deltaT,_syncValues);
 

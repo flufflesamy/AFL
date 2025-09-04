@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- NPWT now clears all trauma.
+- NPWT can be used to clear trauma without open wounds / bandaged wounds.
+- Unified function header style of afl_medical module with ACE.
+
+### Fixed
+
+- NPWT Regressions.
+- NPWT overshooting timer.
+- Incorrect function header documentation.
+
+### Removed
+
+- Unused npwtSuccess function.
+
 ## [v0.6.6] - 2025-09-03
 
 ### Fixed

@@ -1,24 +1,21 @@
 #include "..\script_component.hpp"
 /*
-    The following code is a derivative work of the code from the ACE project,
-    which is licensed under GPLv2 or later. This code is therefore licensed
-    under the terms of the GNU Public License, version 3.
-
-    Original file: ACE3/addons/medical_treatment/fuctions/fnc_canBandage.sqf
-	Authors: kymckay, flufflesamy
-
-	Description:
-		Checks if patient is bleeding on bodyPart.
-
-	Parameter(s):
-		0: Patient <OBJECT>
-        1: Body Part <STRING>
-
-	Returns:
-		0: Is Bleeding <BOOL>
-
-	Examples:
-		[player] call afl_medical_fnc_isPartBleeding
+* The following code is a derivative work of the code from the ACE project,
+* which is licensed under GPLv2 or later. This code is therefore licensed
+* under the terms of the GNU Public License, version 3.
+*
+* Author: kymckay (ace_medical_treatment_fnc_canBandage), flufflesamy
+* Checks if patient is bleeding on bodyPart.
+*
+* Arguments:
+* 0: Patient <OBJECT>
+* 1: Body Part <STRING>
+*
+* Return Value:
+* 0: Is Bleeding <BOOL>
+*
+* Example:
+* [player, "leftarm"] call afl_medical_fnc_isPartBleeding
 */
 params ["_patient", "_bodyPart"];
 

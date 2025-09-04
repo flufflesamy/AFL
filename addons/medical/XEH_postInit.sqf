@@ -14,5 +14,7 @@
 
 [QACEGVAR(medical_gui,updateInjuryListPart), LINKFUNC(ui_updateInjuryListPart)] call CFUNC(addEventHandler);
 
+[QGVAR(npwtSuccessLocal), LINKFUNC(npwtSuccessLocal)] call CFUNC(addEventHandler);
+
 // set coag hash
 [] call FUNC(setCoagHash);

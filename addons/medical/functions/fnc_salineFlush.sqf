@@ -1,23 +1,21 @@
 #include "..\script_component.hpp"
 /*
-	Author: flufflesamy
-
-	Description:
-		Handles ace_medical_treatment_ivBagLocal event. Enables flushing IV lines with saline.
-
-	Parameter(s):
-		0: Patient <UNIT>
-        1: Body part <STRING>
-        2: Treatment <STRING>
-        3: Medic <UNIT>
-        4: Item User <UNIT>
-        5: Item <STRING>
-
-	Returns:
-		Nothing
-
-	Examples:
-		[player] call afl_medical_fnc_salineFlush
+* Author: flufflesamy
+* Handles ace_medical_treatment_ivBagLocal event. Enables flushing IV lines with saline.
+*
+* Arguments:
+* 0: Patient <OBJECT>
+* 1: Body Part <STRING>
+* 2: Treatment <STRING>
+* 3: Medic <OBJECT>
+* 4: Item User <OBJECT>
+* 5: Item <STRING>
+*
+* Return Value:
+* Nothing
+*
+* Example:
+* [player] call afl_medical_fnc_salineFlush
 */
 params ["_patient", "_bodyPart", "_treatment", "_medic", "_itemUser", "_item"];
 TRACE_6("salineFlush",_patient,_bodyPart,_treatment,_medic,_itemUser,_item);

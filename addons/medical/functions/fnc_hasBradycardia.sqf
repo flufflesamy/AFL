@@ -4,7 +4,7 @@
  * which is licensed under GPLv3. This code is therefore also licensed
  * under the terms of the GNU Public License, version 3.
  *
- * Author: Mazinski.H Edited by flufflesamy
+ * Author: Mazinski.H, flufflesamy
  * Checks if patient has bradycardia
  *
  * Arguments:
@@ -16,7 +16,6 @@
  * Example:
  * [player] call afl_medical_fnc_hasBradycardia;
  */
-
 params ["_patient"];
 TRACE_1("hasBradycardia",_patient);
 
