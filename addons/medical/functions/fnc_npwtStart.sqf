@@ -26,7 +26,7 @@ TRACE_1("initialOpenWounds",_initialOpenWounds);
 {
     _x params ["_woundID","_openAmount","_bleedingCoef","_woundDamage"];
 
-    if (_bleedingCoef == 0 || _openAmount == 0) then {
+    if (_bleedingCoef == 0) then {
         _initialOpenWounds deleteAt _forEachIndex;
     };
 } forEachReversed _initialOpenWounds;

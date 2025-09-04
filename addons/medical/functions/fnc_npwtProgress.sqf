@@ -38,10 +38,14 @@ if (_elapsedTime >= _threshold) then {
         [QACEGVAR(medical_treatment,bandageLocal), [_patient, _bodyPart, "PackingBandage", 1000], _patient] call CFUNC(targetEvent);
     };
 
-    // Stitch wounds
-    private _stitched = false;
-    while {not _stitched} do {
-        _stitched = [_patient, _bodyPart] call ACEFUNC(medical_treatment,stitchWound);
+    private _bandagedWoundsOnPart = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
+
+    if (_bandagedWoundsOnPart isNotEqualTo []) then {
+        // Stitch wounds
+        private _stitched = false;
+        while {not _stitched} do {
+            _stitched = [_patient, _bodyPart] call ACEFUNC(medical_treatment,stitchWound);
+        };
     };
 
     INC(_counter);
