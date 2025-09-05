@@ -12,6 +12,7 @@ class CfgPatches {
             "kat_main"
         };
         author = "flufflesamy";
+        url = CSTRING(url);
         VERSION_CONFIG;
     };
 };
@@ -20,6 +21,12 @@ class CfgMods {
     class PREFIX {
         dir = "@afl";
         name = "AFL - Selkie Medical Mod 0.0.0";
+        picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca.paa";
+        hidePicture = "true";
+        hideName = "true";
+        actionName = "Website";
+        action = CSTRING(URL);
+        description = "Issue Tracker: https://github.com/flufflesamy/AFL/issues";
     };
 };
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="AFL">
+    <Package name="Main">
+        <Key ID="STR_AFL_Main_URL">
+            <English>https://github.com/flufflesamy/AFL</English>
+        </Key>
+    </Package>
+</Project>

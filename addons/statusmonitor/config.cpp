@@ -16,6 +16,7 @@ class CfgPatches {
             "afl_main"
         };
         author = "flufflesamy";
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

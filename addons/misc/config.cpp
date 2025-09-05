@@ -11,6 +11,7 @@ class CfgPatches {
             "cba_main"
         };
         author = "flufflesamy";
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

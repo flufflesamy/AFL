@@ -1,8 +1,12 @@
 class CfgSettings {
     class CBA {
         class Versioning {
-            class AFL {
-                CBA[] = {"cba_main", REQUIRED_CBA_VERSION, "true"};
+            class PREFIX {
+                class dependencies {
+                    CBA[] = {"cba_main", REQUIRED_CBA_VERSION, "(true)"};
+                    ACE[] = {"ace_main", REQUIRED_ACE_VERSION, "(true)"};
+                    KAT[] = {"kat_main", REQUIRED_KAM_VERSION, "(true)"};
+                };
             };
         };
     };

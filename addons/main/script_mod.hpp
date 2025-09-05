@@ -6,8 +6,16 @@
 
 #include "script_version.hpp"
 
+#define VERSION     MAJOR.MINOR
+#define VERSION_STR MAJOR.MINOR.PATCH
+#define VERSION_AR  MAJOR,MINOR,PATCH,BUILD
+
+#define VERSION_CONFIG version = VERSION; versionStr = QUOTE(MAJOR.MINOR.PATCH); versionAr[] = {VERSION_AR}
+
 #define REQUIRED_VERSION 2.20
 #define REQUIRED_CBA_VERSION {3, 18, 4}
+#define REQUIRED_ACE_VERSION {3, 20, 0}
+#define REQUIRED_KAM_VERSION {3, 1, 2}
 
 #ifdef COMPONENT_BEAUTIFIED
     #define COMPONENT_NAME QUOTE(Amy Functions Library - COMPONENT_BEAUTIFIED)

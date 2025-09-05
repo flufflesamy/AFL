@@ -19,6 +19,7 @@ class CfgPatches {
             "kat_surgery"
         };
         author = "flufflesamy";
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
