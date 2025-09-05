@@ -1,39 +1,50 @@
-# Amy Functions Library - Selkie Medical Mod
+# AFL - Selkie Medical Mod
 
-[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3513989482)
+[GitHub](https://github.com/flufflesamy/AFL) |
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3513989482) |
+[Changelog](https://github.com/flufflesamy/AFL/blob/testing/CHANGELOG.md)
 
-## Components
+## Overview
 
-### Main
+AFL - Selkie Medical Mod (AFL) is an Arma 3 addon that aims to add medical functionality to ACE and KAM medical systems,
+with the aim to enhance and fix both addons.
 
-Includes global macros.
+This mod was created for the Selkie Platoon, a Halo ODST Arma 3 unit, however it does not have any dependencies on OPTRE or
+unit specific mods.
 
-### Medical
+## Features
 
-Modifies the behavior of ACE Medical and KAT Advanced Medical. Currently contains the following functions:
+### Medical Tweaks
+
+AFL modifies the behavior of ACE Medical and KAT Advanced Medical. Currently contains the following functions:
 
 - Add setting for base bandage time.
 - Re-add ability to tourniquet necks.
 - Normalize IV flow rates based on IRL data.
 - Add IV clog chance based on coagulation factor.
+- Fix KAM dressing vacuum.
 
 ### Medical Simulator
 
-Medical simulator interface for practicing KAT Advanced Medical.
+AFL includes a medical simulator interface for practicing KAT Advanced Medical. Includes the following functions:
 
-### Misc
+- Spawn and apply medical conditions to patients:
+  - Wounds.
+  - Airway.
+  - Cardiac arrest.
+  - Pneumothorax.
+  - Fractures.
+- Preset system.
 
-Currently contains code for the vehicle spawner.
+### Firing Range Mission
 
-### Missions
+AFL adds `Selkie_FiringRange.Stratis`, a firing range map that includes targets, a medical simulator, and a vehicle spawner.
 
-Includes missions. Currently only has Selkie_FiringRange.Stratis which is a map intended for training members of the Selkie Platoon.
+### Status Monitor
 
-## Status Monitor
+AFL adds a status monitor item that adds HUD overlay showing heart rate of units in player's group. Includes TL variant that shows distance instead of heart rate.
 
-Status monitor HUD overlay that shows heart rate of units in player's group. Additional TL version that shows distance instead of heart rate.
-
-## Required Mods
+## Dependencies
 
 - [CBA](https://github.com/CBATeam/CBA_A3)
 - [ace](https://github.com/acemod/ACE3)
@@ -42,7 +53,13 @@ Status monitor HUD overlay that shows heart rate of units in player's group. Add
 
 ## Build Instructions
 
-This repo uses HEMTT for packaging. See [the docs](https://hemtt.dev/) for more instructions.
+This repo uses HEMTT for building and packaging. See [the docs](https://hemtt.dev/) for more instructions.
+
+To build and launch, run:
+
+```sh
+hemtt dev
+```
 
 ## License
 
