@@ -19,6 +19,6 @@ class CfgPatches {
 class CfgMods {
     class PREFIX {
         dir = "@afl";
-        name = "AFL - Selkie Medical Mod";
+        name = "AFL - Selkie Medical Mod 0.0.0";
     };
 };
