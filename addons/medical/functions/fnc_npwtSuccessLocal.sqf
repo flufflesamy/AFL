@@ -21,7 +21,7 @@ params ["_patient", "_bodyPart"];
 TRACE_2("npwtSuccessLocal",_patient,_bodyPart);
 
 // Local check
-if (!_isLocal)  exitWith {ERROR_1("%1 not Local!",_this)};
+if (!local _patient)  exitWith {ERROR_1("%1 not Local!",_this)};
 
 private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 private _openWounds = _patient getVariable [QACEGVAR(medical,openWounds), createHashMap];
@@ -52,3 +52,5 @@ _patient call ACEFUNC(medical_vitals,handleUnitVitals);
 private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call ACEFUNC(common,isPlayer)};
 TRACE_1("clearConditionCaches: npwtSuccessLocal",_nearPlayers);
 [QACEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CFUNC(targetEvent);
+
+INFO_1("NPWT Success Params:%1",_this);

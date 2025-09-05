@@ -6,4 +6,19 @@ workshop = [
 presets = [
     "Selkie_2025_08_25.html",
 ]
+
+[antistasi]
+extends = "default"
+presets = [
+    "amy_antistasi_20250905.html",
+]
+
+[eden]
+extends = "default"
 mission = "addons\\missions\\Selkie_FiringRange.Stratis"
+
+[pbo]
+extends = "default"
+file_patching = false
+binarize = true
+rapify = true

@@ -34,7 +34,7 @@ private _openWoundsCount = 0;
 } forEach _initialOpenWounds;
 
 private _initialWoundsCount = (count _initialBandagedWounds) + (count _initialOpenWounds);
-TRACE_3("npwtStartGet",_initialBandagedWounds,_initialOpenWounds,_initialWoundsCount);
+INFO_3("NPWT Start: Bandaged=%1, Open=%2, Total=%3",_initialBandagedWounds,_initialOpenWounds,_initialWoundsCount);
 
 // Initialize variables
 _medic setVariable [QGVAR(treatmentCounter), 0, false];
