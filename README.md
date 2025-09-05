@@ -9,8 +9,8 @@
 AFL - Selkie Medical Mod (AFL) is an Arma 3 addon that aims to add medical functionality to ACE and KAM medical systems,
 with the aim to enhance and fix both addons.
 
-This mod was created for the Selkie Platoon, a Halo ODST Arma 3 unit, however it does not have any dependencies on OPTRE or
-unit specific mods.
+This mod was created for the Selkie Platoon, a Halo ODST Arma 3 unit, however it does not have any dependencies on OPTRE
+or unit specific mods.
 
 ## Features
 
@@ -42,7 +42,8 @@ AFL adds `Selkie_FiringRange.Stratis`, a firing range map that includes targets,
 
 ### Status Monitor
 
-AFL adds a status monitor item that adds HUD overlay showing heart rate of units in player's group. Includes TL variant that shows distance instead of heart rate.
+AFL adds a status monitor item that adds HUD overlay showing heart rate of units in player's group.
+Includes TL variant that shows distance instead of heart rate.
 
 ## Dependencies
 
@@ -65,10 +66,13 @@ hemtt dev
 
 Copyright (C) 2025 flufflesamy and AFL Contributors
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-This program also includes modified code from other projects. Unless stated otherwise, modified code is also licensed under GPLv3. Please see copyright disclaimers in individual files for more information.
+This program also includes modified code from other projects. Unless stated otherwise,
+modified code is also licensed under GPLv3. Please see copyright disclaimers in individual files for more information.
 
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.

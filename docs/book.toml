@@ -1,0 +1,33 @@
+[book]
+authors = ["flufflesamy"]
+language = "en"
+src = "src"
+title = "AFL Documentation"
+
+[build]
+create-missing = true
+
+[preprocessor]
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "3.1.0" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.admonish.renderer.test]
+render_mode = "strip"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[output]
+
+[output.html]
+default-theme = "ayu"
+additional-css = ["./mdbook-admonish.css"]
+git-repository-url = "https://github.com/flufflesamy/AFL"
+git-repository-icon = "fa-github"
+
+[output.html.search.chapter]
+# Disables search indexing for all chapters in the `appendix` directory.
+"appendix" = { enable = false }
