@@ -48,7 +48,7 @@ switch (true) do {
     case (!_isPartBleeding && _bandagedWoundsOnPart isEqualTo [] && _elapsedTime >= _totalTime): {
         INFO_2("NPWT Progress Complete: Elapsed=%1s, Total=%2s",_elapsedTime,_totalTime);
         if (_elapsedTime - _totalTime > 0.02) then {
-            WARNING_1("NPWT time exceeded by %1s", ((_elapsedTime - _totalTime) toFixed 2));
+            WARNING_1("NPWT time exceeded by %1s",((_elapsedTime - _totalTime) toFixed 2));
         };
         _return = true;
     };
