@@ -22,3 +22,5 @@ class CfgMods {
         name = "AFL - Selkie Medical Mod 0.0.0";
     };
 };
+
+#include "CfgSettings.hpp"

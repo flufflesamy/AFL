@@ -7,6 +7,7 @@
 #include "script_version.hpp"
 
 #define REQUIRED_VERSION 2.20
+#define REQUIRED_CBA_VERSION {3, 18, 4}
 
 #ifdef COMPONENT_BEAUTIFIED
     #define COMPONENT_NAME QUOTE(Amy Functions Library - COMPONENT_BEAUTIFIED)

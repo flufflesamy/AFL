@@ -12,7 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - NPWT now clears all trauma and bruises.
 - ACE medical log entry on NPWT treatment.
 - Timeout to npwtProgress.
-- rhai build scripts.
+- Rhai build scripts.
+- Register addon with CBA versioning system.
 
 ### Changed
 
