@@ -8,15 +8,12 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "afl_main",
-            "cba_main",
-            "ace_main",
             "ace_medical",
             "ace_medical_damage",
             "ace_medical_treatment",
             "ace_medical_gui",
             "ace_medical_feedback",
             "ace_medical_engine",
-            "kat_main",
             "kat_vitals",
             "kat_circulation",
             "kat_breathing",

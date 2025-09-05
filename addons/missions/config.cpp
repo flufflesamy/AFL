@@ -6,7 +6,14 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cba_main", "afl_main", "afl_medicalsim", "afl_misc"};
+        requiredAddons[] = {
+            "afl_main",
+            "afl_medicalsim",
+            "afl_misc",
+            "A3_Structures_F_Globe",
+            "A3_Props_F_Globe"
+        };
+        skipWhenMissingDependencies = 1;
         author = "flufflesamy";
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
