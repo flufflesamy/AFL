@@ -7,10 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- NPWT now clears all trauma and bruises.
+- ACE medical log entry on NPWT treatment.
+- Timeout to npwtProgress.
+
 ### Changed
 
-- NPWT now clears all trauma.
-- NPWT can be used to clear trauma without open wounds / bandaged wounds.
+- NPWT starting condition to reflect trauma and bruise clearing.
+- NPWT treatment time now takes trauma into account. This prevents treatment times being unusually long or short.
 - Unified function header style of afl_medical module with ACE.
 
 ### Fixed
