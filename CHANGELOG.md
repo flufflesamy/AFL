@@ -9,25 +9,54 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- NPWT now clears all trauma and bruises.
-- ACE medical log entry on NPWT treatment.
-- Timeout to npwtProgress.
-- Rhai build scripts.
+#### Main
+
+- CBA versioning macros.
 - Register addon with CBA versioning system.
+
+#### Project
+
+- Antistasi launch preset.
+- Build hooks.
+- Version bump scripts.
 
 ### Changed
 
-- NPWT starting condition to reflect trauma and bruise clearing.
-- NPWT treatment time now takes trauma into account. This prevents treatment times being unusually long or short.
+#### Main
+
+- Unified mod name in config files.
+
+#### Medical
+
+- NPWT
+  - ACE medical log entry on NPWT treatment.
+  - Timeout to npwtProgress.
+  - Treatment now clears all trauma and bruises.
+    - Can now use NPWT on trauma and bruises, not just open wounds.
+  - Treatment time now takes trauma into account.
+    - Prevents treatment times being unusually long or short.
 - Unified function header style of afl_medical module with ACE.
 
 ### Fixed
 
-- NPWT Regressions.
-- NPWT overshooting timer.
+#### Main
+
+- Incorrect VERSION_CONFIG.
+
+#### Medical
+
+- NPWT
+  - Not stitching wounds correctly.
+  - Overshooting timer ([#6](https://github.com/flufflesamy/AFL/issues/6)).
 - Incorrect function header documentation.
 
+#### Project
+
+- Incorrect .editorconfig syntax.
+
 ### Removed
+
+#### Medical
 
 - Unused npwtSuccess function.
 
@@ -216,7 +245,8 @@ of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 
 - Initial release containing medical simulator and firing range.
 
-[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.6.6...HEAD
+[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.6.5...testing
+[v0.6.7]: https://github.com/flufflesamy/AFL/compare/v0.6.6..v0.6.7
 [v0.6.6]: https://github.com/flufflesamy/AFL/compare/v0.6.5..v0.6.6
 [v0.6.5]: https://github.com/flufflesamy/AFL/compare/v0.6.4..v0.6.5
 [v0.6.4]: https://github.com/flufflesamy/AFL/compare/v0.6.3..v0.6.4
