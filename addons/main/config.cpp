@@ -19,6 +19,6 @@ class CfgPatches {
 class CfgMods {
     class PREFIX {
         dir = "@afl";
-        name = "Amy Functions Library - Selkie Medical Mod";
+        name = "AFL - Selkie Medical Mod";
     };
 };
