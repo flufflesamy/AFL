@@ -1,19 +1,19 @@
 #include "..\script_component.hpp"
 /*
-* Author: flufflesamy
-* Calculates treatment time for NPWT treatment.
-*
-* Arguments:
-* 0: Medic <OBJECT>
-* 1: Patient <OBJECT>
-* 2: Body Part <STRING>
-*
-* Return Value:
-* 0: NPWT Time <NUMBER>
-*
-* Example:
-* [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtTime
-*/
+ * Author: flufflesamy
+ * Calculates treatment time for NPWT treatment.
+ *
+ * Arguments:
+ * 0: Medic <OBJECT>
+ * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
+ *
+ * Return Value:
+ * 0: NPWT Time <NUMBER>
+ *
+ * Example:
+ * [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtTime
+ */
 params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("npwtTime",_medic,_patient,_bodyPart);
 

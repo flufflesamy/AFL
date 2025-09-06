@@ -1,17 +1,17 @@
 #include "..\script_component.hpp"
 /*
-* Author: flufflesamy
-* Shows low SpO2 visual to player.
-*
-* Arguments:
-* 0: Enable Effect <BOOL>
-*
-* Return Value:
-* Nothing
-*
-* Example:
-* [true] call afl_medical_fnc_neckTourniquetVisual
-*/
+ * Author: flufflesamy
+ * Shows low SpO2 visual to player.
+ *
+ * Arguments:
+ * 0: Enable Effect <BOOL>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [true] call afl_medical_fnc_neckTourniquetVisual
+ */
 params ["_enable"];
 TRACE_1("neckTourniquetVisual",_enable);
 

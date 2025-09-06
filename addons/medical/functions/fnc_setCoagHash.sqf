@@ -1,17 +1,17 @@
 #include "..\script_component.hpp"
 /*
-* Author: flufflesamy
-* Sets hashtable for IV fluids along with their coagulation values.
-*
-* Arguments:
-* Nothing
-*
-* Return Value:
-* Nothing
-*
-* Example:
-* [] call afl_medical_fnc_setCoagHash
-*/
+ * Author: flufflesamy
+ * Sets hashtable for IV fluids along with their coagulation values.
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [] call afl_medical_fnc_setCoagHash
+ */
 TRACE_1("setCoagHash","");
 
 // Add hashmap of blood coag values

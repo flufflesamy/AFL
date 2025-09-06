@@ -21,7 +21,7 @@
  *
  * Example:
  * ["", [displayNull, 5, false, false, false]] call afl_medical_fnc_ui_onKeyDown
-*/
+ */
 #define NUMBER_KEYS [DIK_1, DIK_2, DIK_3, DIK_4, DIK_5, DIK_6, DIK_7, DIK_8, DIK_9, DIK_0]
 #define ALL_CATEGORIES ["triage", "examine", "bandage", "medication", "airway", "advanced", "surgery", "drag", "toggle"]
 #define CATEGORY_IDC [1300, 1310, 1320, 1330, 1340, 1350, 1385, 1360, 1370]

@@ -1,19 +1,19 @@
 #include "..\script_component.hpp"
 /*
-* Author: flufflesamy
-* Checks if medic can use NPWT on patient.
-*
-* Arguments:
-* 0: Medic <OBJECT>
-* 1: Patient <OBJECT>
-* 2: Body Part <STRING>
-*
-* Return Value:
-* 0: Can NPWT <BOOL>
-*
-* Example:
-* [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtCan
-*/
+ * Author: flufflesamy
+ * Checks if medic can use NPWT on patient.
+ *
+ * Arguments:
+ * 0: Medic <OBJECT>
+ * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
+ *
+ * Return Value:
+ * 0: Can NPWT <BOOL>
+ *
+ * Example:
+ * [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtCan
+ */
 params ["_medic", "_patient", "_bodyPart"];
 // TRACE_3("npwtCan",_medic,_patient,_bodyPart);
 

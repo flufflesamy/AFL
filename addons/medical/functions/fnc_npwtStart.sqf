@@ -1,22 +1,22 @@
 #include "..\script_component.hpp"
 /*
-* Author: flufflesamy
-* Callback on start of NPWT treatment.
-*
-* Arguments:
-* 0: Medic <OBJECT>
-* 1: Patient <OBJECT>
-* 2: Body Part <STRING>
-* 3: Treatment (unused) <STRING>
-* 4: Item User (unused) <OBJECT>
-* 5: Used Item <STRING>
-*
-* Return Value:
-* Nothing
-*
-* Example:
-* [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtStart
-*/
+ * Author: flufflesamy
+ * Callback on start of NPWT treatment.
+ *
+ * Arguments:
+ * 0: Medic <OBJECT>
+ * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
+ * 3: Treatment (unused) <STRING>
+ * 4: Item User (unused) <OBJECT>
+ * 5: Used Item <STRING>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtStart
+ */
 params ["_medic", "_patient", "_bodyPart", "", "", "_usedItem"];
 TRACE_3("npwtStart",_medic,_patient,_bodyPart);
 

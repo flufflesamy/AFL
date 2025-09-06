@@ -1,22 +1,22 @@
 #include "..\script_component.hpp"
 /*
-* Author: flufflesamy
-* Callback for ace_medical_treatment_ivBagLocal event. Adds IV block chance based on coagulation factor.
-*
-* Arguments:
-* 0: Patient <UNIT>
-* 1: Body Part <STRING>
-* 2: Treatment <STRING>
-* 3: Medic <OBJECT>
-* 4: Item User <OBJECT>
-* 5: Item <STRING>
-*
-* Return Value:
-* Nothing
-*
-* Example:
-* [player] call afl_medical_fnc_fluidBlock
-*/
+ * Author: flufflesamy
+ * Callback for ace_medical_treatment_ivBagLocal event. Adds IV block chance based on coagulation factor.
+ *
+ * Arguments:
+ * 0: Patient <UNIT>
+ * 1: Body Part <STRING>
+ * 2: Treatment <STRING>
+ * 3: Medic <OBJECT>
+ * 4: Item User <OBJECT>
+ * 5: Item <STRING>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player] call afl_medical_fnc_fluidBlock
+ */
 params ["_patient", "_bodyPart", "_treatment", "_medic", "_itemUser", "_item"];
 TRACE_6("fluidBlockLocal",_patient,_bodyPart,_treatment,_medic,_itemUser,_item);
 

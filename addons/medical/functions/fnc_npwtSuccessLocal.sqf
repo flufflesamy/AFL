@@ -1,22 +1,22 @@
 #include "..\script_component.hpp"
 /*
-* The following code is a derivative work of code from the ACE project,
-* which is licensed under GPLv2 or later. This code is therefore licensed
-* under the terms of the GNU Public License, version 3.
-*
-* Author: LinkIsGrim (ace_medical_treatment_fnc_addTrauma), flufflesamy
-* Local callback on NPWT treatment success.
-*
-* Arguments:
-* 0: Patient <OBJECT>
-* 1: Body Part <STRING>
-*
-* Return Value:
-* Nothing
-*
-* Example:
-* [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtSuccessLocal
-*/
+ * The following code is a derivative work of code from the ACE project,
+ * which is licensed under GPLv2 or later. This code is therefore licensed
+ * under the terms of the GNU Public License, version 3.
+ *
+ * Author: LinkIsGrim (ace_medical_treatment_fnc_addTrauma), flufflesamy
+ * Local callback on NPWT treatment success.
+ *
+ * Arguments:
+ * 0: Patient <OBJECT>
+ * 1: Body Part <STRING>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtSuccessLocal
+ */
 params ["_patient", "_bodyPart"];
 TRACE_2("npwtSuccessLocal",_patient,_bodyPart);
 

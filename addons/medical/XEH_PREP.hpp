@@ -19,3 +19,4 @@ PREP(npwtCan);
 PREP(npwtTime);
 PREP(npwtSuccess);
 PREP(npwtSuccessLocal);
+PREP(npwtStitchLocal);

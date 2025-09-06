@@ -68,30 +68,20 @@ switch (true) do {
 
 if (_elapsedTime >= _threshold && isNil "_return") then {
     TRACE_4("NPWT treating wound",_treatmentInterval,_counter,_threshold,_elapsedTime);
-    // If bleeding, bandage and stitch
+
+    // If bleeding, bandage
     if (_isPartBleeding) then {
         [QACEGVAR(medical_treatment,bandageLocal), [_patient, _bodyPart, "PackingBandage", 1000], _patient] call CFUNC(targetEvent);
         INFO_1("Finished bandaging: Time=%1",_elapsedTime);
     };
 
-    _bandagedWoundsOnPart = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
-
-    if (_bandagedWoundsOnPart isNotEqualTo []) then {
-        private _wound = _bandagedWoundsOnPart select 0;
-        private _stitched = false;
-        // Make sure the wound is stitched, timeout at 100 runs.
-        for "_i" from 1 to 100 do {
-            _stitched = [_patient, _bodyPart, _wound] call ACEFUNC(medical_treatment,stitchWound);
-            if (_stitched) then {
-                break;
-            };
-        };
-        INFO_2("Stitched wound: Wound=%1 Success=%2",_wound,_stitched);
-    };
+    // Stitch wound
+    [QGVAR(npwtStitchLocal), [_patient, _bodyPart], _patient] call CFUNC(targetEvent);
 
     // Increment counter
     INC(_counter);
     _medic setVariable [QGVAR(treatmentCounter), _counter, false];
+    INFO_1("NPWT treated wound:%1",_this);
 };
 
 RETNIL(_return);

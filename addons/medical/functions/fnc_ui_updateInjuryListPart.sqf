@@ -1,20 +1,20 @@
 #include "..\script_component.hpp"
 /*
-* Author: flufflesamy
-* Adds visual indication of IV bags on limbs in medical menu.
-*
-* Arguments:
-* 0: Injury List <CONTROL>
-* 1: Target <OBJECT>
-* 2: Body Part <NUMBER>
-* 3: Entries <ARRAY>
-*
-* Return Value:
-* Nothing
-*
-* Example:
-* [objectNull, player, 0, []] call afl_medical_fnc_updateInjuryListPart
-*/
+ * Author: flufflesamy
+ * Adds visual indication of IV bags on limbs in medical menu.
+ *
+ * Arguments:
+ * 0: Injury List <CONTROL>
+ * 1: Target <OBJECT>
+ * 2: Body Part <NUMBER>
+ * 3: Entries <ARRAY>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [objectNull, player, 0, []] call afl_medical_fnc_updateInjuryListPart
+ */
 params ["_ctrl", "_target", "_selectionN", "_entries"];
 
 private _bloodBags = _target getVariable [QACEGVAR(medical,ivBags), []];

@@ -1,21 +1,21 @@
 #include "..\script_component.hpp"
 /*
-* Author: flufflesamy
-* Calculate IV flow rate based on fluid type and blood pressure
-*
-* Arguments:
-* 0: Blood Pressure <ARRAY>
-*   0: Systolic BP <NUMBER>
-*   1: Diastolic BP <NUMBER>
-* 1: Bodypart Index <NUMBER>
-* 2: Fluid Type <STRING>
-*
-* Return Value:
-* 0: Flow Rate in mL/s <NUMBER>
-*
-* Example:
-* [[120,80], 1, "Plasma"] call afl_medical_fnc_handleNeckTourniquetEffects
-*/
+ * Author: flufflesamy
+ * Calculate IV flow rate based on fluid type and blood pressure
+ *
+ * Arguments:
+ * 0: Blood Pressure <ARRAY>
+ *   0: Systolic BP <NUMBER>
+ *   1: Diastolic BP <NUMBER>
+ * 1: Bodypart Index <NUMBER>
+ * 2: Fluid Type <STRING>
+ *
+ * Return Value:
+ * 0: Flow Rate in mL/s <NUMBER>
+ *
+ * Example:
+ * [[120,80], 1, "Plasma"] call afl_medical_fnc_handleNeckTourniquetEffects
+ */
 #define IV_MAX_FLOW (180 / 60) // 180 ml/min
 #define IO_MAX_FLOW (80 / 60) // 80 ml/min
 #define SALINE_COEF 1
