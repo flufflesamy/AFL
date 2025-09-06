@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Antistasi launch preset.
 - Build hooks.
+- Documentation website created with mdbook.
 - Version bump scripts.
 
 ### Changed
