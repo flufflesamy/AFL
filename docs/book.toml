@@ -27,6 +27,8 @@ default-theme = "ayu"
 additional-css = ["./mdbook-admonish.css"]
 git-repository-url = "https://github.com/flufflesamy/AFL"
 git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/flufflesamy/AFL/edit/master/docs/{path}"
+site-url = "https://flufflesamy.github.io/AFL/"
 
 [output.html.search.chapter]
 # Disables search indexing for all chapters in the `appendix` directory.
