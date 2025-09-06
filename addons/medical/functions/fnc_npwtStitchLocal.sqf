@@ -8,10 +8,10 @@
  * 1: Body Part <STRING>
  *
  * Return Value:
- * 0: Can NPWT <BOOL>
+ * Nothing
  *
  * Example:
- * [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtCan
+ * [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtStitchLocal
  */
 params ["_patient", "_bodyPart"];
 
@@ -21,6 +21,8 @@ private _stitched = [_patient, _bodyPart] call ACEFUNC(medical_treatment,stitchW
 
 if (!_stitched) then {
     ERROR_1("%1 stitching failed! %1",_this);
+} else {
+    INFO_1("NPWT stitched wound: %1",_this);
 };
 
 // Clear condition caches
