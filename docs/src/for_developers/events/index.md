@@ -7,3 +7,8 @@ XEH events can be raised using CBA XEH functions. For instance, the function `CB
 a local event on the target's machine.
 
 For more information on XEH, refer to [CBA's XEH Documentation](https://github.com/CBATeam/CBA_A3/wiki/Extended-Event-Handlers-(new)).
+
+~~~admonish warning
+As AFL is still in pre-release development, the events API is **not stable**.
+Use these events in your mod **at your own risk**.
+~~~

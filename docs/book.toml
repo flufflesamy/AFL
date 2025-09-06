@@ -20,6 +20,12 @@ render_mode = "strip"
 command = "mdbook-toc"
 renderer = ["html"]
 
+[preprocessor.inline-highlighting]
+default-language = "sqf"
+
+[preprocessor.image-size]
+command = "mdbook-image-size"
+
 [output]
 
 [output.html]

@@ -1,40 +1,44 @@
 # AFL - Selkie Medical Mod
 
-[GitHub](https://github.com/flufflesamy/AFL) |
-[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3513989482) |
-[Changelog](https://github.com/flufflesamy/AFL/blob/testing/CHANGELOG.md)
+**[View the Docs](https://flufflesamy.github.io/AFL/)**
 
-## Overview
+[Download on Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3513989482)
 
-AFL - Selkie Medical Mod (AFL) is an Arma 3 addon that aims to add medical functionality to ACE and KAM medical systems,
-with the aim to enhance and fix both addons.
+[GitHub](https://github.com/flufflesamy/AFL)
 
-This mod was created for the Selkie Platoon, a Halo ODST Arma 3 unit, however it does not have any dependencies on OPTRE
-or unit specific mods.
+## What is AFL?
+
+AFL - Selkie Medical Mod (AFL) is an Arma 3 mod that aims to add medical functionality to ACE and KAM medical systems,
+with the aim to enhance and fix both mods.
+
+This mod was created for the [Selkie Platoon](https://units.arma3.com/unit/selkie), an OPTRE ODST Arma 3 unit.
+However, it does not have any dependencies on OPTRE or any unit-specific mods and therefore can be used by anyone.
+
+## Dependencies
+
+- [CBA](https://github.com/CBATeam/CBA_A3)
+- [ace](https://github.com/acemod/ACE3)
+- [KAM](https://github.com/KAT-Advanced-Medical/KAM)
+- [O&T Expansion Eden](https://steamcommunity.com/workshop/filedetails/?id=1923321700) (Firing Range Only)
+
+## Contributing
+
+AFL is free and open source. You can find the source code on [GitHub](https://github.com/flufflesamy/AFL).
+Bug reports and feature requests can be posted on the [issues page](https://github.com/flufflesamy/AFL/issues).
+You can also track the status of this project on the [projects page](https://github.com/flufflesamy/AFL/projects).
+If you wish to contribute to this project, please consider [opening a pull request](https://github.com/flufflesamy/AFL/pulls)!
 
 ## Features
 
+For a full list of features, refer to [the docs](https://flufflesamy.github.io/AFL/guide/features).
+
 ### Medical Tweaks
 
-AFL modifies the behavior of ACE Medical and KAT Advanced Medical. Currently contains the following functions:
-
-- Add setting for base bandage time.
-- Re-add ability to tourniquet necks.
-- Normalize IV flow rates based on IRL data.
-- Add IV clog chance based on coagulation factor.
-- Fix KAM dressing vacuum.
+AFL modifies the behavior of ACE Medical and KAT Advanced Medical.
 
 ### Medical Simulator
 
-AFL includes a medical simulator interface for practicing KAT Advanced Medical. Includes the following functions:
-
-- Spawn and apply medical conditions to patients:
-  - Wounds.
-  - Airway.
-  - Cardiac arrest.
-  - Pneumothorax.
-  - Fractures.
-- Preset system.
+AFL includes a medical simulator interface for practicing KAT Advanced Medical.
 
 ### Firing Range Mission
 
@@ -45,22 +49,9 @@ AFL adds `Selkie_FiringRange.Stratis`, a firing range map that includes targets,
 AFL adds a status monitor item that adds HUD overlay showing heart rate of units in player's group.
 Includes TL variant that shows distance instead of heart rate.
 
-## Dependencies
-
-- [CBA](https://github.com/CBATeam/CBA_A3)
-- [ace](https://github.com/acemod/ACE3)
-- [KAM](https://github.com/KAT-Advanced-Medical/KAM)
-- [O&T Expansion Eden](https://steamcommunity.com/workshop/filedetails/?id=1923321700) (Firing Range Only)
-
 ## Build Instructions
 
-This repo uses HEMTT for building and packaging. See [the docs](https://hemtt.dev/) for more instructions.
-
-To build and launch, run:
-
-```sh
-hemtt dev
-```
+Please refer to [the docs](https://flufflesamy.github.io/AFL/for_developers/developing/building) for build instructions.
 
 ## License
 

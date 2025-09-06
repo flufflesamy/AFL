@@ -27,7 +27,7 @@ jobs:
           key: book
 
       - name: Setup mdBook
-        run: cargo install mdbook mdbook-admonish mdbook-toc
+        run: cargo install mdbook mdbook-admonish mdbook-toc mdbook-image-size mdbook-inline-highlighting
 
       - name: Build Book
         run: |
