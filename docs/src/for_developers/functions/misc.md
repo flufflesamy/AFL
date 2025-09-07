@@ -30,8 +30,31 @@ Creates a vehicle on a marker.
 ```sqf
 [
     "OPTRE_FC_Wraith_Tan",
-    "myMkr", vehicleConsole,
+    "myMkr",
+    _vehicleConsole,
     nil
 ] call afl_misc_fnc_createVehOnMarker
+```
+~~~
+
+## `afl_misc_fnc_isDestroyed`
+
+### Description
+
+Checks if a vehicle is destroyed.
+
+### Parameters
+
+1. Vehicle `\\<OBJECT>`
+
+### Returns
+
+1. Is Destroyed `\\<BOOL>`
+
+### Usage
+
+~~~admonish example
+```sqf
+[_veh] call afl_misc_fnc_isDestroyed;
 ```
 ~~~

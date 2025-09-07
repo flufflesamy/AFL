@@ -2,18 +2,18 @@
 
 The following are events registered by `afl_medical`.
 
+## Contents
+
 <!-- toc -->
 
-## Events List
+## `afl_medical_neckTourniquetLocal`
 
-### `afl_medical_neckTourniquetLocal`
-
-#### Parameters
+### Parameters
 
 0. Patient (OBJECT)
 1. Body Part (STRING)
 
-#### Usage
+### Usage
 
 ~~~admonish example collapsible=true
 The following code raises the event to be handled by AFL.
