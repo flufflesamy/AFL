@@ -17,6 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Docs
 
 - Flesh out documentation (#9).
+- Add scripts for installing dependencies.
+
+### Fixed
+
+#### Docs
+
+- Deployment script caching.
 
 ## [v0.6.8] - 2025-09-06
 
