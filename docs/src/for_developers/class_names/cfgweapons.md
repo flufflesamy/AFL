@@ -1,5 +1,7 @@
 # CfgWeapons
 
+Classes added by AFL in `CfgWeapons`.
+
 ## Status Monitor
 
 | Class Name            | In-Game Name        | Type          |

@@ -4,6 +4,54 @@
         <Key ID="STR_AFL_Medical_Activity_usedNPWT">
             <English>%1 used dressing vacuum.</English>
         </Key>
+        <Key ID="STR_AFL_Medical_Setting_BandageTimeL">
+            <English>Base Bandage Time (L)</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_BandageTimeL_Description">
+            <English>Time in seconds for bandaging large wounds.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_BandageTimeM">
+            <English>Base Bandage Time (M)</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_BandageTimeM_Description">
+            <English>Time in seconds for bandaging medium wounds.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_BandageTimeS">
+            <English>Base Bandage Time (S)</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_BandageTimeS_Description">
+            <English>Time in seconds for bandaging small wounds.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_Bandaging">
+            <English>Bandaging</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_Category">
+            <English>AFL Medical</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_IV">
+            <English>IV</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_IV_BlockCoef">
+            <English>IV Block Chance Coefficient</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_IV_BlockCoef_Description">
+            <English>Where a coefficient of 1 equals 0.1% block chance per coagulation value (e.g. Plasma 1000ml has coagulation value of 20).</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_IV_BlockEnable">
+            <English>Enable IV Fluid Blocking</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_IV_BlockEnable_Description">
+            <English>When enabled, fluids have a chance to block IV lines depending on viscosity.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NeckTourniquet">
+            <English>Enable Neck Tourniquet</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NeckTourniquet_Description">
+            <English>Enables the ability to tourniquet necks.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_Tourniquet">
+            <English>Tourniquet</English>
+        </Key>
         <Key ID="STR_AFL_Medical_noIVBags">
             <English>No IV bags on this bodypart...</English>
         </Key>

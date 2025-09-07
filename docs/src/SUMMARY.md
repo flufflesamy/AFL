@@ -12,7 +12,7 @@
   - [Status Monitor](guide/features/status_monitor.md)
 - [Settings](guide/settings/index.md)
   - [Medical Settings](guide/settings/medical.md)
-  - [Status Monitor Settings]()
+  - [Status Monitor Settings](guide/settings/status_monitor.md)
 
 # For Developers
 
@@ -23,7 +23,6 @@
   - [Medical Simulator Framework](for_developers/frameworks/medsim.md)
   - [Status Monitor Framework](for_developers/frameworks/status_monitor.md)
 - [Functions](for_developers/functions/index.md)
-  - [Medical Functions]()
   - [Medical Simulator Functions](for_developers/functions/medicalsim.md)
   - [Misc Functions](for_developers/functions/misc.md)
 - [Events](for_developers/events/index.md)

@@ -19,6 +19,7 @@ render_mode = "strip"
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]
+max-level = 3
 
 [preprocessor.inline-highlighting]
 default-language = "sqf"
