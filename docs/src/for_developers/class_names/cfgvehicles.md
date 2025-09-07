@@ -1,5 +1,7 @@
 # CfgVehicles
 
+Classes added by AFL in `CfgVehicles`.
+
 ## Status Monitor
 
 | Class Name                   | In-Game Name        | Type          |
