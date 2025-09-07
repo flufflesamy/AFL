@@ -41,6 +41,11 @@ jobs:
         with:
           tool: mdbook-inline-highlighting
 
+      - name: Setup mdbook-toc
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-toc
+
       - name: Build Book
         run: |
           cd docs
