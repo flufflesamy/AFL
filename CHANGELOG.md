@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+#### Medical
+
+- Convert settings to use stringtables.
+- Add tooltips to settings.
+
+#### Docs
+
+- Flesh out documentation (#9).
+
 ## [v0.6.8] - 2025-09-06
 
 ### Added
