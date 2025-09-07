@@ -13,21 +13,20 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     permissions:
-      contents: read  # To push a branch
-      pages: write  # To push to a GitHub Pages site
-      id-token: write # To update the deployment status
+      contents: read
+      pages: write
+      id-token: write
+    env:
+      CARGO_TERM_COLOR: always
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Rust Cache
-        uses: Swatinem/rust-cache@v2
-        with:
-          key: book
-
       - name: Setup mdBook
-        run: cargo install mdbook mdbook-admonish mdbook-toc mdbook-image-size mdbook-inline-highlighting
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook,mdbook-admonish,mdbook-toc,mdbook-image-size,mdbook-inline-highlighting
 
       - name: Build Book
         run: |
