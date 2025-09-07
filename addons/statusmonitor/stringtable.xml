@@ -29,7 +29,7 @@
             <English>Critical Color</English>
         </Key>
         <Key ID="STR_AFL_StatusMonitor_Setting_CriticalColor_Description">
-            <English>Color when unit is dead or out of range.</English>
+            <English>Color when unit has a heart rate of 0 or out of range.</English>
         </Key>
         <Key ID="STR_AFL_StatusMonitor_Setting_HeartColor">
             <English>Heart Color</English>

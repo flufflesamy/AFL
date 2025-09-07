@@ -12,7 +12,7 @@
   - [Status Monitor](guide/features/status_monitor.md)
 - [Settings](guide/settings/index.md)
   - [Medical Settings](guide/settings/medical.md)
-  - [Status Monitor Settings]()
+  - [Status Monitor Settings](guide/settings/status_monitor.md)
 
 # For Developers
 
