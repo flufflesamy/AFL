@@ -24,9 +24,22 @@ jobs:
           fetch-depth: 0
 
       - name: Setup mdBook
+        uses: taiki-e/install-action@mdbook
+
+      - name: Setup mdBook-admonish
         uses: taiki-e/cache-cargo-install-action@v2
         with:
-          tool: mdbook,mdbook-admonish,mdbook-toc,mdbook-image-size,mdbook-inline-highlighting
+          tool: mdbook-admonish
+
+      - name: Setup mdbook-image-size
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-image-size
+
+      - name: Setup mdbook-inline-highlighting
+        uses: taiki-e/cache-cargo-install-action@v2
+        with:
+          tool: mdbook-inline-highlighting
 
       - name: Build Book
         run: |
