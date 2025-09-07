@@ -1,4 +1,4 @@
-# AFL Documentation
+# AFL Docs
 
 ## What is AFL?
 

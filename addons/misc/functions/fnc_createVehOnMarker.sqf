@@ -1,22 +1,22 @@
 #include "..\script_component.hpp"
 /*
-	Author: flufflesamy
-
-	Description:
-		Create vehicle on marker.
-
-	Parameter(s):
-		0: Name of Vehicle <STRING>
-		1: Name of Marker <STRING>
-		2: Entity to store variable in <OBJECT>
-		3: Caller (Optional, default nil) <OBJECT>
-
-	Returns:
-		0: Vehicle <OBJECT>
-
-	Examples:
-		["OPTRE_FC_Wraith_Tan", "myMkr", vehicleConsole, nil] call afl_misc_fnc_createVehOnMarker
-*/
+ * Author: flufflesamy
+ * Creates a vehicle on a marker.
+ *
+ * Arguments:
+ * 0: Vehicle Class Name <STRING>
+ * 1: Name of Marker <STRING>
+ * 2: Vehicle Console Entity <OBJECT>
+ * 3: Caller (Optional, default nil) <OBJECT>
+ *
+ * Return Value:
+ * 0: Vehicle <OBJECT>
+ *
+ * Example:
+ * ["OPTRE_FC_Wraith_Tan", "myMkr", vehicleConsole, nil] call afl_misc_fnc_createVehOnMarker
+ *
+ * Public: Yes
+ */
 
 params ["_vehName", "_markerName", "_entity", ["_caller", nil]];
 TRACE_3("createVehOnMarker",_vehName,_markerName,_entity);

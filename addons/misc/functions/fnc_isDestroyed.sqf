@@ -1,20 +1,19 @@
 #include "..\script_component.hpp"
 /*
-	Author: flufflesamy
-
-	Description:
-		Gets if a vehicle is destroyed.
-
-	Parameter(s):
-		0: Vehicle <OBJECT>
-
-	Returns:
-		0: Is destroyed <BOOL>
-
-	Examples:
-		[myVeh] call afl_misc_fnc_isDestroyed
-*/
-
+ * Author: flufflesamy
+ * Checks if a vehicle is destroyed.
+ *
+ * Arguments:
+ * 0: Vehicle <OBJECT>
+ *
+ * Return Value:
+ * 0: Is Destroyed <BOOL>
+ *
+ * Example:
+ * [_veh] call afl_misc_fnc_isDestroyed
+ *
+ * Public: Yes
+ */
 params ["_veh"];
 TRACE_1("isDestroyed",_veh);
 

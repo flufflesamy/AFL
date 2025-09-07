@@ -15,6 +15,8 @@
  *
  * Example:
  * [player] call afl_medical_fnc_hasBradycardia;
+ *
+ * Public: Yes
  */
 params ["_patient"];
 TRACE_1("hasBradycardia",_patient);

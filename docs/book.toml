@@ -2,7 +2,7 @@
 authors = ["flufflesamy"]
 language = "en"
 src = "src"
-title = "AFL Documentation"
+title = "AFL Docs"
 
 [build]
 create-missing = true
