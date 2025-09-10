@@ -36,5 +36,6 @@ class ACE_Medical_Treatment_Actions {
         callbackFailure = "";
         treatmentTime = QFUNC(npwtTime);
         condition = QFUNC(npwtCan);
+        allowSelfTreatment = 1;
     };
 };

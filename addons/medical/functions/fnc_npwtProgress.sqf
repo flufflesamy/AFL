@@ -17,7 +17,7 @@
  *
  * Return Value:
  * 0: Success <BOOL>
- *   true: Runs npwtSuccess (unused) and ends treatment
+ *   true: Runs npwtSuccess and ends treatment
  *   false: Runs npwtFailure (unused) and ends treatment
  *   nil: Continue treatment
  *
@@ -27,61 +27,47 @@
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_medic", "_patient", "_bodyPart"];
 
-// Local check
-if (!local _medic) exitWith {
-    ERROR_1("%1 not Local!",_this);
-    false;
-};
-
-private _return = nil;
+// Get variables
 private _isPartBleeding = [_patient, _bodyPart] call FUNC(isPartBleeding);
-private _initialWoundsCount = _medic getVariable [QGVAR(initialWoundsCount), 0];
+private _initialWoundsCount = GVAR(initialWoundsCount);
+private _counter = GVAR(npwtCounter);
 private _bandagedWoundsOnPart = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
-private _counter = _medic getVariable [QGVAR(treatmentCounter), 0];
 
+// Set treatment interval and threshold
 private _treatmentInterval = _totalTime / (_initialWoundsCount max 1);
 private _threshold = _treatmentInterval * _counter + _treatmentInterval;
+
+if (_initialWoundsCount > 0 && _elapsedTime >= _threshold && isNil "_return") then {
+    TRACE_5("NPWT treating wound",_this,_treatmentInterval,_counter,_threshold,_elapsedTime);
+
+    [QGVAR(npwtProgressLocal), [_patient, _bodyPart], _patient] call CFUNC(targetEvent);
+
+    // Increment counter
+    INC(_counter);
+    GVAR(npwtCounter) = _counter;
+    INFO_1("npwtProgress: Treated wound. Params=%1",_this);
+};
+
+// Get updated state
+_isPartBleeding = [_patient, _bodyPart] call FUNC(isPartBleeding);
+_bandagedWoundsOnPart = (GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []];
+
+private _return = nil;
 
 // Halt checks
 switch (true) do {
     // Stop treatment when timer done and all wounds stitched and bandaged
     case (!_isPartBleeding && _bandagedWoundsOnPart isEqualTo [] && _elapsedTime >= _totalTime): {
-        INFO_2("NPWT Progress Complete: Elapsed=%1s, Total=%2s",_elapsedTime,_totalTime);
-        if (_elapsedTime - _totalTime > 0.02) then {
-            WARNING_1("NPWT time exceeded by %1s",((_elapsedTime - _totalTime) toFixed 2));
-        };
+        INFO_1("npwtProgress: Progress Complete. Params=%1",_this);
         _return = true;
     };
-    // Timeout with error if treatment goes on for too long
-    case ((_elapsedTime - _totalTime) > 1): {
-        ERROR_5("NPWT timeout by %1s: Wound Count=%2, Bandaged Wounds=%3, Interval=%4, Threshold=%5",((_elapsedTime - _totalTime) toFixed 2),_initialWoundsCount,_bandagedWoundsOnPart,_treatmentInterval,_threshold);
-
-        _return = false;
-    };
-    // Failsafe, if not all treated, set counter to 0 so that treatment will loop immediately
+    // Timeout if treatment goes on for too long
     case (_elapsedTime >= _totalTime): {
-        _counter = 0;
+        WARNING_1("npwtProgress: Timeout. Params=%1",_this);
+        _return = true;
     };
     // Otherwise, continue treatment
     default {};
 };
 
-if (_elapsedTime >= _threshold && isNil "_return") then {
-    TRACE_4("NPWT treating wound",_treatmentInterval,_counter,_threshold,_elapsedTime);
-
-    // If bleeding, bandage
-    if (_isPartBleeding) then {
-        [QACEGVAR(medical_treatment,bandageLocal), [_patient, _bodyPart, "PackingBandage", 1000], _patient] call CFUNC(targetEvent);
-        INFO_1("Finished bandaging: Time=%1",_elapsedTime);
-    };
-
-    // Stitch wound
-    [QGVAR(npwtStitchLocal), [_patient, _bodyPart], _patient] call CFUNC(targetEvent);
-
-    // Increment counter
-    INC(_counter);
-    _medic setVariable [QGVAR(treatmentCounter), _counter, false];
-    INFO_1("NPWT treated wound:%1",_this);
-};
-
-RETNIL(_return);
+_return;

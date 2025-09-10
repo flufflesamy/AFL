@@ -16,6 +16,7 @@
 
 [QGVAR(npwtSuccessLocal), LINKFUNC(npwtSuccessLocal)] call CFUNC(addEventHandler);
 [QGVAR(npwtStitchLocal), LINKFUNC(npwtStitchLocal)] call CFUNC(addEventHandler);
+[QGVAR(npwtProgressLocal), LINKFUNC(npwtProgressLocal)] call CFUNC(addEventHandler);
 
 // set coag hash
 [] call FUNC(setCoagHash);
