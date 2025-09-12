@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="AFL">
     <Package name="Medical">
+        <Key ID="STR_AFL_Medical_Activity_usedIrrigate">
+            <English>%1 irrigated fracture.</English>
+        </Key>
         <Key ID="STR_AFL_Medical_Activity_usedNPWT">
             <English>%1 used dressing vacuum.</English>
         </Key>

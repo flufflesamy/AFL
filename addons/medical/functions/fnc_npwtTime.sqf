@@ -35,13 +35,13 @@ private _bodyPartDamageOnPart = _patient getVariable [QACEGVAR(medical,bodyPartD
 private _damageTime = _bodyPartDamageOnPart * GVAR(npwtNormalizeCoef);
 
 if (_baseTime == 0 && _bodyPartDamageOnPart > 0) then {
-    _return = _bandagedTime;
+    _return = round (_bandagedTime * (1 - GVAR(npwtNormalizeProp)) + _damageTime * GVAR(npwtNormalizeProp));
 } else {
     // If normalize option enabled
     if (GVAR(npwtNormalize)) then {
         // Normalize times based on trauma to avoid overly long or short treatment times
         // Make sure that treatment time is not under time to treat bruises / trauma
-        _return = round ((_baseTime * (1 - GVAR(npwtNormalizeProp)) + _damageTime * GVAR(npwtNormalizeProp)) max _bandagedTime);
+        _return = round (_baseTime * (1 - GVAR(npwtNormalizeProp)) + _damageTime * GVAR(npwtNormalizeProp));
     } else {
         _return = round _baseTime;
     };

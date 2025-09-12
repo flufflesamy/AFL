@@ -8,6 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "afl_main",
+            "afl_misc",
             "ace_medical",
             "ace_medical_damage",
             "ace_medical_treatment",

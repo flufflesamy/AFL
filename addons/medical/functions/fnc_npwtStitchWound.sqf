@@ -75,7 +75,8 @@ _patient setVariable [VAR_STITCHED_WOUNDS, _stitchedWounds, true];
 
 // Remove Trauma
 private _targetWoundTrauma = _targetWound select 3;
-[_patient, _bodyPart, -_targetWoundTrauma] call ACEFUNC(medical,addTrauma);
+private _targetWoundAmount = _targetWound select 2;
+[_patient, _bodyPart, -(_targetWoundTrauma * _targetWoundAmount)] call ACEFUNC(medical,addTrauma);
 
 // Fetch updated state
 _bandagedWounds = GET_BANDAGED_WOUNDS(_patient);

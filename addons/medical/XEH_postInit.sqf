@@ -21,3 +21,6 @@
 
 // set coag hash
 [] call FUNC(setCoagHash);
+
+// set downgrade fluid hash
+[] call FUNC(setConsumeFluidHash);

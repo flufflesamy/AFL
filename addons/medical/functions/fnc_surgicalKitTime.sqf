@@ -22,7 +22,7 @@ private _return = 0;
 // Get count of wounds to be treated
 private _bandagedWoundsOnPart = count ((GET_BANDAGED_WOUNDS(_patient)) getOrDefault [_bodyPart, []]);
 
-private _baseTime = _bandagedWoundsOnPart * GVAR(npwtStitchTime);
+private _baseTime = _bandagedWoundsOnPart * ACEGVAR(medical_treatment,woundStitchTime);
 
 _return = _baseTime;
 
