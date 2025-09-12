@@ -132,6 +132,7 @@
 #undef VAR_OPEN_WOUNDS
 #undef VAR_BANDAGED_WOUNDS
 #undef VAR_STITCHED_WOUNDS
+#undef VAR_BODYPART_DAMAGE
 #undef VAR_MEDICATIONS
 #undef VAR_HEMORRHAGE
 #undef VAR_IN_PAIN
@@ -156,6 +157,7 @@
 #define VAR_OPEN_WOUNDS       QACEGVAR(medical,openWounds)
 #define VAR_BANDAGED_WOUNDS   QACEGVAR(medical,bandagedWounds)
 #define VAR_STITCHED_WOUNDS   QACEGVAR(medical,stitchedWounds)
+#define VAR_BODYPART_DAMAGE   QACEGVAR(medical,bodyPartDamage)
 // These variables track gradual adjustments (from medication, etc.)
 #define VAR_MEDICATIONS       QACEGVAR(medical,medications)
 // These variables track the current state of status values above

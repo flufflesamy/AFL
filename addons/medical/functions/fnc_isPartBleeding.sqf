@@ -16,11 +16,13 @@
  *
  * Example:
  * [player, "leftarm"] call afl_medical_fnc_isPartBleeding
+ *
+ * Public: Yes
  */
 params ["_patient", "_bodyPart"];
 
-if (isNil "_patient" || isNil "_bodyPart") exitWith {
-    ERROR_2("%1 or %2 cannot be nil!",_patient,_bodyPart);
+if (isNull _patient || isNil "_bodyPart") exitWith {
+    ERROR_2("isPartBleeding: Patient=%1 or Body Part=%2 cannot be nil!",_patient,_bodyPart);
 };
 
 private _isBleeding = false;

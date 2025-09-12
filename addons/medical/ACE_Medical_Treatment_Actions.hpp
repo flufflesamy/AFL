@@ -1,6 +1,8 @@
 class ACE_Medical_Treatment_Actions {
     class BasicBandage;
     class Carbonate;
+    class FieldDressing;
+    class CheckFracture;
 
     class ApplyNeckTourniquet: BasicBandage {
         displayName = ACECSTRING(medical_treatment,Apply_Tourniquet);
@@ -36,5 +38,49 @@ class ACE_Medical_Treatment_Actions {
         callbackFailure = "";
         treatmentTime = QFUNC(npwtTime);
         condition = QFUNC(npwtCan);
+        allowSelfTreatment = 1;
+    };
+
+    class SurgicalKit: FieldDressing {
+        allowSelfTreatment = 1;
+        callbackFailure = "";
+        callBackProgress =  QFUNC(surgicalKitProgress);
+        callBackStart = QFUNC(surgicalKitStart);
+        callbackSuccess = QFUNC(surgicalKitSuccess);
+        condition = QFUNC(surgicalKitCan);
+        consumeItem = 0;
+        treatmentTime = QFUNC(surgicalKitTime);
+    };
+
+    class OpenReduction: CheckFracture {
+        items[] = {"ACE_surgicalKit"};
+        consumeItem = 0;
+    };
+
+    class Expose: BasicBandage {
+        items[] = {"ACE_surgicalKit"};
+        consumeItem = 0;
+    };
+
+    class Incision: BasicBandage {
+        consumeItem = 0;
+        items[] = {"ACE_surgicalKit"};
+    };
+
+    class Clamp: BasicBandage {
+        items[] = {"ACE_surgicalKit"};
+        consumeItem = 0;
+    };
+
+    class Irrigate: BasicBandage {
+        items[] = {};
+        consumeItem = 0;
+        condition = QFUNC(irrigateCan);
+        callbackStart = QFUNC(irrigateStart);
+    };
+
+    class ResetSurgery: CheckFracture {
+        items[] = {"ACE_surgicalKit"};
+        consumeItem = 0;
     };
 };

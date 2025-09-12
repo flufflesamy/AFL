@@ -11,6 +11,8 @@
  *
  * Example:
  * [true] call afl_medical_fnc_neckTourniquetVisual
+ *
+ * Public: No
  */
 params ["_enable"];
 TRACE_1("neckTourniquetVisual",_enable);

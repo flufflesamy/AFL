@@ -15,7 +15,12 @@
 [QACEGVAR(medical_gui,updateInjuryListPart), LINKFUNC(ui_updateInjuryListPart)] call CFUNC(addEventHandler);
 
 [QGVAR(npwtSuccessLocal), LINKFUNC(npwtSuccessLocal)] call CFUNC(addEventHandler);
-[QGVAR(npwtStitchLocal), LINKFUNC(npwtStitchLocal)] call CFUNC(addEventHandler);
+[QGVAR(npwtProgressLocal), LINKFUNC(npwtProgressLocal)] call CFUNC(addEventHandler);
+
+[QGVAR(surgicalKitProgressLocal), LINKFUNC(surgicalKitProgressLocal)] call CFUNC(addEventHandler);
 
 // set coag hash
 [] call FUNC(setCoagHash);
+
+// set downgrade fluid hash
+[] call FUNC(setConsumeFluidHash);

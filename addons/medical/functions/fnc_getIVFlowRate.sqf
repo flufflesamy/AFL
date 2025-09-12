@@ -15,6 +15,8 @@
  *
  * Example:
  * [[120,80], 1, "Plasma"] call afl_medical_fnc_handleNeckTourniquetEffects
+ *
+ * Public: No
  */
 #define IV_MAX_FLOW (180 / 60) // 180 ml/min
 #define IO_MAX_FLOW (80 / 60) // 80 ml/min

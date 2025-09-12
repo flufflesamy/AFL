@@ -16,6 +16,8 @@
  *
  * Example:
  * [player] call afl_medical_fnc_salineFlush
+ *
+ * Public: No
  */
 params ["_patient", "_bodyPart", "_treatment", "_medic", "_itemUser", "_item"];
 TRACE_6("salineFlush",_patient,_bodyPart,_treatment,_medic,_itemUser,_item);
