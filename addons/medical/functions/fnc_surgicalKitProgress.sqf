@@ -5,7 +5,7 @@
  * under the terms of the GNU Public License, version 3.
  *
  * Authors: BaerMitUmlaut, mharis001, MiszczuZPolski, flufflesamy
- * In progress callback for dressing vacuum.
+ * In progress callback for surgical kit.
  *
  * Arguments:
  * 0: Arguments <ARRAY>
@@ -22,7 +22,9 @@
  *   nil: Continue treatment
  *
  * Example:
- * [[player, cursorTarget, "leftarm"], 5, 10] call afl_medical_fnc_nwptProgress
+ * [[player, cursorTarget, "leftarm"], 5, 10] call afl_medical_fnc_surgicalKitProgress
+ *
+ * Public: No
  */
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_medic", "_patient", "_bodyPart"];

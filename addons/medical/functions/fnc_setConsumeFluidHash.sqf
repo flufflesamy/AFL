@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: flufflesamy
- * Sets hashtable for IV fluids along with their coagulation values.
+ * Sets hashtable for IV fluids with their conversion values when consumed.
  *
  * Arguments:
  * Nothing
@@ -10,7 +10,9 @@
  * Nothing
  *
  * Example:
- * [] call afl_medical_fnc_setCoagHash
+ * [] call afl_medical_fnc_setConsumeFluidHash
+ *
+ * Public: No
  */
 TRACE_1("setFluidHash","");
 

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: flufflesamy
- * Consumes fluid and gives unit lower fluid value. If lowest value, delete item.
+ * Consumes fluid and gives unit lower fluid value items. If lowest value, delete item.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -11,7 +11,9 @@
  * 0: Success <BOOL>
  *
  * Example:
- * [player, cursorTarget, "leftarm"] call afl_medical_fnc_irrigateCan
+ * [player, "ACE_salineIV"] call afl_medical_fnc_consumeFluid
+ *
+ * Public: No
  */
 params ["_unit", "_fluid"];
 TRACE_2("consumeFluid",_unit,_fluid);

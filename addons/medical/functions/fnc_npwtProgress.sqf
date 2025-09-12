@@ -23,6 +23,8 @@
  *
  * Example:
  * [[player, cursorTarget, "leftarm"], 5, 10] call afl_medical_fnc_nwptProgress
+ *
+ * Public: No
  */
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_medic", "_patient", "_bodyPart"];

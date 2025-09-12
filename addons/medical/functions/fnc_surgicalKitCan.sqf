@@ -12,7 +12,9 @@
  * 0: Can NPWT <BOOL>
  *
  * Example:
- * [player, cursorTarget, "leftarm"] call afl_medical_fnc_npwtCan
+ * [player, cursorTarget, "leftarm"] call afl_medical_fnc_surgicalKitCan
+ *
+ * Public: No
  */
 params ["_medic", "_patient", "_bodyPart"];
 

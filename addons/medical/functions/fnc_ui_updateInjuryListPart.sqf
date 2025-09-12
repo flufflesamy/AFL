@@ -14,6 +14,8 @@
  *
  * Example:
  * [objectNull, player, 0, []] call afl_medical_fnc_updateInjuryListPart
+ *
+ * Public: No
  */
 params ["_ctrl", "_target", "_selectionN", "_entries"];
 

@@ -16,6 +16,8 @@
  *
  * Example:
  * [player, "leftarm"] call afl_medical_fnc_isPartBleeding
+ *
+ * Public: Yes
  */
 params ["_patient", "_bodyPart"];
 

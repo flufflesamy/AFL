@@ -11,6 +11,8 @@
  *
  * Example:
  * [] call afl_medical_fnc_setCoagHash
+ *
+ * Public: No
  */
 TRACE_1("setCoagHash","");
 

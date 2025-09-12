@@ -13,6 +13,8 @@
  *
  * Example:
  * [player, cursorTarget, "leftarm"] call afl_medical_fnc_irrigateCan
+ *
+ * Public: No
  */
 #define SALINE_BAGS ["ACE_salineIV", "ACE_salineIV_500", "ACE_salineIV_250"]
 

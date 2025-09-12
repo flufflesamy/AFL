@@ -17,6 +17,8 @@
  *
  * Example:
  * [player, 1, true] call afl_medical_fnc_getBloodVolumeChange
+ *
+ * Public: No
  */
 params ["_unit", "_deltaT", "_syncValues"];
 // TRACE_3("getBloodVolumeChange",_unit,_deltaT,_syncValues);

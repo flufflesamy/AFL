@@ -17,6 +17,8 @@
  *
  * Example:
  * [player, "leftarm"] call afl_medical_fnc_npwtGetWoundCount
+ *
+ * Public: No
  */
 params ["_patient", "_bodyPart"];
 TRACE_2("npwtGetWoundCount",_patient,_bodyPart);

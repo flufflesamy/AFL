@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: flufflesamy
- * Calculates treatment time for NPWT treatment.
+ * Calculates treatment time for surgical kit treatment.
  *
  * Arguments:
  * 0: Medic <OBJECT>
@@ -9,10 +9,12 @@
  * 2: Body Part <STRING>
  *
  * Return Value:
- * 0: NPWT Time <NUMBER>
+ * 0: Surgical Kit Time <NUMBER>
  *
  * Example:
- * [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtTime
+ * [player, cursorTarget, "leftArm"] call afl_medical_fnc_surgicalKitTime
+ *
+ * Public: No
  */
 params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("surgicalKitTime",_medic,_patient,_bodyPart);

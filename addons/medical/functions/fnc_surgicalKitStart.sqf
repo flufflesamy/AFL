@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: flufflesamy
- * Callback on start of NPWT treatment.
+ * Callback on start of surgical kit treatment.
  *
  * Arguments:
  * 0: Medic <OBJECT>
@@ -12,7 +12,9 @@
  * Nothing
  *
  * Example:
- * [player, cursorTarget, "leftArm"] call afl_medical_fnc_npwtStart
+ * [player, cursorTarget, "leftArm"] call afl_medical_fnc_surgicalKitStart
+ *
+ * Public: No
  */
 params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("surgicalKitStart",_medic,_patient,_bodyPart);

@@ -16,6 +16,8 @@
  *
  * Example:
  * [player, "leftarm"] call afl_medical_fnc_npwtSuccessLocal
+ *
+ * Public: No
  */
 params ["_patient", "_bodyPart"];
 TRACE_2("npwtSuccessLocal",_patient,_bodyPart);

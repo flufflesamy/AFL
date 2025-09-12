@@ -13,6 +13,8 @@
  *
  * Example:
  * [player, cursorTarget, "leftArm"] call afl_medical_fnc_irrgateStart
+ *
+ * Public: No
  */
 params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("npwtStart",_medic,_patient,_bodyPart);

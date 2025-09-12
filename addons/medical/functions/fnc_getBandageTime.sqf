@@ -18,6 +18,8 @@
  *
  * Example:
  * [player, cursorTarget, "head", "FieldDressing"] call ace_medical_treatment_fnc_getBandageTime
+ *
+ * Public: No
  */
 params ["_medic", "_patient", "_bodyPart", "_bandage"];
 TRACE_4("getBandageTime",_medic,_patient,_bodyPart,_bandage);

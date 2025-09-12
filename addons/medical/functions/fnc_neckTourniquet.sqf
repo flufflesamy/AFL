@@ -20,6 +20,8 @@
  *
  * Example:
  * [player, cursorObject, "LeftLeg", "", objNull, "ACE_tourniquet"] call afl_medical_fnc_neckTourniquet
+ *
+ * Public: No
  */
 params ["_medic", "_patient", "_bodyPart", "", "", "_usedItem"];
 TRACE_2("neckTourniquet",_medic,_patient);

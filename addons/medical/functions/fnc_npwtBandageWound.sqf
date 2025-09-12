@@ -12,6 +12,8 @@
  *
  * Example:
  * [player, "leftarm"] call afl_medical_fnc_nwptBandageWound
+ *
+ * Public: No
  */
 params ["_patient", "_bodyPart"];
 TRACE_2("npwtBandageWound",_patient,_bodyPart);
