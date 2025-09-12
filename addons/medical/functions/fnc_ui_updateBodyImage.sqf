@@ -12,6 +12,8 @@
  *
  * Example:
  * [controlNull, player] call afl_medical_fnc_updateBodyImage
+ *
+ * Public: No
  */
 params ["_ctrlGroup", "_target"];
 

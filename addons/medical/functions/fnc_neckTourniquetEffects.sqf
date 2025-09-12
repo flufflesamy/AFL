@@ -1,17 +1,19 @@
 #include "..\script_component.hpp"
 /*
-* Author: flufflesamy
-* Creates PFH that handles neck tourniquet effects.
-*
-* Arguments:
-* 0: Unit <OBJECT>
-*
-* Return Value:
-* Nothing
-*
-* Example:
-* [player] call afl_medical_fnc_neckTourniquetEffects
-*/
+ * Author: flufflesamy
+ * Creates PFH that handles neck tourniquet effects.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player] call afl_medical_fnc_neckTourniquetEffects
+ *
+ * Public: No
+ */
 params ["_unit"];
 TRACE_1("neckTourniquetEffects",_unit);
 

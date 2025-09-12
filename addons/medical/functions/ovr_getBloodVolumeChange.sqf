@@ -13,6 +13,8 @@
  *
  * Example:
  * [player, 1, true] call kat_pharma_fnc_getBloodVolumeChange
+ *
+ * Public: No
  */
 
 _this call FUNC(getBloodVolumeChange);

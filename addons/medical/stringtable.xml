@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="AFL">
     <Package name="Medical">
+        <Key ID="STR_AFL_Medical_Activity_usedIrrigate">
+            <English>%1 irrigated fracture.</English>
+        </Key>
         <Key ID="STR_AFL_Medical_Activity_usedNPWT">
             <English>%1 used dressing vacuum.</English>
         </Key>
@@ -42,6 +45,54 @@
         </Key>
         <Key ID="STR_AFL_Medical_Setting_IV_BlockEnable_Description">
             <English>When enabled, fluids have a chance to block IV lines depending on viscosity.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWT">
+            <English>Dressing Vacuum (NPWT)</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTBandageTime">
+            <English>NPWT Bandage Time</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTBandageTime_Description">
+            <English>Time in seconds for dressing vaccum to bandage wound.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTNormalize">
+            <English>Normalize NPWT Time</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTNormalizeCoef">
+            <English>Body Part Damage Multiplier</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTNormalizeCoef_Description">
+            <English>Multiplier to multiply body part damage to.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTNormalizeProp">
+            <English>Body Part Damage Proportion</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTNormalizeProp_Description">
+            <English>Proportion of body part damage in percent that makes up total NPWT treatment time.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTNormalize_Description">
+            <English>(Base dressing vaccum time * 1 - proportion) + (body part damage * multiplier * proportion).</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTSelfTreatment">
+            <English>Allow Self Treatment</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTSelfTreatment_BodyAndLegs">
+            <English>Body + Legs Only</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTSelfTreatment_Description">
+            <English>If enabled, allows medic to use dressing vacuum on self.</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTSelfTreatment_No">
+            <English>No</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTSelfTreatment_Yes">
+            <English>Yes</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTStitchTime">
+            <English>NPWT Stitch Time</English>
+        </Key>
+        <Key ID="STR_AFL_Medical_Setting_NPWTStitchTime_Description">
+            <English>Time in seconds for dressing vaccum to stitch wound.</English>
         </Key>
         <Key ID="STR_AFL_Medical_Setting_NeckTourniquet">
             <English>Enable Neck Tourniquet</English>

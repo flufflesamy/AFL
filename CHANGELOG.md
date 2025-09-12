@@ -7,12 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+#### Medical
+
+- NPWT rewrite
+  - Rewrite functions to remove dependencies on ACE and KAM functions.
+  - Fine-grained CBA settings to change bandage and stitch time, as well as body part damage normalization behavior.
+  - Configurable ability to self-treat using NPWT.
+  - Stitch and bandage functions.
+  - More error checks to functions.
+- Surgical kit rewrite
+  - Rewrite surgical kit implementation to match NPWT.
+  - Surgical kit now replaces function of clamp, retractor, and bone plate for KAM fracture surgeries.
+  - Surgical kit functions.
+- Fracture irrigation tweaks
+  - Can now use any size saline to irrigate wounds.
+  - Uses consumeFluid function to dynamically remove larger fluid bags and replace with a combination of smaller ones.
+  - Irrigation start and condition functions.
+- Tooltips to settings.
+
+#### Project
+
+- New Selkie 2025-09-10 preset.
+
 ### Changed
 
 #### Medical
 
+- NPWT
+  - Remove per-frame state checking from npwtProgress function to improve performance.
+  - Treatment time for trauma clearing now takes body part damage into account.
 - Convert settings to use stringtables.
-- Add tooltips to settings.
+- Update function headers to show if function is part of public API.
 
 #### Docs
 
@@ -24,6 +51,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Docs
 
 - Deployment script caching.
+
+### Removed
+
+#### Medical
+
+- npwtStitchLocal function.
 
 ## [v0.6.8] - 2025-09-06
 

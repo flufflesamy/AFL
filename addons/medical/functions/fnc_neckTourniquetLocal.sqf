@@ -16,6 +16,8 @@
  *
  * Example:
  * [player, "LeftLeg"] call afl_medical_fnc_neckTourniquetLocal
+ *
+ * Public: No
  */
 params ["_patient", "_bodyPart"];
 TRACE_2("neckTourniquetLocal",_patient,_bodyPart);
