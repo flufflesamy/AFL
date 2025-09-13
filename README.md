@@ -26,7 +26,7 @@ However, it does not have any dependencies on OPTRE or any unit-specific mods an
 AFL is free and open source. You can find the source code on [GitHub](https://github.com/flufflesamy/AFL).
 Bug reports and feature requests can be posted on the [issues page](https://github.com/flufflesamy/AFL/issues).
 You can also track the status of this project on the [projects page](https://github.com/flufflesamy/AFL/projects).
-If you wish to contribute to this project, please consider [opening a pull request](https://github.com/flufflesamy/AFL/pulls)!
+If you wish to contribute to this project, please read the [contributor's guide](https://github.com/flufflesamy/AFL/blob/master/CONTRIBUTING.md)!
 
 ## Features
 
