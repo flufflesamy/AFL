@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Medical
 
-- NPWT rewrite
+- NPWT rewrite (Resolves [#8](https://github.com/flufflesamy/AFL/issues/8))
   - Rewrite functions to remove dependencies on ACE and KAM functions.
   - Fine-grained CBA settings to change bandage and stitch time, as well as body part damage normalization behavior.
   - Configurable ability to self-treat using NPWT.
@@ -51,7 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Docs
 
-- Flesh out documentation (#9).
+- Flesh out documentation (Resolves [#9](https://github.com/flufflesamy/AFL/issues/9)).
 - Add scripts for installing dependencies.
 - Update README to reflect new contributor's guide (CONTRIBUTING.md).
 
@@ -85,7 +85,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Deployment script caching.
 
-### Medical Sim
+#### Medical
+
+- NPWT triage card display (Resolves [#11](https://github.com/flufflesamy/AFL/issues/11)).
+
+#### Medical Sim
 
 - Missing pneumothorax deteriorate stringtable entry.
 - Stringtable typos.
