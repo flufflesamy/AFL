@@ -4,7 +4,7 @@
     [LLSTRING(Setting_BandageTimeS), LLSTRING(Setting_BandageTimeS_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_Bandaging)],
     [0, 20, 4, 1],
-    true
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -13,7 +13,7 @@
     [LLSTRING(Setting_BandageTimeM), LLSTRING(Setting_BandageTimeM_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_Bandaging)],
     [0, 20, 6, 1],
-    true
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -22,7 +22,7 @@
     [LLSTRING(Setting_BandageTimeL), LLSTRING(Setting_BandageTimeL_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_Bandaging)],
     [0, 20, 8, 1],
-    true
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -39,7 +39,7 @@
         ],
         0 // Default is No
     ],
-    true
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -47,8 +47,8 @@
     "SLIDER",
     [LLSTRING(Setting_NPWTBandageTime), LLSTRING(Setting_NPWTBandageTime_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_NPWT)],
-    [0, 10, 3, 1],
-    true
+    [0, 15.0, 5.0, 1],
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -56,8 +56,8 @@
     "SLIDER",
     [LLSTRING(Setting_NPWTStitchTime), LLSTRING(Setting_NPWTStitchTime_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_NPWT)],
-    [0, 10, 2, 1],
-    true
+    [0, 15.0, 3.0, 1],
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -66,7 +66,7 @@
     [LLSTRING(Setting_NPWTNormalize), LLSTRING(Setting_NPWTNormalize_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_NPWT)],
     [true],
-    true
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -74,8 +74,8 @@
     "SLIDER",
     [LLSTRING(Setting_NPWTNormalizeProp), LLSTRING(Setting_NPWTNormalizeProp_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_NPWT)],
-    [0, 1, 0.50, 2, true],
-    true
+    [0, 1.00, 0.50, 2, true],
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -83,8 +83,8 @@
     "SLIDER",
     [LLSTRING(Setting_NPWTNormalizeCoef), LLSTRING(Setting_NPWTNormalizeCoef_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_NPWT)],
-    [0, 5, 1.00, 2],
-    true
+    [0, 5.00, 1.25, 2],
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -93,7 +93,7 @@
     [LLSTRING(Setting_NeckTourniquet), LLSTRING(Setting_NeckTourniquet_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_Bandaging)],
     [false],
-    true
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -102,7 +102,7 @@
     [LLSTRING(Setting_IV_BlockEnable), LLSTRING(Setting_IV_BlockEnable_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_IV)],
     [false],
-    true
+    1
 ] call CFUNC(addSetting);
 
 [
@@ -111,5 +111,5 @@
     [LLSTRING(Setting_IV_BlockCoef), LLSTRING(Setting_IV_BlockCoef_Description)],
     [LLSTRING(Setting_Category), LLSTRING(Setting_IV)],
     [0.05, 10.00, 1.00, 2, false],
-    true
+    1
 ] call CFUNC(addSetting);

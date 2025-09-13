@@ -65,7 +65,7 @@
             <English>VT</English>
         </Key>
         <Key ID="STR_AFL_MedicalSim_Cardiac_PAO2">
-            <English>PAO2</English>
+            <English>PAO2:</English>
         </Key>
         <Key ID="STR_AFL_MedicalSim_Cardiac_Title">
             <English>Circulation</English>
@@ -91,6 +91,7 @@
         <Key ID="STR_AFL_MedicalSim_Misc_Uncon">
             <English>Unconscious:</English>
         </Key>
+        <Key ID="STR_AFL_MedicalSim_PTX_Deteriorate"></Key>
         <Key ID="STR_AFL_MedicalSim_PTX_Strength">
             <English>Strength:</English>
         </Key>
