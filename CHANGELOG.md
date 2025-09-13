@@ -7,7 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.7.0] - 2025-09-13
+
 ### Added
+
+#### Extras
+
+- README file.
+
+#### Main
+
+- Add custom CBA version mismatch logic to show large error message if client attempt to connect with outdated AFL version.
 
 #### Medical
 
@@ -27,24 +37,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Irrigation start and condition functions.
 - Tooltips to settings.
 
+#### Misc
+
+- addVehicleSpawner function.
+
 #### Project
 
+- CONTRIBUTING.md and CODE_OF_CONDUCT.md
+- License folder with ACE and KAM licenses.
 - New Selkie 2025-09-10 preset.
 
 ### Changed
+
+#### Docs
+
+- Flesh out documentation (#9).
+- Add scripts for installing dependencies.
+- Update README to reflect new contributor's guide (CONTRIBUTING.md).
+
+#### Extras
+
+- Update server settings file to match current Selkie settings.
+- Update status monitor asset source file.
 
 #### Medical
 
 - NPWT
   - Remove per-frame state checking from npwtProgress function to improve performance.
   - Treatment time for trauma clearing now takes body part damage into account.
+  - Make limping update run on every npwtSuccessLocal to stop issues with limping not clearing.
 - Convert settings to use stringtables.
 - Update function headers to show if function is part of public API.
 
-#### Docs
+#### Medical Sim
 
-- Flesh out documentation (#9).
-- Add scripts for installing dependencies.
+- Increase maximum number of wounds in simulator to 20.
+- Increase variety of wounds for the testdamage damage type to include cuts and bruises.
+
+#### Missions
+
+- Update firing range mission mod settings to match Selkie settings.
+- Update init.sqf of firing range mission to use addVehicleSpawner function.
 
 ### Fixed
 
@@ -52,7 +85,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Deployment script caching.
 
+### Medical Sim
+
+- Missing pneumothorax deteriorate stringtable entry.
+- Stringtable typos.
+
 ### Removed
+
+#### Extras
+
+- Old logo assets.
 
 #### Medical
 
@@ -299,7 +341,8 @@ of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 
 - Initial release containing medical simulator and firing range.
 
-[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.6.5...testing
+[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.7.0...testing
+[v0.7.0]: https://github.com/flufflesamy/AFL/compare/v0.6.7..v0.7.0
 [v0.6.7]: https://github.com/flufflesamy/AFL/compare/v0.6.6..v0.6.7
 [v0.6.6]: https://github.com/flufflesamy/AFL/compare/v0.6.5..v0.6.6
 [v0.6.5]: https://github.com/flufflesamy/AFL/compare/v0.6.4..v0.6.5

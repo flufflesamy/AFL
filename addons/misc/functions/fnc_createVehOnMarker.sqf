@@ -7,7 +7,7 @@
  * 0: Vehicle Class Name <STRING>
  * 1: Name of Marker <STRING>
  * 2: Vehicle Console Entity <OBJECT>
- * 3: Caller (Optional, default nil) <OBJECT>
+ * 3: Caller <OBJECT>
  *
  * Return Value:
  * 0: Vehicle <OBJECT>
@@ -18,28 +18,28 @@
  * Public: Yes
  */
 
-params ["_vehName", "_markerName", "_entity", ["_caller", nil]];
-TRACE_3("createVehOnMarker",_vehName,_markerName,_entity);
+params ["_vehName", "_markerName", "_entity", "_caller"];
+TRACE_4("createVehOnMarker",_vehName,_markerName,_entity,_caller);
 
-private _pos = getMarkerPos[_markerName];
+private _pos = getMarkerPos[_markerName, true];
 
-private _mkrVarName = format ["%1_%2", ADDON, _markerName];
-private _veh = _entity getVariable [_mkrVarName, nil];
+private _mkrVarName = format ["%1_%2", QUOTE(ADDON), _markerName];
+private _veh = _entity getVariable [_mkrVarName, objNull];
 
 // If vehicle is already spawned, remove it
-if (!isNil _veh) then
+if (!isNull _veh) then
 {
 	deleteVehicle _veh;
 	_entity setVariable [_mkrVarName, nil, true];
 	TRACE_2("_veh exists, deleting old vehicle",_veh,_entity);
 };
 
-_veh = createVehicle[_vehName, _pos, [], 0, ""];
+_veh = createVehicle[_vehName, _pos, [], 0, "CAN_COLLIDE"];
 _veh setVariable ["BIS_enableRandomization", false];
 
 if (_caller == player) then
 {
-	hint format ["Spawned %1 at %2!", _vehName, _markerName];
+	hint format ["Spawned %1 at %2.", _vehName, _markerName];
 };
 
 
@@ -52,12 +52,14 @@ private _id = [_veh, "Dammaged", {
 
 	if (_caller == player) then
 	{
+        hintSilent "";
 		hint format ["Dealt %1 damage to %2!", _damage, _hitPoint];
 	};
 
 	if (_unit call FUNC(isDestroyed)) then
 	{
-		if (caller == player) then{
+		if (_caller == player) then{
+            hintSilent "";
 			hint "Vehicle Destroyed!";
 		};
 

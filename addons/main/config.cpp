@@ -30,4 +30,5 @@ class CfgMods {
     };
 };
 
+#include "CfgEventHandlers.hpp"
 #include "CfgSettings.hpp"

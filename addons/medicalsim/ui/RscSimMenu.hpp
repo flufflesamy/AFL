@@ -55,8 +55,8 @@ class GVAR(RscPropSlider) : RscXSliderH {
 };
 
 class GVAR(RscWoundsSlider) : GVAR(RscPropSlider) {
-    sliderRange[] = {0, 10};
-    sliderStep = 0.5;
+    sliderRange[] = {0, 20};
+    sliderStep = 1;
 };
 
 class GVAR(RscSliderValue) : RscEdit {

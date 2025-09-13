@@ -45,11 +45,6 @@ if (_openWoundsOnPart isNotEqualTo []) then {
         WARNING_2("npwtSuccessLocal: Treatment incomplete, patient has bleeding wounds. _openWoundsOnPart=%1, Params=%2",_openWoundsOnPart,_this);
 
         _patient call ACEFUNC(medical_status,updateWoundBloodLoss);
-
-        // Update limping
-        if (_bodyPart in ["leftleg", "rightleg"] && ACEGVAR(medical,limping) > 0) then {
-            _patient call ACEFUNC(medical_engine,updateDamageEffects);
-        };
     };
 };
 
@@ -77,6 +72,7 @@ switch (_bodyPart) do {
 };
 
 // Update medical engine
+_patient call ACEFUNC(medical_engine,updateDamageEffects);
 _patient call ACEFUNC(medical_vitals,handleUnitVitals);
 
 // Clear condition caches
