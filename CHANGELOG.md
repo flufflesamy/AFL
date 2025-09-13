@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+#### Docs
+
+- Add contributing section to main README.
+
+#### Project
+
+- Rename licenses folder to external_licenses so that GitHub doesn't get confused.
+
 ## [v0.7.0] - 2025-09-13
 
 ### Added
