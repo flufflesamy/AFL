@@ -346,7 +346,8 @@ of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 - Initial release containing medical simulator and firing range.
 
 [Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.7.0...testing
-[v0.7.0]: https://github.com/flufflesamy/AFL/compare/v0.6.7..v0.7.0
+[v0.7.0]: https://github.com/flufflesamy/AFL/compare/v0.6.8..v0.7.0
+[v0.6.8]: https://github.com/flufflesamy/AFL/compare/v0.6.7..v0.6.8
 [v0.6.7]: https://github.com/flufflesamy/AFL/compare/v0.6.6..v0.6.7
 [v0.6.6]: https://github.com/flufflesamy/AFL/compare/v0.6.5..v0.6.6
 [v0.6.5]: https://github.com/flufflesamy/AFL/compare/v0.6.4..v0.6.5
