@@ -7,15 +7,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+#### Docs
+
+- Missing medical and misc function documentation (Resolves [#17](https://github.com/flufflesamy/AFL/issues/17)).
+
+#### Project
+
+- Add `meta.cpp` file.
+
 ### Changed
 
 #### Docs
 
 - Add contributing section to main README.
+- Flesh out feature descriptions.
+
+#### Main
+
+- Modify mismatch function to show human readable version string instead of array. Different error dialog now shows
+depending on if client or server is outdated (Resolves [#16](https://github.com/flufflesamy/AFL/issues/16)).
+- Rename `COMPONENT_NAME` to "AFL" in script_mod.hpp.
+- Rename `COMPONENT_BEAUTIFIED` to better match pbo names.
 
 #### Project
 
-- Rename licenses folder to external_licenses so that GitHub doesn't get confused.
+- Rename `licenses` folder to `external_licenses` so that GitHub doesn't get confused.
+- Modify `project.toml` so `meta.cpp` and `AUTHORS.txt` gets copied into artifact on build.
+
+### Removed
+
+#### Docs
+
+- Remove function documentation for `afl_misc_fnc_createVehOnMarker` as it is no longer public.
 
 ## [v0.7.0] - 2025-09-13
 

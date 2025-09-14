@@ -8,7 +8,9 @@ include = [
     "LICENSE",
     "README.md",
     "logo.paa",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "meta.cpp",
+    "AUTHORS.txt"
 ]
 
 [version]

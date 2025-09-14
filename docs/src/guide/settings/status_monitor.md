@@ -12,37 +12,37 @@ Settings for the Status Monitor component.
 
 Interval in seconds of how often status monitor updates.
 
-Type: Slider
+**Type:** Slider
 
-Range: 0-10s
+**Range:** 0-10s
 
-Default Value: 5s
+**Default:** 5s
 
 ### Range (m)
 
 Distance between player and unit in meters before monitor shows as out of range.
 
-Type: Slider
+**Type:** Slider
 
-Range: 0-1000m
+**Range:** 0-1000m
 
-Default Value: 100m
+**Default:** 100m
 
 ### X on PR 0
 
 Show X if unit is in cardiac arrest.
 
-Type: Checkbox
+**Type:** Checkbox
 
-Default Value: False
+**Default:** False
 
 ### Out-of-Range
 
 Show OOR indicator if unit is out of range.
 
-Type: Checkbox
+**Type:** Checkbox
 
-Default Value : False
+**Default:** False
 
 ## Client Settings
 

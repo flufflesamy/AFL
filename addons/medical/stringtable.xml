@@ -71,7 +71,8 @@
             <English>Proportion of body part damage in percent that makes up total NPWT treatment time.</English>
         </Key>
         <Key ID="STR_AFL_Medical_Setting_NPWTNormalize_Description">
-            <English>(Base dressing vaccum time * 1 - proportion) + (body part damage * multiplier * proportion).</English>
+            <English>When enabled, dressing vacuum treatment time takes body part damage into account. Total time is calculated with the following equation: t_total = (1 - p)(t_bandage + t_stitch) + pmd. Where t is time in seconds, p is the normalize proportion (50% = 0.5), m is the body part damage multiplier,
+and d is body part damage.</English>
         </Key>
         <Key ID="STR_AFL_Medical_Setting_NPWTSelfTreatment">
             <English>Allow Self Treatment</English>
