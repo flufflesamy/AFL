@@ -15,7 +15,7 @@
  * Example:
  * ["OPTRE_FC_Wraith_Tan", "myMkr", vehicleConsole, nil] call afl_misc_fnc_createVehOnMarker
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_vehName", "_markerName", "_entity", "_caller"];

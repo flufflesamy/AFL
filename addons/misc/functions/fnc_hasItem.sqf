@@ -12,6 +12,8 @@
  *
  * Example:
  * [player, "AFL_statusMonitor"] call afl_misc_fnc_hasItem
+ *
+ * Public: Yes
  */
 params ["_unit", "_item"];
 
