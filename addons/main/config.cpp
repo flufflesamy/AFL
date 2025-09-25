@@ -20,7 +20,7 @@ class CfgPatches {
 class CfgMods {
     class PREFIX {
         dir = "@afl";
-        name = "AFL - Selkie Medical Mod 0.0.0";
+        name = "AFL 0.0.0";
         picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca.paa";
         hidePicture = "true";
         hideName = "true";

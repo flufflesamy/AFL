@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+[v0.7.2] - 2025-09-25
+
+### Changed
+
+- Updated branding.
+
 [v0.7.1] - 2025-09-16
 
 ### Added
@@ -382,7 +388,8 @@ of cerebral ischemia, asphyxiation, and the carotid sinus reflex.
 
 - Initial release containing medical simulator and firing range.
 
-[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.7.1...testing
+[Unreleased]: https://github.com/flufflesamy/AFL/compare/v0.7.2...testing
+[v0.7.2]: https://github.com/flufflesamy/AFL/compare/v0.7.1..v0.7.2
 [v0.7.1]: https://github.com/flufflesamy/AFL/compare/v0.7.0..v0.7.1
 [v0.7.0]: https://github.com/flufflesamy/AFL/compare/v0.6.8..v0.7.0
 [v0.6.8]: https://github.com/flufflesamy/AFL/compare/v0.6.7..v0.6.8
