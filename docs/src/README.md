@@ -5,7 +5,7 @@
 AFL - Selkie Medical Mod (AFL) is an Arma 3 mod that aims to add medical functionality to ACE and KAM medical systems,
 with the aim to enhance and fix both mods.
 
-This mod was created for the [Selkie Platoon](https://units.arma3.com/unit/selkie), an OPTRE Arma 3 unit.
+This mod was created for an OPTRE Arma 3 unit.
 However, it does not have any dependencies on OPTRE or any unit-specific mods and therefore can be used by anyone.
 
 ## Contributing
